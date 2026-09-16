@@ -41,11 +41,11 @@ export const siteConfig: SiteConfig = {
   name: 'Sarathii',
   tagline: 'Transform Your Potential into Excellence',
   concept: 'Civil Services & Leadership Mentorship',
-  logo: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cropped-updated-logo-NZs5Mvv9RwpnqXOLhFIiMsGdYhuUnk.webp',
-  founderPortrait: '/images/founder-transparent.png',
+  logo: '/images/sarathii-logo.png',
+  founderPortrait: '/images/digitalboard.png',
   navItems: [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
+    { label: 'Know Sarathii', href: '/about' },
     { label: 'Books', href: '/books' },
     { label: 'Insights', href: '/insights' },
     { label: 'Contact', href: '/contact' },
@@ -70,7 +70,7 @@ export const siteConfig: SiteConfig = {
     hours: 'Mon – Sat: 9:00 AM – 6:00 PM IST',
   },
   socials: [
-    { platform: 'LinkedIn', url: 'https://linkedin.com', icon: 'Linkedin' },
+    { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/jay-prakash-singh-87381a66/', icon: 'Linkedin' },
     { platform: 'Twitter (X)', url: 'https://twitter.com', icon: 'Twitter' },
     { platform: 'Instagram', url: 'https://instagram.com', icon: 'Instagram' },
     { platform: 'YouTube', url: 'https://youtube.com', icon: 'Youtube' },

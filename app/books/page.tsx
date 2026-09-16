@@ -20,90 +20,93 @@ export default function BooksPage() {
     <div className="flex flex-col min-h-screen bg-[#FFFDF9]">
       <Header />
 
-      <main className="flex-grow pt-28 sm:pt-36">
+      <main className="flex-grow">
         {/* Books Hero Section */}
-        <section className="py-16 sm:py-24 bg-radial-hero border-b border-[#E5DDD8] relative overflow-hidden">
-          <Container>
-            <div className="max-w-4xl space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#4B1458]/10 text-xs uppercase tracking-[0.2em] font-semibold text-[#7B2A7A]">
-                <Sparkles size={13} className="text-[#D4AF6A]" />
+        <section className="relative pt-28 pb-14 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24 bg-[#1A041E] text-white border-b border-[#D4AF6A]/30 text-center overflow-hidden">
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#7B2A7A]/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-[#D4AF6A]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern-dark opacity-40 pointer-events-none" />
+
+          <Container className="relative z-10">
+            <div className="max-w-3xl mx-auto space-y-4">
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2A0932]/90 border border-[#D4AF6A]/40 text-xs uppercase tracking-[0.2em] font-semibold text-[#E6CFA5] shadow-lg backdrop-blur-md">
+                <Sparkles size={13} className="text-[#D4AF6A] animate-pulse" />
                 <span>Civilizational Literature & Leadership</span>
               </div>
 
-              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#2A0932] font-normal leading-[1.05]">
+              <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] text-[#FFFDF9] font-normal leading-[1.05] tracking-tight">
                 Books by{' '}
-                <span className="italic text-[#7B2A7A]">
+                <span className="italic text-[#E6CFA5]">
                   Jay Prakash Singh
                 </span>
               </h1>
 
-              <p className="text-base sm:text-xl text-[#6E6271] leading-relaxed max-w-2xl font-normal">
+              <p className="text-base sm:text-lg text-[#E5DDD8]/90 leading-relaxed max-w-2xl mx-auto font-normal">
                 Synthesizing classical Indian civilizational wisdom with five decades of real-world administrative, military, and judicial leadership.
               </p>
             </div>
           </Container>
+
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF6A]/60 to-transparent" />
         </section>
 
         {/* Featured Book Major Showcase */}
-        <section className="py-20 lg:py-28 bg-[#FFFDF9]">
+        <section className="py-10 lg:py-14 bg-[#FFFDF9]">
           <Container>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* 3D Book Visual (5 cols) */}
               <div className="lg:col-span-5 flex justify-center sticky top-28">
-                <div className="relative w-full max-w-[340px] aspect-[3/4.2] rounded-3xl overflow-hidden border-2 border-[#D4AF6A] shadow-2xl bg-[#1A051F]">
+                <div className="relative w-full max-w-[340px] aspect-[2/3] rounded-2xl overflow-hidden border-2 border-[#D4AF6A] shadow-2xl bg-[#1A051F] group hover:scale-[1.02] transition-transform duration-300">
                   <Image
                     src={featuredBook.coverImage}
                     alt={featuredBook.englishTitle}
                     fill
                     sizes="(max-width: 768px) 100vw, 340px"
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
-                  <div className="absolute bottom-6 left-6 right-6 text-center z-10">
-                    <span className="text-xs uppercase tracking-widest text-[#E6CFA5] font-semibold bg-[#2A0932]/80 backdrop-blur-md px-4 py-1.5 rounded-full border border-[#D4AF6A]/30">
-                      {featuredBook.authorHindi} • {featuredBook.englishSubtitle}
-                    </span>
-                  </div>
+                  {/* Subtle book spine edge shadow & gloss highlight */}
+                  <div className="absolute inset-y-0 left-0 w-4 bg-gradient-to-r from-black/40 via-white/10 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-2xl pointer-events-none" />
                 </div>
               </div>
 
               {/* Book Overview & Narrative (7 cols) */}
-              <div className="lg:col-span-7 space-y-10">
+              <div className="lg:col-span-7 space-y-6">
                 <div>
                   <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-2">
                     About The Masterwork
                   </div>
-                  <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#2A0932] font-normal leading-tight mb-4">
+                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#2A0932] font-normal leading-tight mb-3">
                     {featuredBook.hindiTitle}{' '}
-                    <span className="italic text-[#7B2A7A] text-2xl sm:text-3xl block sm:inline">
+                    <span className="italic text-[#7B2A7A] text-xl sm:text-2xl block sm:inline">
                       ({featuredBook.hindiSubtitle})
                     </span>
                   </h3>
-                  <p className="text-base text-[#6E6271] leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#6E6271] leading-relaxed">
                     {featuredBook.summary}
                   </p>
                 </div>
 
                 {/* Extended Summary Paragraphs */}
-                <div className="space-y-4 text-sm sm:text-base text-[#6E6271] leading-relaxed border-l-2 border-[#D4AF6A] pl-6">
+                <div className="space-y-3 text-sm text-[#6E6271] leading-relaxed border-l-2 border-[#D4AF6A] pl-5">
                   {featuredBook.extendedSummary.map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
                 </div>
 
                 {/* Core Themes Grid */}
-                <div className="space-y-4">
-                  <h4 className="font-serif text-2xl text-[#2A0932] font-semibold">
+                <div className="space-y-3">
+                  <h4 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
                     Core Conceptual Themes
                   </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {featuredBook.themes.map((theme) => (
                       <div
                         key={theme.title}
-                        className="bg-[#F8F5F2] rounded-2xl p-5 border border-[#E5DDD8] space-y-2"
+                        className="bg-[#F8F5F2] rounded-2xl p-4 sm:p-5 border border-[#E5DDD8] space-y-1.5"
                       >
-                        <div className="font-serif text-lg text-[#4B1458] font-semibold">
+                        <div className="font-serif text-base sm:text-lg text-[#4B1458] font-semibold">
                           {theme.title}
                         </div>
                         <p className="text-xs text-[#6E6271] leading-relaxed">
@@ -118,9 +121,9 @@ export default function BooksPage() {
                 </div>
 
                 {/* Quotes from the Book */}
-                <div className="bg-[#2A0932] text-[#FFFDF9] rounded-3xl p-8 border border-[#D4AF6A]/30 space-y-4 shadow-md">
-                  <Quote size={24} className="text-[#D4AF6A]" />
-                  <div className="space-y-3 font-serif text-lg italic text-[#E6CFA5]">
+                <div className="bg-[#2A0932] text-[#FFFDF9] rounded-3xl p-6 sm:p-7 border border-[#D4AF6A]/30 space-y-3 shadow-md">
+                  <Quote size={20} className="text-[#D4AF6A]" />
+                  <div className="space-y-2 font-serif text-base sm:text-lg italic text-[#E6CFA5]">
                     {featuredBook.quotes.map((quote, i) => (
                       <p key={i}>{quote}</p>
                     ))}
@@ -132,36 +135,36 @@ export default function BooksPage() {
         </section>
 
         {/* Complete Prastavana (Preface) Section */}
-        <section className="py-20 lg:py-28 bg-[#F8F5F2] border-t border-[#E5DDD8]">
+        <section className="py-10 lg:py-14 bg-[#F8F5F2] border-t border-[#E5DDD8]">
           <Container size="sm">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-2">
+            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-1">
                 मूल प्रस्तावना
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#2A0932] font-normal">
+              <h2 className="font-serif text-2xl sm:text-3xl text-[#2A0932] font-normal">
                 ग्रंथ की प्रस्तावना एवं दर्शन
               </h2>
-              <p className="text-xs sm:text-sm text-[#6E6271] mt-2">
+              <p className="text-xs text-[#6E6271] mt-1">
                 From the preface of &ldquo;जिन राहों पर सियाराम चले&rdquo; by Jay Prakash Singh
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E5DDD8] shadow-md space-y-8">
+            <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#E5DDD8] shadow-md space-y-6">
               {/* Hindi Preface Text */}
-              <div className="space-y-6 font-serif text-lg sm:text-xl leading-relaxed text-[#2A0932] border-b border-[#E5DDD8] pb-8">
+              <div className="space-y-5 font-serif text-base sm:text-lg leading-relaxed text-[#2A0932] border-b border-[#E5DDD8] pb-6">
                 {featuredBook.prastavanaHindi.map((para, i) => (
-                  <p key={i} className="first-letter:text-3xl first-letter:font-bold first-letter:text-[#4B1458]">
+                  <p key={i} className="first-letter:text-2xl first-letter:font-bold first-letter:text-[#4B1458]">
                     {para}
                   </p>
                 ))}
               </div>
 
               {/* English Reflection */}
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <h4 className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold">
                   English Reflection & Synthesis
                 </h4>
-                <div className="space-y-4 text-sm sm:text-base text-[#6E6271] leading-relaxed">
+                <div className="space-y-3 text-xs sm:text-sm text-[#6E6271] leading-relaxed">
                   {featuredBook.prastavanaEnglishReflection.map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
@@ -172,7 +175,7 @@ export default function BooksPage() {
         </section>
 
         {/* Chapters Overview */}
-        <section className="py-20 lg:py-28 bg-[#FFFDF9]">
+        <section className="py-10 lg:py-14 bg-[#FFFDF9]">
           <Container>
             <SectionHeading
               align="center"
@@ -181,23 +184,23 @@ export default function BooksPage() {
               description="A progressive thematic exploration across the pivotal stages of the epic journey."
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
               {featuredBook.chapters.map((chapter) => (
                 <div
                   key={chapter.number}
-                  className="bg-[#F8F5F2] rounded-3xl p-7 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex flex-col justify-between"
+                  className="bg-[#F8F5F2] rounded-3xl p-6 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex flex-col justify-between"
                 >
-                  <div className="space-y-3">
+                  <div className="space-y-2">
                     <span className="text-xs uppercase tracking-widest text-[#D4AF6A] font-bold">
                       अध्याय {chapter.number}
                     </span>
-                    <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
+                    <h3 className="font-serif text-lg sm:text-xl text-[#2A0932] font-semibold">
                       {chapter.hindiTitle}
                     </h3>
                     <div className="text-xs text-[#7B2A7A] italic font-serif">
                       {chapter.englishTitle}
                     </div>
-                    <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed pt-2">
+                    <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed pt-1">
                       {chapter.description}
                     </p>
                   </div>
@@ -206,10 +209,10 @@ export default function BooksPage() {
             </div>
 
             {/* Inquire for Copy CTA */}
-            <div className="mt-16 text-center">
+            <div className="mt-8 text-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all shrink-0 hover:scale-105 active:scale-95"
               >
                 <span>Request Reading Copy / Inquire</span>
                 <ArrowRight size={14} />

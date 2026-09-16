@@ -13,8 +13,8 @@ export function Container({
 }: ContainerProps) {
   const sizeClasses = {
     sm: 'max-w-4xl',
-    default: 'max-w-[1420px]',
-    lg: 'max-w-[1560px]',
+    default: 'max-w-[1360px]',
+    lg: 'max-w-[1480px]',
     full: 'max-w-full',
   }
 

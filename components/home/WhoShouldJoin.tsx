@@ -17,10 +17,11 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function WhoShouldJoin() {
   return (
-    <section className="py-20 lg:py-28 bg-[#FFFDF9] relative">
+    <section className="py-10 lg:py-14 bg-[#FFFDF9] relative">
       <Container>
         <SectionHeading
-          kicker="05 / Alignment"
+          align="center"
+          kicker="08 / Alignment & Eligibility"
           title={
             <>
               Who Should Join{' '}
@@ -33,38 +34,38 @@ export function WhoShouldJoin() {
         />
 
         {/* 4 Audience Profiles in an Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6">
           {targetAudiences.map((audience, index) => (
             <motion.div
               key={audience.title}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#F8F5F2] rounded-3xl p-8 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all duration-300 hover:shadow-md flex flex-col justify-between"
+              transition={{ duration: 0.4, delay: index * 0.08 }}
+              className="bg-[#F8F5F2] rounded-3xl p-5 sm:p-6 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all duration-300 hover:shadow-md flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="w-10 h-10 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center">
                     {iconMap[audience.icon]}
                   </div>
-                  <span className="text-xs uppercase tracking-widest text-[#7B2A7A] font-semibold">
+                  <span className="text-[11px] uppercase tracking-widest text-[#7B2A7A] font-semibold">
                     Profile 0{index + 1}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-2xl text-[#2A0932] font-semibold mb-3">
+                <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold mb-2">
                   {audience.title}
                 </h3>
 
-                <p className="text-sm text-[#6E6271] leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed mb-4">
                   {audience.description}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#E5DDD8] flex items-center justify-between">
+              <div className="pt-3 border-t border-[#E5DDD8] flex items-center justify-between">
                 <div className="flex items-center gap-2 text-xs font-semibold text-[#4B1458]">
-                  <CheckCircle2 size={15} className="text-[#D4AF6A]" />
+                  <CheckCircle2 size={14} className="text-[#D4AF6A]" />
                   <span>{audience.idealFor}</span>
                 </div>
               </div>
@@ -73,21 +74,21 @@ export function WhoShouldJoin() {
         </div>
 
         {/* Action Callout */}
-        <div className="mt-12 p-8 rounded-3xl bg-[#F8F5F2] border border-[#E5DDD8] flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center sm:text-left">
-            <h4 className="font-serif text-xl text-[#2A0932] font-medium">
+        <div className="mt-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#F8F5F2] border border-[#E5DDD8] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="space-y-0.5 text-center sm:text-left">
+            <h4 className="font-serif text-lg sm:text-xl text-[#2A0932] font-medium">
               Ready to evaluate your current preparation roadmap?
             </h4>
-            <p className="text-xs sm:text-sm text-[#6E6271]">
+            <p className="text-xs text-[#6E6271]">
               Book an initial diagnostic discussion with Jay Prakash Singh.
             </p>
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all shrink-0 hover:scale-105 active:scale-95"
           >
             <span>Request Diagnostic Session</span>
-            <ArrowRight size={14} />
+            <ArrowRight size={13} />
           </Link>
         </div>
       </Container>

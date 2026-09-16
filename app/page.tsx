@@ -3,8 +3,11 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/home/Hero'
 import { ImpactStrip } from '@/components/home/ImpactStrip'
+import { MeetTheMentor } from '@/components/home/MeetTheMentor'
+import { ProofOfExperience } from '@/components/home/ProofOfExperience'
 import { Philosophy } from '@/components/home/Philosophy'
 import { WhySarathii } from '@/components/home/WhySarathii'
+import { AnswerWritingTransformation } from '@/components/home/AnswerWritingTransformation'
 import { SarathiiMethod } from '@/components/home/SarathiiMethod'
 import { Experience } from '@/components/home/Experience'
 import { WhoShouldJoin } from '@/components/home/WhoShouldJoin'
@@ -19,8 +22,11 @@ export default function HomePage() {
       <main className="flex-grow">
         <Hero />
         <ImpactStrip />
+        <MeetTheMentor />
+        <ProofOfExperience />
         <Philosophy />
         <WhySarathii />
+        <AnswerWritingTransformation />
         <SarathiiMethod />
         <Experience />
         <WhoShouldJoin />

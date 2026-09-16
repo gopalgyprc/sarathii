@@ -173,6 +173,156 @@ export const articles: Article[] = [
       ],
     },
   },
+  {
+    slug: 'ethical-decision-making-under-pressure',
+    title: 'Ethical Decision-Making Under Bureaucratic Pressure: Mastering GS-4',
+    subtitle: 'Decoding constitutional morality, civil service integrity, and complex real-world case studies.',
+    category: 'Ethics',
+    author: 'Jay Prakash Singh',
+    authorRole: 'Founder & Chief Mentor, Sarathii',
+    date: '2026-01-20',
+    formattedDate: 'January 20, 2026',
+    readTime: '9 min read',
+    image: '/images/insight-ethics.jpg',
+    excerpt:
+      'Ethics in governance is not an abstract theoretical ideal; it is the practical courage to choose constitutional duty when compromise is expedient. Learn how to decode GS-4 case studies with judicial balance.',
+    content: {
+      intro:
+        'General Studies Paper IV (Ethics, Integrity, and Aptitude) remains the most misunderstood paper in the Civil Services Mains. Many candidates treat it as an academic philosophy exam, reciting Western deontological and utilitarian theories without anchoring them in Indian constitutional reality. But the commission evaluates something far more practical: your capacity to navigate moral dilemmas under acute political, administrative, and social pressure.',
+      sections: [
+        {
+          heading: 'Constitutional Morality as the Ultimate North Star',
+          paragraphs: [
+            'When an officer is confronted with conflicting loyalties—between executive directives, local political pressure, public sentiment, and statutory duty—the only unassailable anchor is Constitutional Morality.',
+            'In your GS-4 answers, ground every ethical dilemma in foundational constitutional values: Justice (social, economic, political), Equality before Law (Article 14), and Protection of Life and Dignity (Article 21). An answer anchored in constitutional jurisprudence carries ten times the weight of abstract moralizing.',
+          ],
+          callout: 'An ethical officer does not look for the easiest decision, nor the most popular one. They look for the constitutionally lawful decision executed with compassion.',
+        },
+        {
+          heading: 'The 5-Step Structural Framework for Case Studies',
+          paragraphs: [
+            'To score 130+ marks in GS-4, apply a standardized analytical framework to every 20-mark case study: 1) Identify all primary and secondary stakeholders with their competing interests; 2) Articulate the core ethical dilemmas (e.g., Efficiency vs. Equity, Procedural Compliance vs. Human Distress); 3) Evaluate 3 to 4 viable courses of action with objective pros and cons; 4) State your chosen final course of action with clear administrative justification; and 5) Propose long-term systemic safeguards to prevent recurrence.',
+            'This structured methodology immediately showcases to the examiner that you possess the methodical problem-solving mind of an administrative magistrate.',
+          ],
+        },
+        {
+          heading: 'Emotional Intelligence & Probity in Public Life',
+          paragraphs: [
+            'Probity is not mere absence of corruption; it is active dedication to institutional transparency and fiduciary responsibility.',
+            'Coupled with emotional intelligence, an administrator learns to remain unprovoked by provocative public protests while empathetically addressing the underlying genuine human grievances.',
+          ],
+        },
+      ],
+      conclusion:
+        'Ethical leadership is not an armor you put on for the examination; it is an internal standard you live by daily. Let your ethical answers reflect genuine conviction, intellectual rigor, and an unwavering commitment to public good.',
+      takeaways: [
+        'Ground moral judgments in constitutional articles and administrative jurisprudence.',
+        'Use the 5-step stakeholder-dilemma-evaluation framework for all case studies.',
+        'Balance strict adherence to the Rule of Law with genuine empathy for the vulnerable.',
+        'Provide concrete institutional safeguards alongside immediate executive actions.',
+      ],
+    },
+  },
+  {
+    slug: 'crisis-governance-public-policy',
+    title: 'From District to Secretariat: Navigating Crisis Governance & Public Policy',
+    subtitle: 'Firsthand lessons from five decades across administrative management, disaster relief, and national security.',
+    category: 'Leadership',
+    author: 'Jay Prakash Singh',
+    authorRole: 'Founder & Chief Mentor, Sarathii',
+    date: '2026-01-12',
+    formattedDate: 'January 12, 2026',
+    readTime: '10 min read',
+    image: '/images/insight-governance.jpg',
+    excerpt:
+      'When an unexpected administrative crisis strikes, the standard operating manual rarely suffices. True governance requires rapid field synthesis, inter-departmental trust, and calm decisive leadership.',
+    content: {
+      intro:
+        'Over my five decades in public governance—leading district administrations during natural calamities, formulating state industrial policies, and managing judicial dispute resolutions—one truth stood out: governance is tested not during tranquil times, but in the crucible of sudden, high-stakes crises. For civil servants and policy architects, mastering crisis leadership is the hallmark of genuine statesmanship.',
+      sections: [
+        {
+          heading: 'The Incident Command Architecture in Frontline Administration',
+          paragraphs: [
+            'During a flood, industrial disaster, or public order challenge, information in the initial hours is fragmented, distorted, and panic-driven. The first duty of the District Magistrate is establishing single-point operational clarity.',
+            'By creating a 24/7 centralized control room, delegating clear micro-jurisdictions to Sub-Divisional Magistrates and sector officers, and ensuring transparent communication with the media, administrative panic is converted into coordinated, life-saving action.',
+          ],
+          callout: 'In moments of crisis, calm communication from the leadership is just as vital as physical logistical deployment.',
+        },
+        {
+          heading: 'Balancing Immediate Relief with Structural Rehabilitation',
+          paragraphs: [
+            'A common governance failure is exhausting all administrative energy in immediate fire-fighting while neglecting long-term systemic rehabilitation.',
+            'Strategic public administration demands a parallel two-track architecture: Track A manages emergency sustenance and medical stabilization, while Track B simultaneously drafts the economic reconstruction blueprint, insurance indemnification, and disaster-resilient infrastructure.',
+          ],
+        },
+        {
+          heading: 'Inter-Institutional Synergy & The Rule of Trust',
+          paragraphs: [
+            'No major public challenge can be resolved by the bureaucracy in isolation. Seamless coordination between the Civil Administration, Police, Armed Forces, Panchayati Raj Institutions, and Civil Society Organizations requires deep institutional trust built before the crisis occurs.',
+            'An effective leader inspires collaboration through humility, respect for domain expertise, and clear shared purpose.',
+          ],
+        },
+      ],
+      conclusion:
+        'Whether in the examination hall drafting policy solutions or on the ground managing a district, approach governance with systemic clarity, moral resolve, and an unwavering commitment to the last citizen in the queue.',
+      takeaways: [
+        'Establish single-point command and verification channels in the opening hours of a crisis.',
+        'Run parallel tracks for immediate humanitarian relief and long-term systemic rehabilitation.',
+        'Foster proactive inter-agency trust with armed forces, police, and civil society.',
+        'Communicate with transparent, reassuring authority to combat misinformation.',
+      ],
+    },
+  },
+  {
+    slug: 'mastering-upsc-personality-test',
+    title: 'Mastering the UPSC Personality Test: Intellectual Honesty & Composure',
+    subtitle: 'Why the final interview is a test of character, authenticity, and psychological poise rather than factual recall.',
+    category: 'Preparation',
+    author: 'Jay Prakash Singh',
+    authorRole: 'Founder & Chief Mentor, Sarathii',
+    date: '2026-01-05',
+    formattedDate: 'January 5, 2026',
+    readTime: '8 min read',
+    image: '/images/insight-interview.jpg',
+    excerpt:
+      'The UPSC interview board does not seek walking encyclopedias; they seek future leaders endowed with humility, analytical balance, and unshakeable moral backbone. Here is how to present your genuine self.',
+    content: {
+      intro:
+        'By the time a candidate reaches the Dholpur House premises for the UPSC Personality Test, their knowledge base has already been thoroughly certified by the grueling 1750-mark Mains examination. The 275-mark Interview is designed to assess something far deeper: your intellectual caliber, mental alertness, critical powers of assimilation, balance of judgment, and social cohesion.',
+      sections: [
+        {
+          heading: 'The Virtue of Saying "I Do Not Know, Sir"',
+          paragraphs: [
+            'The biggest blunder candidates commit is guessing factual answers or attempting to bluff an august board comprised of seasoned ambassadors, retired generals, and senior administrators with four decades of experience.',
+            'Saying politely, "I am unaware of this specific data point, sir, but I will read up on it," demonstrates intellectual honesty, humility, and high emotional maturity—qualities that instantly earn respect.',
+          ],
+          callout: 'The board is not testing the limits of your memory; they are probing the integrity of your character under gentle pressure.',
+        },
+        {
+          heading: 'Articulating Balanced Stands on Polarizing National Issues',
+          paragraphs: [
+            'When asked about contentious issues—such as uniform civil codes, federal fiscal disputes, or environmental vs. industrial growth tradeoffs—never adopt rigid ideological extremes.',
+            'An administrative response acknowledges multiple valid perspectives, evaluates constitutional provisions, identifies structural challenges, and proposes a balanced, practical pathway that honors public welfare.',
+          ],
+        },
+        {
+          heading: 'Non-Verbal Poise and Authentic Presence',
+          paragraphs: [
+            'Your posture, eye contact, steady voice modulation, and listening patience convey more information to the board than the exact words chosen.',
+            'Enter the room with genuine gratitude and quiet confidence, treating the interview not as an interrogation, but as a rich intellectual dialogue between junior and senior colleagues in the service of the nation.',
+          ],
+        },
+      ],
+      conclusion:
+        'The personality test is the culmination of your tapasya. Walk into the board room with dignity, humility, and the quiet resolve of one dedicated to lifelong national service.',
+      takeaways: [
+        'Prioritize intellectual honesty over artificial guessing or rehearsed jargon.',
+        'Structure verbal responses with clarity: premise, multi-dimensional analysis, and constructive solution.',
+        'Maintain relaxed eye contact and genuine listening respect with all board members.',
+        'Anchor every opinion in constitutional values and national developmental goals.',
+      ],
+    },
+  },
 ]
 
 export function getArticleBySlug(slug: string): Article | undefined {

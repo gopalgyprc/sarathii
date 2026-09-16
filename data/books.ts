@@ -35,7 +35,7 @@ export const featuredBook: BookDetail = {
   englishSubtitle: 'In the Forest and in Life',
   authorHindi: 'जे. पी. सिंह',
   authorEnglish: 'J. P. Singh (Former IAS, Defence & Judicial Member)',
-  coverImage: '/images/book-siyaram-cover.jpg',
+  coverImage: '/images/book-cover.webp',
   summary:
     'A profound civilizational treatise that explores the exile of Shri Ram and Sita not merely as a mythological narrative, but as an eternal blueprint for ethical leadership, steadfast composure during crises, and purposeful living.',
   extendedSummary: [

@@ -21,7 +21,19 @@ export interface MethodStep {
   name: string
   tagline: string
   description: string
+  objective: string
+  action: string
+  mindset: string
+  outcome: string
   details: string[]
+}
+
+export interface AnswerWritingStep {
+  number: string
+  title: string
+  subtitle: string
+  description: string
+  examinerImpact: string
 }
 
 export interface TargetAudience {
@@ -174,12 +186,54 @@ export const whatSarathiiOffers: PillarOffer[] = [
   },
 ]
 
+export const answerWritingTransformationSteps: AnswerWritingStep[] = [
+  {
+    number: '01',
+    title: 'Raw Knowledge',
+    subtitle: 'From Information to Understanding',
+    description: 'Candidates accumulate facts, articles, and statistics. But rote recall alone leads to unstructured data dumping that fails to engage the examiner.',
+    examinerImpact: 'Overwhelms the page without answering the core demand of the question.',
+  },
+  {
+    number: '02',
+    title: 'Structured Thinking',
+    subtitle: 'Architectural Framing',
+    description: 'Deconstruct the exact directive (Discuss, Critically Analyse, Evaluate). Frame the answer into clear thematic pillars and sub-dimensions.',
+    examinerImpact: 'Signals immediate cognitive discipline and logical organization.',
+  },
+  {
+    number: '03',
+    title: 'Clear Argument',
+    subtitle: 'Coherent Sequential Logic',
+    description: 'Present ideas in seamless inductive and deductive sequences. Eliminate semantic fluff and redundant filler words.',
+    examinerImpact: 'Allows the examiner to absorb your reasoning in seconds with zero friction.',
+  },
+  {
+    number: '04',
+    title: 'Balanced Analysis',
+    subtitle: 'Judicial Neutrality & Trade-offs',
+    description: 'Weigh multi-stakeholder impacts, fiscal constraints, and constitutional morality with the scrupulous balance of a judge.',
+    examinerImpact: 'Demonstrates executive maturity and balanced administrative temper.',
+  },
+  {
+    number: '05',
+    title: 'Precise Answer',
+    subtitle: 'Actionable Governance Conclusion',
+    description: 'Conclude with a forward-looking, constitutionally anchored policy solution that reflects visionary public leadership.',
+    examinerImpact: 'Secures top-bracket marks and leaves a lasting impression of officer readiness.',
+  },
+]
+
 export const sarathiiMethodSteps: MethodStep[] = [
   {
     step: '01',
     name: 'Assess',
     tagline: 'Understand Capabilities & Gaps',
     description: 'A comprehensive diagnostic evaluation of your current knowledge base, answer-writing maturity, analytical reasoning, and psychological readiness.',
+    objective: 'Understand current strengths, weaknesses, blind spots, and preparation gaps.',
+    action: 'Diagnostic baseline evaluation of answers, reading habits, and optional subject alignment.',
+    mindset: 'Radical intellectual honesty and curiosity for improvement.',
+    outcome: 'A clear baseline assessment matrix mapping exact areas for breakthrough.',
     details: [
       'Diagnostic baseline answer-writing evaluation',
       'Identification of blind spots and cognitive biases',
@@ -191,6 +245,10 @@ export const sarathiiMethodSteps: MethodStep[] = [
     name: 'Strategise',
     tagline: 'Customised Roadmap for Success',
     description: 'Design a bespoke, high-yield preparation blueprint tailored to your timeline, learning velocity, and target examination cycle.',
+    objective: 'Build a realistic, high-yield roadmap eliminating source hoarding and low-ROI materials.',
+    action: 'Micro and macro milestone mapping across Prelims, Mains, and Essay syllabi.',
+    mindset: 'Strategic focus — courageously deciding what NOT to study.',
+    outcome: 'A calibrated month-by-month execution blueprint designed for your timeline.',
     details: [
       'Month-by-month micro and macro milestone mapping',
       'High-yield source curation (eliminating low-ROI material)',
@@ -202,6 +260,10 @@ export const sarathiiMethodSteps: MethodStep[] = [
     name: 'Implement',
     tagline: 'Discipline & Daily Execution',
     description: 'Execute the strategy with relentless discipline, active learning protocols, and structured daily answer-writing routines.',
+    objective: 'Execute consistently with military precision and sustained daily rhythm.',
+    action: 'Structured daily writing, thematic note distillation, and weekly milestone check-ins.',
+    mindset: 'Process fidelity over result anxiety.',
+    outcome: 'Deep syllabus mastery transformed into structured, high-retention memory.',
     details: [
       'Structured daily writing and analytical synthesis',
       'Core syllabus completion with administrative depth',
@@ -213,6 +275,10 @@ export const sarathiiMethodSteps: MethodStep[] = [
     name: 'Refine',
     tagline: 'Honest Feedback & Iteration',
     description: 'Continuous micro-corrections through rigorous, line-by-line answer critique, simulated mock tests, and cognitive refinement.',
+    objective: 'Identify micro-weaknesses and polish expression to top-bracket standards.',
+    action: 'Line-by-line answer structural critique, speed optimization, and mock stress tests.',
+    mindset: 'Constructive receptivity to critique; relentless pursuit of precision.',
+    outcome: 'Crisp, structured, and luminous answers produced effortlessly under timed conditions.',
     details: [
       'Line-by-line answer structural critique',
       'Speed and presentation optimization under timed conditions',
@@ -224,6 +290,10 @@ export const sarathiiMethodSteps: MethodStep[] = [
     name: 'Achieve',
     tagline: 'Confident Execution & Rank',
     description: 'Enter the examination hall and the UPSC interview board with unshakable composure, intellectual clarity, and executive presence.',
+    objective: 'Perform with calm confidence, executive authority, and clarity.',
+    action: 'Final peak simulation, personality test anchoring, and strategic revision.',
+    mindset: 'Stoic equanimity rooted in purposeful public service.',
+    outcome: 'Examination success and seamless transition into responsible administrative leadership.',
     details: [
       'Peak psychological and physical performance state',
       'Fluid execution across GS, Essay, and Optional papers',

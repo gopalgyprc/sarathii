@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
+import { CustomCursor } from '@/components/ui/CustomCursor'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -129,6 +130,15 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: '/favicon.ico',
+        sizes: '32x32',
+      },
+      {
+        url: '/icon.png',
+        type: 'image/png',
+        sizes: '512x512',
+      },
+      {
         url: '/icon-light-32x32.png',
         media: '(prefers-color-scheme: light)',
       },
@@ -136,12 +146,9 @@ export const metadata: Metadata = {
         url: '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
     ],
     apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
   },
 }
 
@@ -160,6 +167,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${poppins.variable} scroll-smooth`}>
       <body className="font-sans antialiased bg-[#FFFDF9] text-[#1F1722] selection:bg-[#4B1458] selection:text-[#FFFDF9]">
+        <CustomCursor />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

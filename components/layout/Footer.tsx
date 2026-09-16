@@ -15,24 +15,24 @@ import { Container } from '@/components/ui/Container'
 
 export function Footer() {
   return (
-    <footer className="bg-[#2A0932] text-[#FFFDF9] pt-16 md:pt-20 pb-8 border-t border-[#D4AF6A]/20 relative overflow-hidden bg-pattern-dark">
+    <footer className="bg-[#2A0932] text-[#FFFDF9] pt-10 md:pt-14 pb-8 border-t border-[#D4AF6A]/20 relative overflow-hidden bg-pattern-dark">
       {/* Subtle decorative glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#7B2A7A]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-80 h-80 bg-[#D4AF6A]/10 rounded-full blur-3xl pointer-events-none" />
 
       <Container>
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-14 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-8 border-b border-white/10">
           {/* Col 1: Brand & Philosophy (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="inline-block focus:outline-none">
-              <div className="relative w-28 h-16 bg-white/95 rounded-lg p-2 shadow-md">
+            <Link href="/" className="inline-block focus:outline-none group">
+              <div className="relative w-28 h-16 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={siteConfig.logo}
                   alt="Sarathii Logo"
                   fill
                   sizes="112px"
-                  className="object-contain p-1"
+                  className="object-contain"
                 />
               </div>
             </Link>
@@ -49,11 +49,11 @@ export function Footer() {
             {/* Social Links */}
             <div className="pt-2 flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/jay-prakash-singh-87381a66/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn Profile of Jay Prakash Singh"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z" />

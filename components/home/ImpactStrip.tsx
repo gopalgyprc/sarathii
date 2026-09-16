@@ -91,7 +91,7 @@ function AnimatedStatNumber({
 
 export function ImpactStrip() {
   return (
-    <section className="bg-gradient-to-b from-[#350C3E] via-[#2A0932] to-[#1F0724] text-[#FFFDF9] py-14 sm:py-20 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-[#350C3E] via-[#2A0932] to-[#1F0724] text-[#FFFDF9] py-8 sm:py-12 relative overflow-hidden">
       {/* Decorative Gold Border Dividers */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF6A]/40 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF6A]/30 to-transparent" />

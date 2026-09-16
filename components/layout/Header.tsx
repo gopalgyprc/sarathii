@@ -33,8 +33,8 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'glass-nav py-3 border-b border-[#E5DDD8]/80 shadow-[0_4px_20px_rgba(42,9,50,0.04)]'
-            : 'bg-transparent py-5 sm:py-6'
+            ? 'bg-[#1A041E]/95 backdrop-blur-xl py-3 border-b border-[#D4AF6A]/30 shadow-[0_8px_32px_rgba(0,0,0,0.35)]'
+            : 'bg-gradient-to-b from-black/40 via-black/15 to-transparent py-4 sm:py-5'
         }`}
       >
         <Container>
@@ -42,22 +42,22 @@ export function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7B2A7A] rounded-lg p-1"
+              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF6A] rounded-xl p-1 transition-transform duration-300 group-hover:scale-105"
               aria-label="Sarathii Home"
             >
-              <div className="relative w-20 sm:w-24 h-12 sm:h-14 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative w-20 sm:w-24 h-12 sm:h-14 transition-transform duration-300">
                 <Image
                   src={siteConfig.logo}
                   alt="Sarathii Logo"
                   fill
                   sizes="96px"
-                  className="object-contain"
+                  className="object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
                   priority
                 />
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Clean, Sharp, Luminous Typography */}
             <nav
               className="hidden md:flex items-center gap-7 lg:gap-10"
               aria-label="Main Navigation"
@@ -72,17 +72,17 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`relative text-xs lg:text-sm uppercase tracking-[0.14em] font-medium transition-colors duration-200 py-1 ${
+                    className={`relative text-xs lg:text-sm uppercase tracking-[0.14em] transition-colors duration-200 py-1.5 ${
                       isActive
-                        ? 'text-[#4B1458] font-bold'
-                        : 'text-[#6E6271] hover:text-[#4B1458]'
+                        ? 'text-[#E6CFA5] font-bold'
+                        : 'text-[#FFFDF9]/85 hover:text-[#E6CFA5] font-medium'
                     }`}
                   >
                     {item.label}
                     {isActive && (
                       <motion.span
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#D4AF6A]"
+                        className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-[#D4AF6A]"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -91,11 +91,11 @@ export function Header() {
               })}
             </nav>
 
-            {/* Header Right Action */}
+            {/* Header Right Action - Gold Luminous Button */}
             <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs uppercase tracking-[0.12em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-[0_4px_14px_rgba(75,20,88,0.25)] transition-all duration-300 hover:shadow-[0_6px_20px_rgba(75,20,88,0.35)] hover:-translate-y-0.5 active:translate-y-0"
+                className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] hover:text-[#1A041E] shadow-[0_4px_18px_rgba(212,175,106,0.35)] border border-[#D4AF6A]/50 transition-all duration-300 hover:shadow-[0_6px_24px_rgba(212,175,106,0.5)] hover:scale-105 active:scale-95"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowRight
@@ -108,11 +108,11 @@ export function Header() {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2.5 rounded-full text-[#4B1458] hover:bg-[#F8F5F2] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7B2A7A]"
+              className="md:hidden p-2.5 rounded-full text-[#E6CFA5] hover:text-white bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF6A]"
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </Container>
@@ -126,10 +126,10 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 bg-[#FFFDF9] pt-24 pb-10 px-6 flex flex-col justify-between md:hidden overflow-y-auto"
+            className="fixed inset-0 z-40 bg-gradient-to-b from-[#1A041E] via-[#2A0932] to-[#140218] text-white pt-24 pb-10 px-6 flex flex-col justify-between md:hidden overflow-y-auto border-b border-[#D4AF6A]/30"
           >
             <div className="space-y-6">
-              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold border-b border-[#E5DDD8] pb-3">
+              <div className="text-xs uppercase tracking-[0.2em] text-[#D4AF6A] font-semibold border-b border-white/15 pb-3">
                 Navigation
               </div>
               <nav className="flex flex-col space-y-4">
@@ -149,16 +149,16 @@ export function Header() {
                       <Link
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`flex items-center justify-between py-2 text-xl font-serif tracking-tight ${
+                        className={`flex items-center justify-between py-2 text-xl font-serif tracking-tight transition-colors ${
                           isActive
-                            ? 'text-[#4B1458] font-bold'
-                            : 'text-[#1F1722] hover:text-[#4B1458]'
+                            ? 'text-[#E6CFA5] font-bold'
+                            : 'text-white/85 hover:text-[#E6CFA5]'
                         }`}
                       >
                         <span>{item.label}</span>
                         <ArrowUpRight
                           size={18}
-                          className={isActive ? 'text-[#D4AF6A]' : 'text-[#6E6271]'}
+                          className={isActive ? 'text-[#D4AF6A]' : 'text-white/40'}
                         />
                       </Link>
                     </motion.div>
@@ -167,19 +167,19 @@ export function Header() {
               </nav>
             </div>
 
-            <div className="pt-8 border-t border-[#E5DDD8] space-y-6">
+            <div className="pt-8 border-t border-white/15 space-y-6">
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center gap-3 py-3.5 rounded-full text-sm uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] shadow-lg shadow-[#4B1458]/20"
+                className="w-full flex items-center justify-center gap-3 py-3.5 rounded-full text-xs uppercase tracking-[0.16em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-white shadow-xl shadow-black/40 transition-all"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowRight size={16} />
               </Link>
 
-              <div className="text-xs text-center text-[#6E6271] space-y-1">
+              <div className="text-xs text-center text-[#E5DDD8]/80 space-y-1">
                 <p>Sector-75, Noida, Uttar Pradesh</p>
-                <p className="text-[#4B1458] font-medium">{siteConfig.contact.email}</p>
+                <p className="text-[#E6CFA5] font-medium">{siteConfig.contact.email}</p>
               </div>
             </div>
           </motion.div>

@@ -13,10 +13,11 @@ export function BookShowcase() {
   const [prastavanaOpen, setPrastavanaOpen] = useState(false)
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F8F5F2] relative overflow-hidden bg-pattern-subtle">
+    <section className="py-10 lg:py-14 bg-[#F8F5F2] relative overflow-hidden bg-pattern-subtle">
       <Container>
         <SectionHeading
-          kicker="06 / Literary & Civilizational Work"
+          align="center"
+          kicker="09 / Literary & Civilizational Work"
           title={
             <>
               Author & Scholar:{' '}
@@ -29,55 +30,52 @@ export function BookShowcase() {
         />
 
         {/* 3D Book Showcase Composition */}
-        <div className="mt-12 bg-[#2A0932] text-[#FFFDF9] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#D4AF6A]/30 relative overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div className="mt-6 bg-[#2A0932] text-[#FFFDF9] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#D4AF6A]/30 relative overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Subtle Ambient Glow */}
           <div className="absolute top-0 right-10 w-96 h-96 bg-[#7B2A7A]/25 rounded-full blur-3xl pointer-events-none" />
 
           {/* Left Column: 3D Book Display (5 cols) */}
           <div className="lg:col-span-5 flex justify-center book-container">
             <motion.div
-              whileHover={{ rotateY: -10, rotateX: 5, y: -6 }}
+              whileHover={{ rotateY: -8, rotateX: 4, y: -6 }}
               transition={{ duration: 0.4 }}
-              className="relative w-64 sm:w-72 aspect-[3/4.2] rounded-2xl overflow-hidden border-2 border-[#D4AF6A] shadow-2xl book-card-3d bg-[#1A051F]"
+              className="relative w-56 sm:w-64 aspect-[2/3] rounded-2xl overflow-hidden border-2 border-[#D4AF6A] shadow-2xl book-card-3d bg-[#1A051F]"
             >
               <Image
                 src={featuredBook.coverImage}
                 alt={featuredBook.englishTitle}
                 fill
                 sizes="(max-width: 768px) 100vw, 300px"
-                className="object-cover"
+                className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4 text-center z-10">
-                <span className="text-xs uppercase tracking-widest text-[#E6CFA5] font-semibold bg-[#2A0932]/80 backdrop-blur-md px-3 py-1 rounded-full border border-[#D4AF6A]/30">
-                  {featuredBook.authorHindi}
-                </span>
-              </div>
+              {/* Subtle book spine edge shadow & gloss highlight */}
+              <div className="absolute inset-y-0 left-0 w-3.5 bg-gradient-to-r from-black/40 via-white/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-2xl pointer-events-none" />
             </motion.div>
           </div>
 
           {/* Right Column: Editorial Synopsis & Actions (7 cols) */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#E6CFA5] text-xs uppercase tracking-widest font-semibold">
+          <div className="lg:col-span-7 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 text-[#E6CFA5] text-[11px] uppercase tracking-widest font-semibold">
               <Sparkles size={12} className="text-[#D4AF6A]" />
               <span>Civilizational Treatise on Leadership</span>
             </div>
 
-            <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#FFFDF9] font-normal leading-tight">
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#FFFDF9] font-normal leading-tight">
               &ldquo;{featuredBook.hindiTitle}&rdquo;
             </h3>
 
-            <p className="text-sm sm:text-base text-[#E5DDD8]/90 leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-[#E5DDD8]/90 leading-relaxed font-normal">
               {featuredBook.summary}
             </p>
 
             {/* Key Book Themes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
               {featuredBook.themes.slice(0, 2).map((theme) => (
                 <div
                   key={theme.title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-1"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-3.5 space-y-1"
                 >
                   <div className="text-xs font-serif text-[#E6CFA5] font-semibold">
                     {theme.title}
@@ -90,21 +88,21 @@ export function BookShowcase() {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
                 onClick={() => setPrastavanaOpen(true)}
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all shadow-md"
               >
-                <BookOpen size={15} />
+                <BookOpen size={14} />
                 <span>Read Prastavana (Preface)</span>
               </button>
 
               <Link
                 href="/books"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all"
               >
                 <span>Full Book Details</span>
-                <ArrowRight size={14} />
+                <ArrowRight size={13} />
               </Link>
             </div>
           </div>

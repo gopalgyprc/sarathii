@@ -67,44 +67,49 @@ export default async function SingleArticlePage({ params }: PageProps) {
     <div className="flex flex-col min-h-screen bg-[#FFFDF9]">
       <Header />
 
-      <main className="flex-grow pt-28 sm:pt-36">
-        {/* Article Header Section */}
-        <article className="pb-20">
-          <Container size="sm">
+      <main className="flex-grow">
+        {/* Article Dark Plum Hero Section */}
+        <section className="relative pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-20 bg-[#1A041E] text-white border-b border-[#D4AF6A]/30 overflow-hidden">
+          {/* Ambient Lighting */}
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#7B2A7A]/25 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-1/4 w-[450px] h-[450px] bg-[#D4AF6A]/15 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute inset-0 bg-pattern-dark opacity-40 pointer-events-none" />
+
+          <Container size="sm" className="relative z-10">
             {/* Back Button */}
-            <div className="pt-8 pb-6">
+            <div className="pb-6">
               <Link
                 href="/insights"
-                className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#6E6271] hover:text-[#4B1458] transition-colors"
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-[#E6CFA5] hover:text-white transition-colors"
               >
                 <ArrowLeft size={14} />
                 <span>Back to All Insights</span>
               </Link>
             </div>
 
-            {/* Meta Tags */}
+            {/* Meta Tags & Header */}
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4B1458]/10 text-xs uppercase tracking-widest font-bold text-[#7B2A7A]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#2A0932]/90 border border-[#D4AF6A]/40 text-xs uppercase tracking-widest font-bold text-[#E6CFA5]">
                 <span>{article.category}</span>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#2A0932] font-normal leading-[1.1] tracking-tight">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#FFFDF9] font-normal leading-[1.1] tracking-tight">
                 {article.title}
               </h1>
 
-              <p className="font-serif text-lg sm:text-xl italic text-[#6E6271] leading-relaxed">
+              <p className="font-serif text-lg sm:text-xl italic text-[#E5DDD8]/90 leading-relaxed">
                 {article.subtitle}
               </p>
 
               {/* Author and Date Bar */}
-              <div className="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-[#E5DDD8] text-xs sm:text-sm text-[#6E6271]">
+              <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/15 text-xs sm:text-sm text-[#E5DDD8]">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#4B1458] text-[#E6CFA5] font-serif flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 rounded-full bg-[#D4AF6A] text-[#2A0932] font-serif flex items-center justify-center font-bold">
                     JPS
                   </div>
                   <div>
-                    <div className="font-semibold text-[#1F1722]">{article.author}</div>
-                    <div className="text-[11px] text-[#6E6271]">{article.authorRole}</div>
+                    <div className="font-semibold text-white">{article.author}</div>
+                    <div className="text-[11px] text-[#E6CFA5]">{article.authorRole}</div>
                   </div>
                 </div>
 
@@ -121,6 +126,14 @@ export default async function SingleArticlePage({ params }: PageProps) {
                 </div>
               </div>
             </div>
+          </Container>
+
+          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF6A]/60 to-transparent" />
+        </section>
+
+        {/* Article Body Section */}
+        <article className="py-10 lg:py-14">
+          <Container size="sm">
 
             {/* Featured Image */}
             <div className="my-8 relative w-full h-72 sm:h-96 md:h-[440px] rounded-3xl overflow-hidden shadow-lg bg-[#E8DCCF]">
@@ -206,7 +219,7 @@ export default async function SingleArticlePage({ params }: PageProps) {
                 <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed">
                   Founder & Chief Mentor at Sarathii. Former member of the Indian Administrative Service, Armed Forces, and Judicial Tribunals. Author of &ldquo;जिन राहों पर सियाराम चले&rdquo;.
                 </p>
-                <div className="pt-2">
+                <div className="pt-2 flex items-center gap-4">
                   <Link
                     href="/about"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4B1458] hover:text-[#7B2A7A]"
@@ -214,6 +227,18 @@ export default async function SingleArticlePage({ params }: PageProps) {
                     <span>Read full biography</span>
                     <ArrowRight size={12} />
                   </Link>
+                  <span className="text-gray-300">•</span>
+                  <a
+                    href="https://www.linkedin.com/in/jay-prakash-singh-87381a66/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0077B5] hover:text-[#005582]"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z" />
+                    </svg>
+                    <span>LinkedIn Profile</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -221,13 +246,13 @@ export default async function SingleArticlePage({ params }: PageProps) {
         </article>
 
         {/* Related Articles Strip */}
-        <section className="py-16 bg-[#F8F5F2] border-t border-[#E5DDD8]">
+        <section className="py-10 lg:py-12 bg-[#F8F5F2] border-t border-[#E5DDD8]">
           <Container>
-            <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-6">
+            <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-4">
               More Insights
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {relatedArticles.slice(0, 2).map((rel) => (
                 <div
                   key={rel.slug}
