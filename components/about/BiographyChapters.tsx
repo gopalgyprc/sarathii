@@ -37,7 +37,7 @@ export function BiographyChapters() {
       <Container>
         <SectionHeading
           align="center"
-          kicker="Documentary Biography"
+          kicker="Sarathii Provenance · Biography Chapters"
           title={
             <>
               Six Chapters of{' '}
@@ -46,7 +46,7 @@ export function BiographyChapters() {
               </span>
             </>
           }
-          description="Trace the formative journey of Jay Prakash Singh across five decades — from rural resilience to national command, systemic civil governance, judicial tribunals, and civilizational authorship."
+          description="Trace how five decades of public leadership by Sarathii's Founder & Chief Mentor, Jay Prakash Singh, forged the foundational principles of the Sarathii Method."
         />
 
         {/* Chapter Selection Bar */}
@@ -64,7 +64,7 @@ export function BiographyChapters() {
                 }`}
                 data-cursor="read"
               >
-                <span className={`text-[10px] uppercase font-bold tracking-wider ${isSelected ? 'text-[#E6CFA5]' : 'text-[#7B2A7A]'}`}>
+                <span className={`text-xs uppercase font-bold tracking-wider ${isSelected ? 'text-[#E6CFA5]' : 'text-[#7B2A7A]'}`}>
                   Ch. {ch.number}
                 </span>
                 <span className="hidden sm:inline">· {ch.title}</span>
@@ -96,7 +96,7 @@ export function BiographyChapters() {
                     {chapter.number}
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-[#7B2A7A] block">
+                    <span className="text-xs uppercase tracking-widest font-bold text-[#7B2A7A] block">
                       Chapter {chapter.number} · {chapter.period}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-serif text-[#2A0932] font-semibold mt-0.5">
@@ -117,8 +117,8 @@ export function BiographyChapters() {
                 <p className="font-serif italic text-base sm:text-xl text-[#FFFDF9] leading-relaxed">
                   &ldquo;{chapter.quote}&rdquo;
                 </p>
-                <span className="text-[11px] uppercase tracking-widest text-[#E6CFA5] font-bold block mt-3">
-                  — Jay Prakash Singh · Founder, Sarathii
+                <span className="text-xs uppercase tracking-widest text-[#E6CFA5] font-bold block mt-3">
+                  — Jay Prakash Singh · Founder & Chief Mentor, Sarathii
                 </span>
               </div>
 
@@ -135,7 +135,7 @@ export function BiographyChapters() {
                   <Award size={16} className="text-[#D4AF6A]" />
                   <span>Strategic Takeaway for Future Civil Servants</span>
                 </div>
-                <p className="text-xs sm:text-sm text-[#2A0932] font-semibold leading-relaxed">
+                <p className="text-sm text-[#2A0932] font-semibold leading-relaxed">
                   {chapter.takeaway}
                 </p>
               </div>

@@ -169,15 +169,15 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
                 {/* Author attribution & CTA */}
                 <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#D4AF6A] text-[#2A0932] font-serif font-bold text-sm flex items-center justify-center shadow-inner">
+                    <div className="w-11 h-11 rounded-full bg-[#D4AF6A] text-[#2A0932] font-serif font-bold text-sm flex items-center justify-center shadow-inner">
                       JPS
                     </div>
                     <div>
-                      <div className="text-xs font-semibold text-white">
+                      <div className="text-sm font-semibold text-white">
                         {featuredArticle.author}
                       </div>
-                      <div className="text-[11px] text-[#D4AF6A]/80">
-                        {featuredArticle.authorRole}
+                      <div className="text-xs text-[#E6CFA5]/90 font-medium">
+                        Founder & Chief Mentor, Sarathii
                       </div>
                     </div>
                   </div>
@@ -201,13 +201,13 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
         <Container>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-[#E5DDD8]">
             <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-1">
+              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-1">
                 02 / Curated Monograph Archive
               </div>
               <h2 className="font-serif text-3xl sm:text-4xl text-[#2A0932] font-normal">
                 All Essays & Strategic Notes
               </h2>
-              <p className="text-xs sm:text-sm text-[#6E6271] mt-1 max-w-xl">
+              <p className="text-sm text-[#6E6271] mt-1 max-w-xl">
                 Filter by core administrative discipline or search across strategic themes.
               </p>
             </div>
@@ -253,7 +253,7 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
                 >
                   <span>{cat}</span>
                   <span
-                    className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                    className={`text-xs px-2 py-0.5 rounded-full ${
                       isActive
                         ? 'bg-[#D4AF6A] text-[#2A0932] font-bold'
                         : 'bg-[#E5DDD8] text-[#6E6271]'
@@ -298,7 +298,7 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
                         {/* Category Badge */}
                         <div className="absolute top-4 left-4">
                           <span
-                            className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border backdrop-blur-md shadow-sm ${getCategoryBadgeClass(
+                            className={`px-3 py-1 rounded-full text-xs uppercase tracking-widest font-bold border backdrop-blur-md shadow-sm ${getCategoryBadgeClass(
                               article.category
                             )} bg-white/95`}
                           >
@@ -307,15 +307,15 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
                         </div>
 
                         {/* Reading Time Pill */}
-                        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-[#E6CFA5] font-medium flex items-center gap-1 border border-white/10">
-                          <Clock size={11} />
+                        <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-xs text-[#E6CFA5] font-medium flex items-center gap-1 border border-white/10">
+                          <Clock size={12} />
                           <span>{article.readTime}</span>
                         </div>
                       </div>
 
                       {/* Card Body */}
                       <div className="p-6 sm:p-7 space-y-3">
-                        <div className="text-[11px] text-[#7B2A7A] font-semibold uppercase tracking-wider">
+                        <div className="text-xs text-[#7B2A7A] font-bold uppercase tracking-wider">
                           {article.formattedDate}
                         </div>
 
@@ -325,7 +325,7 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
                           </Link>
                         </h3>
 
-                        <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed line-clamp-3">
+                        <p className="text-sm text-[#5D5060] leading-relaxed line-clamp-3">
                           {article.excerpt}
                         </p>
                       </div>
@@ -333,7 +333,7 @@ export function InsightsExplorer({ articles }: InsightsExplorerProps) {
 
                     {/* Card Footer */}
                     <div className="px-6 sm:px-7 pb-6 pt-2 border-t border-[#EAE4DD] flex items-center justify-between">
-                      <span className="text-[11px] font-medium text-[#6E6271]">
+                      <span className="text-xs font-semibold text-[#4B1458]">
                         By {article.author}
                       </span>
                       <Link

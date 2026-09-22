@@ -42,16 +42,16 @@ export function MeetTheMentor() {
         {/* Section Header */}
         <SectionHeading
           align="center"
-          kicker="01 / The Journey of the Charioteer"
+          kicker="05 / The Guidance Behind Sarathii"
           title={
             <>
-              Meet Your Mentor:{' '}
+              Founder &amp; Chief Mentor:{' '}
               <span className="font-serif italic font-normal text-[#7B2A7A]">
                 Jay Prakash Singh
               </span>
             </>
           }
-          description="A rare confluence of tactical armed forces discipline, senior civil administrative leadership, judicial tribunal integrity, and classical civilizational authorship."
+          description="The Sarathii Method is anchored in the lived experience of Jay Prakash Singh — a rare confluence of tactical armed forces discipline, senior civil administrative leadership, judicial tribunal integrity, and classical civilizational authorship."
         />
 
         {/* 5-Stage Visual Timeline Stepper */}
@@ -76,7 +76,7 @@ export function MeetTheMentor() {
                 <button
                   key={step.number}
                   onClick={() => setActiveStep(index)}
-                  className={`group p-3.5 sm:p-4 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between ${
+                  className={`group p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between ${
                     isActive
                       ? 'bg-[#4B1458] text-white border-[#4B1458] shadow-lg shadow-[#4B1458]/20 -translate-y-1 ring-2 ring-[#D4AF6A]/50'
                       : 'bg-[#FBF8F4] hover:bg-white text-[#1F1722] border-[#E5DDD8] hover:border-[#D4AF6A] shadow-sm'
@@ -85,7 +85,7 @@ export function MeetTheMentor() {
                 >
                   <div className="flex items-center justify-between mb-2 w-full">
                     <span
-                      className={`text-[11px] font-bold uppercase tracking-widest ${
+                      className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${
                         isActive ? 'text-[#D4AF6A]' : 'text-[#7B2A7A]'
                       }`}
                     >
@@ -93,7 +93,7 @@ export function MeetTheMentor() {
                     </span>
 
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                      className={`w-9 h-9 rounded-full flex items-center justify-center transition-all ${
                         isActive
                           ? 'bg-[#E6CFA5] text-[#2A0932] shadow-md scale-105'
                           : isPast
@@ -107,14 +107,14 @@ export function MeetTheMentor() {
 
                   <div>
                     <h3
-                      className={`text-sm sm:text-base font-bold tracking-tight ${
+                      className={`text-base sm:text-lg font-bold tracking-tight leading-snug ${
                         isActive ? 'text-white' : 'text-[#2A0932]'
                       }`}
                     >
                       {step.title}
                     </h3>
                     <p
-                      className={`text-[11px] line-clamp-1 mt-0.5 ${
+                      className={`text-xs sm:text-sm line-clamp-1 mt-1 ${
                         isActive ? 'text-[#E6CFA5]' : 'text-[#6E6271]'
                       }`}
                     >
@@ -146,49 +146,49 @@ export function MeetTheMentor() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
                 {/* Left Side: Journey Context & Essence */}
                 <div className="lg:col-span-7 space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 text-[#E6CFA5] text-[11px] uppercase tracking-widest font-bold border border-white/15">
-                    <Sparkles size={12} className="text-[#D4AF6A]" />
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#E6CFA5] text-xs uppercase tracking-wider font-bold border border-white/15">
+                    <Sparkles size={13} className="text-[#D4AF6A]" />
                     <span>{currentStep.role}</span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
+                  <h3 className="text-2xl sm:text-3xl lg:text-[2.6rem] font-bold tracking-tight text-white leading-tight">
                     {currentStep.title} —{' '}
                     <span className="font-serif italic font-normal text-[#E6CFA5]">
                       {currentStep.essence}
                     </span>
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#E5DDD8]/90 leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-[1.05rem] text-[#E5DDD8]/90 leading-relaxed font-normal">
                     {currentStep.description}
                   </p>
 
-                  <div className="pt-1 flex flex-wrap items-center gap-3">
+                  <div className="pt-2 flex flex-wrap items-center gap-4">
                     <Link
                       href="/about"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-white transition-all shadow-md hover:scale-105 active:scale-95"
+                      className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-xs sm:text-sm uppercase tracking-wider font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-white transition-all shadow-md hover:scale-105 active:scale-95"
                     >
                       <span>Read Chapter {currentStep.number} in Biography</span>
-                      <ArrowRight size={13} />
+                      <ArrowRight size={15} />
                     </Link>
 
-                    <span className="text-xs text-[#E5DDD8]/60">
+                    <span className="text-xs sm:text-sm text-[#E5DDD8]/70 font-medium">
                       Phase {activeStep + 1} of {journeySteps.length}
                     </span>
                   </div>
                 </div>
 
                 {/* Right Side: What this means for your UPSC preparation */}
-                <div className="lg:col-span-5 bg-white/[0.06] backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#D4AF6A]/30 space-y-3 shadow-inner">
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-[#D4AF6A] font-bold">
-                    <Award size={15} />
+                <div className="lg:col-span-5 bg-white/[0.06] backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-[#D4AF6A]/30 space-y-4 shadow-inner">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider text-[#D4AF6A] font-bold">
+                    <Award size={16} />
                     <span>Direct Translation for Aspirants</span>
                   </div>
 
-                  <blockquote className="font-serif italic text-base sm:text-lg text-[#FFFDF9] leading-snug border-l-2 border-[#D4AF6A] pl-3 py-0.5">
+                  <blockquote className="font-serif italic text-lg sm:text-xl lg:text-2xl text-[#FFFDF9] leading-snug border-l-2 border-[#D4AF6A] pl-3.5 py-1">
                     &ldquo;{currentStep.lessonForAspirants}&rdquo;
                   </blockquote>
 
-                  <p className="text-[11px] text-[#E5DDD8]/80 leading-relaxed pt-1">
+                  <p className="text-xs sm:text-sm text-[#E5DDD8]/85 leading-relaxed pt-1 font-normal">
                     Mentorship at Sarathii is not based on theoretical summaries. It is guided by the exact mental instincts forged across this lived experience.
                   </p>
                 </div>
@@ -209,14 +209,14 @@ export function MeetTheMentor() {
               />
             </div>
             <div>
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#7B2A7A]">
-                <Quote size={13} className="text-[#D4AF6A]" />
+              <div className="flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#7B2A7A]">
+                <Quote size={14} className="text-[#D4AF6A]" />
                 <span>Founder & Chief Mentor</span>
               </div>
-              <h4 className="text-lg sm:text-xl font-bold text-[#2A0932] mt-0.5">
+              <h4 className="text-xl sm:text-2xl font-bold text-[#2A0932] mt-0.5">
                 Jay Prakash Singh
               </h4>
-              <p className="text-xs sm:text-sm text-[#6E6271] mt-0.5">
+              <p className="text-sm sm:text-base text-[#6E6271] mt-0.5 font-medium">
                 Ex-Defence Commander · Former Senior Civil Administrator · Judicial Tribunal Member · Author
               </p>
             </div>
@@ -224,10 +224,10 @@ export function MeetTheMentor() {
 
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-wider font-bold text-[#4B1458] border border-[#4B1458]/30 hover:bg-[#4B1458] hover:text-white transition-all shrink-0"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm uppercase tracking-wider font-bold text-[#4B1458] border border-[#4B1458]/40 hover:bg-[#4B1458] hover:text-white transition-all shrink-0"
           >
             <span>Explore Complete Profile</span>
-            <ArrowRight size={14} />
+            <ArrowRight size={15} />
           </Link>
         </div>
       </Container>

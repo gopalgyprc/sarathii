@@ -68,7 +68,7 @@ export function Hero() {
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none"
                 />
                 <Sparkles size={13} className="text-[#D4AF6A] animate-pulse" />
-                <span>Civil Services & Leadership Mentorship</span>
+                <span>Sarathii · School of Thought & Leadership Mentorship</span>
               </div>
             </motion.div>
 
@@ -107,7 +107,7 @@ export function Hero() {
               <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border-2 border-[#D4AF6A]/50 shadow-2xl bg-[#1A041E]">
                 <Image
                   src="/images/withboard.png"
-                  alt="Jay Prakash Singh - Founder & Chief Mentor conducting a session"
+                  alt="Sarathii Mentorship conducted by Chief Mentor Jay Prakash Singh"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
                   className="object-cover object-[78%_top]"
@@ -116,14 +116,14 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A041E]/95 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-2.5 left-3.5 right-3.5 flex items-center justify-between text-left">
                   <div>
-                    <div className="text-sm font-serif font-bold text-white leading-tight">
-                      Jay Prakash Singh
+                    <div className="text-xs uppercase tracking-wider text-[#D4AF6A] font-bold">
+                      Sarathii Mentorship
                     </div>
-                    <div className="text-[10px] text-[#E6CFA5] leading-tight">
-                      Founder & Chief Mentor, Sarathii
+                    <div className="text-sm font-serif font-bold text-white leading-tight mt-0.5">
+                      Jay Prakash Singh · Chief Mentor
                     </div>
                   </div>
-                  <span className="text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#2A0932] border border-[#D4AF6A]/40 text-[#E6CFA5]">
+                  <span className="text-[10px] sm:text-xs uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#2A0932] border border-[#D4AF6A]/40 text-[#E6CFA5]">
                     50+ Yrs Exp
                   </span>
                 </div>
@@ -133,9 +133,9 @@ export function Hero() {
             {/* Supporting Paragraph */}
             <motion.p
               variants={itemVariants}
-              className="text-sm sm:text-base lg:text-lg text-[#E5DDD8]/90 leading-relaxed font-normal"
+              className="text-base sm:text-lg lg:text-xl text-[#E5DDD8]/95 leading-relaxed font-normal"
             >
-              Success in the Civil Services Examination is not determined solely by the volume of knowledge you possess. It is determined by the ability to{' '}
+              <strong className="text-white font-bold">Sarathii</strong> is a premier civil services mentorship institution founded on the belief that excellence is not an accident. Guided by Founder &amp; Chief Mentor <span className="text-[#E6CFA5] font-semibold">Jay Prakash Singh</span>, Sarathii prepares candidates not merely to complete a syllabus, but to{' '}
               <strong className="text-white font-semibold">think clearly</strong>,{' '}
               <strong className="text-white font-semibold">analyse objectively</strong>,{' '}
               <strong className="text-white font-semibold">express precisely</strong>, and{' '}
@@ -145,11 +145,11 @@ export function Hero() {
             {/* Action Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
             >
               <Link
                 href="/contact"
-                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-xs uppercase tracking-[0.16em] font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden"
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-sm sm:text-base uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden"
               >
                 <motion.div
                   initial={{ x: '-100%' }}
@@ -157,16 +157,16 @@ export function Hero() {
                   transition={{ duration: 0.6 }}
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none"
                 />
-                <span>Begin Your Journey</span>
+                <span>Begin Your Journey with Sarathii</span>
                 <ArrowRight
-                  size={16}
+                  size={18}
                   className="transition-transform duration-300 group-hover:translate-x-1.5"
                 />
               </Link>
 
               <Link
                 href="/about"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-[0.16em] font-semibold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#D4AF6A] hover:bg-white/15 transition-all duration-300 hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm sm:text-base uppercase tracking-[0.14em] font-bold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#D4AF6A] hover:bg-white/15 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <span>Discover Sarathii</span>
               </Link>
@@ -175,10 +175,10 @@ export function Hero() {
             {/* Trust Note */}
             <motion.div
               variants={itemVariants}
-              className="pt-2 flex items-center justify-center lg:justify-start gap-3 text-xs text-[#E5DDD8]/80 font-serif italic"
+              className="pt-3 flex items-center justify-center lg:justify-start gap-3 text-sm sm:text-base text-[#E5DDD8]/90 font-serif italic"
             >
               <span className="w-8 h-px bg-[#D4AF6A]" />
-              <span>Mentorship grounded in five decades of public administration, defense & judiciary.</span>
+              <span>Sarathii is founded on five decades of lived public administration, defense &amp; judicial service.</span>
             </motion.div>
           </motion.div>
 
@@ -188,24 +188,24 @@ export function Hero() {
       </Container>
 
       {/* Bottom Credential Bar spanning the full width cleanly */}
-      <div className="relative z-10 w-full border-t border-white/10 bg-[#1A041E]/90 backdrop-blur-md py-4">
+      <div className="relative z-10 w-full border-t border-white/10 bg-[#1A041E]/90 backdrop-blur-md py-4 sm:py-5">
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x-0 md:divide-x divide-white/10">
             <div className="flex flex-col items-center justify-center px-2">
-              <span className="text-sm sm:text-base font-bold text-[#E6CFA5] font-serif">50+ Years</span>
-              <span className="text-[11px] text-[#E5DDD8]/80 uppercase tracking-wider">Lived Experience</span>
+              <span className="text-lg sm:text-xl font-bold text-[#E6CFA5] font-serif">The Sarathii Method</span>
+              <span className="text-xs sm:text-sm text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Structured Pedagogy</span>
             </div>
             <div className="flex flex-col items-center justify-center px-2">
-              <span className="text-sm sm:text-base font-bold text-[#FFFDF9] font-serif">Personal 1:1</span>
-              <span className="text-[11px] text-[#E5DDD8]/80 uppercase tracking-wider">Strategic Mentorship</span>
+              <span className="text-lg sm:text-xl font-bold text-[#FFFDF9] font-serif">1:1 Mentorship</span>
+              <span className="text-xs sm:text-sm text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Personalized Evaluation</span>
             </div>
             <div className="flex flex-col items-center justify-center px-2">
-              <span className="text-sm sm:text-base font-bold text-[#E6CFA5] font-serif">Defence & Civil</span>
-              <span className="text-[11px] text-[#E5DDD8]/80 uppercase tracking-wider">Public Leadership</span>
+              <span className="text-lg sm:text-xl font-bold text-[#E6CFA5] font-serif">50+ Years Lived</span>
+              <span className="text-xs sm:text-sm text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Defence &amp; Civil Service</span>
             </div>
             <div className="flex flex-col items-center justify-center px-2">
-              <span className="text-sm sm:text-base font-bold text-[#FFFDF9] font-serif">The Sarathii Method</span>
-              <span className="text-[11px] text-[#E5DDD8]/80 uppercase tracking-wider">Structured Framework</span>
+              <span className="text-lg sm:text-xl font-bold text-[#FFFDF9] font-serif">School of Thought</span>
+              <span className="text-xs sm:text-sm text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Lifelong Guidance</span>
             </div>
           </div>
         </Container>

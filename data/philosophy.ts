@@ -11,6 +11,11 @@ export interface PillarOffer {
   title: string
   headline: string
   description: string
+  paragraphs: string[]
+  bullets?: {
+    title?: string
+    items: string[]
+  }
   keyPoints: string[]
   quote: string
   icon: string
@@ -55,9 +60,7 @@ Its objective is not simply to complete the syllabus but to cultivate habits of 
 
 These are not merely examination skills. They are the very qualities expected of a civil servant entrusted with the responsibility of serving society.
 
-The guidance offered by Sarathii is rooted not only in academic understanding but also in decades of practical experience in public service, administration, the armed forces, the judiciary, and literature.
-
-It combines the discipline of a soldier, the vision of an administrator, the balance of a judge, and the sensitivity of a writer.
+The guidance offered by Sarathii is rooted not only in academic understanding but also in decades of practical experience in public service, administration, the armed forces, the judiciary, and literature. It combines the discipline of a soldier, the vision of an administrator, the balance of a judge, and the sensitivity of a writer.
 
 Sarathii therefore offers more than coaching. It offers mentorship.
 
@@ -67,6 +70,44 @@ For Sarathii, success is measured not only by the number of selections it produc
 
 Sarathii is not merely a classroom. It is a school of thought.
 Sarathii is not merely a mentor. It is a lifelong guide.`
+
+export const sarathiiPhilosophySections = [
+  {
+    heading: 'The Foundational Premise',
+    content:
+      'Success in the Civil Services Examination is not determined solely by the amount of knowledge one possesses. It is determined by the ability to think clearly, analyse objectively, express precisely, and perform confidently under pressure.',
+  },
+  {
+    heading: 'The Sarathii Method',
+    content:
+      'The Sarathii Method is founded on the belief that excellence is not an accident. It is the outcome of disciplined preparation, logical thinking, strategic planning, emotional resilience, and unwavering self-belief.',
+  },
+  {
+    heading: 'Bridging the Critical Difference',
+    content:
+      'Every year, thousands of aspirants study the same books, attend the same lectures, and read the same current affairs. Yet only a few succeed. The difference lies not merely in what they know, but in how they think, how they write, and how they approach the examination. Sarathii seeks to bridge that difference.',
+  },
+  {
+    heading: 'Qualities of a Civil Servant',
+    content:
+      'Its objective is not simply to complete the syllabus but to cultivate habits of disciplined thinking and purposeful action. It teaches aspirants to write with clarity, reason with logic, analyse with balance, plan strategically, remain composed under pressure, and maintain a positive outlook throughout their journey. These are not merely examination skills. They are the very qualities expected of a civil servant entrusted with the responsibility of serving society.',
+  },
+  {
+    heading: 'The Confluence of Disciplines',
+    content:
+      'The guidance offered by Sarathii is rooted not only in academic understanding but also in decades of practical experience in public service, administration, the armed forces, the judiciary, and literature. It combines the discipline of a soldier, the vision of an administrator, the balance of a judge, and the sensitivity of a writer.',
+  },
+  {
+    heading: 'Mentorship for a Lifetime',
+    content:
+      'Sarathii therefore offers more than coaching. It offers mentorship. Its purpose is not merely to help candidates secure a rank, but to prepare them for a lifetime of responsible leadership, ethical conduct, and meaningful public service. For Sarathii, success is measured not only by the number of selections it produces, but also by the quality of officers it helps shape.',
+  },
+]
+
+export const sarathiiMantras = [
+  'Sarathii is not merely a classroom. It is a school of thought.',
+  'Sarathii is not merely a mentor. It is a lifelong guide.',
+]
 
 export const philosophyConcepts: PhilosophyConcept[] = [
   {
@@ -104,84 +145,178 @@ export const whatSarathiiOffers: PillarOffer[] = [
     number: '01',
     title: 'Clear and Concise Writing',
     headline: 'Written communication is the medium through which a candidate comes face to face with the examiner.',
-    description: 'A clear, concise, and well-structured answer written in simple language immediately creates a positive and favourable impression. Clear writing is the ability to communicate effectively using the minimum words without sacrificing meaning.',
-    keyPoints: [
-      'Eliminating semantic redundancy and fluff',
-      'Structural architectural framing (Introduction, Core Logic, Balanced Conclusion)',
-      'High-impact keyword and data integration',
-      'Effective diagrammatic representations',
+    description:
+      'A clear, concise, and well-structured answer written in simple language immediately creates a positive and favourable impression. Clear writing is the ability to communicate effectively using the minimum words without sacrificing meaning.',
+    paragraphs: [
+      'Written communication is the medium through which a candidate comes face to face with the examiner.',
+      'A clear, concise, and well-structured answer written in simple language immediately creates a positive and favourable impression.',
+      'Clear writing is the ability to communicate effectively using the minimum words without sacrificing meaning. It requires expressing one’s ideas with such precision that the reader understands exactly what the writer intends, leaving no room for ambiguity.',
+      'This is perhaps the most difficult skill for any writer to master, regardless of the field. Sarathii aims to help aspirants develop this invaluable ability through systematic guidance and continuous practice.',
     ],
-    quote: 'Clear writing is the mirror of a clear mind.',
+    bullets: {
+      title: 'Hallmarks of Mastered Writing',
+      items: [
+        'Communicate effectively using the minimum words without sacrificing meaning.',
+        'Express ideas with such precision that the reader understands exactly what is intended.',
+        'Eliminate ambiguity, semantic fluff, and circular phrasing entirely.',
+        'Cultivate structured simplicity through systematic guidance and continuous practice.',
+      ],
+    },
+    keyPoints: [
+      'Communicating effectively using minimum words without sacrificing meaning',
+      'Eliminating ambiguity so the examiner grasps your intent instantly',
+      'Creating a favorable first impression with structured, simple language',
+      'Mastering the hardest writing skill through systematic administrative guidance',
+    ],
+    quote: 'Clear writing is the ability to communicate effectively using the minimum words without sacrificing meaning, leaving no room for ambiguity.',
     icon: 'PenTool',
   },
   {
     number: '02',
     title: 'Logical and Coherent Thinking',
-    headline: 'Success depends not only on knowledge but also on the ability to think logically and present ideas coherently.',
-    description: 'Logical thinking requires maintaining a single focused theme, presenting ideas clearly, following a coherent sequence, and reaching a well-reasoned conclusion.',
-    keyPoints: [
-      'Maintaining thematic integrity across diverse GS papers',
-      'Logical flow and seamless transition between arguments',
-      'Contextual linkage between static concepts and current dynamics',
-      'Evidence-based inductive and deductive reasoning',
+    headline: 'Success in the Civil Services Examination depends not only on knowledge but also on the ability to think logically and present ideas coherently.',
+    description:
+      'Logical thinking is a disciplined thought process in which rational and orderly arguments lead naturally to a well-reasoned conclusion without contradiction or confusion.',
+    paragraphs: [
+      'Success in the Civil Services Examination depends not only on knowledge but also on the ability to think logically and present ideas coherently.',
+      'Logical thinking is a disciplined thought process in which rational and orderly arguments lead naturally to a well-reasoned conclusion without contradiction or confusion.',
+      'Knowledge can be acquired through books and lectures. However, the art of expressing that knowledge logically and effectively can be developed only under the guidance of an accomplished mentor through sustained practice. Sarathii seeks to provide precisely that guidance.',
     ],
-    quote: 'Structure is what turns raw knowledge into persuasive administrative reasoning.',
+    bullets: {
+      title: 'It requires the candidate to:',
+      items: [
+        'Maintain a single, focused theme throughout the answer without any diversion.',
+        'Present ideas clearly in a coherent, logical, and sequential manner from beginning to end.',
+      ],
+    },
+    keyPoints: [
+      'Maintaining a single, focused theme throughout without diversion',
+      'Presenting ideas in a coherent, logical, and sequential manner from beginning to end',
+      'Building rational, orderly arguments leading to contradiction-free conclusions',
+      'Developing logical expression under an accomplished mentor through sustained practice',
+    ],
+    quote: 'Knowledge can be acquired through books, but the art of expressing it logically can be developed only under the guidance of an accomplished mentor.',
     icon: 'Brain',
   },
   {
     number: '03',
     title: 'Analytical and Critical Approach',
-    headline: 'The Civil Services Examination does not merely test memory—it evaluates critical discernment.',
-    description: 'It evaluates the ability to analyse, evaluate, think critically, form independent judgments, and reach balanced conclusions. Sarathii equips aspirants with the intellectual tools necessary to develop an analytical style of writing.',
-    keyPoints: [
-      'Deconstructing complex policy trade-offs',
-      'Multi-stakeholder impact assessments',
-      'Constitutional and ethical perspective anchoring',
-      'Constructive critique with actionable policy solutions',
+    headline: 'The Civil Services Examination does not merely test memory; it evaluates the ability to analyse, evaluate, and form independent judgments.',
+    description:
+      'An analytical approach requires examining every issue critically, identifying its strengths and weaknesses in relation to the central theme, and arriving at a balanced and well-reasoned conclusion.',
+    paragraphs: [
+      'The Civil Services Examination does not merely test a candidate’s memory; it evaluates the ability to analyse, evaluate, and form independent judgments which is required of an administrator.',
+      'An analytical approach requires examining every issue critically, identifying its strengths and weaknesses in relation to the central theme, and arriving at a balanced and well-reasoned conclusion. This is fundamentally different from many university examinations, where descriptive answers based largely on memorised material may suffice.',
+      'Civil Services questions frequently contain directives such as analyse, critically examine, evaluate, comment, or discuss. These are designed to assess a candidate’s understanding of the subject and, more importantly, the ability to express an informed personal opinion rather than merely reproducing the views of established scholars.',
+      'Sarathii intends to equip aspirants with the intellectual tools necessary to develop this analytical and critical style of writing.',
     ],
-    quote: 'An administrator must not only see the problem; they must perceive the unseen consequences.',
+    bullets: {
+      title: 'Decoding UPSC Directives (Analyse, Critically Examine, Evaluate, Comment, Discuss)',
+      items: [
+        'Assess understanding of the subject rather than memorised factual recall.',
+        'Express an informed personal opinion rather than merely reproducing scholar views.',
+        'Identify strengths and weaknesses in relation to the central theme.',
+        'Synthesize balanced, well-reasoned conclusions required of an administrator.',
+      ],
+    },
+    keyPoints: [
+      'Examining issues critically in relation to the central theme',
+      'Mastering key directives: Analyse, Critically Examine, Evaluate, Comment, Discuss',
+      'Expressing an informed personal opinion rather than reproducing rote views',
+      'Arriving at balanced, well-reasoned conclusions required of an administrator',
+    ],
+    quote: 'The examination evaluates the ability to express an informed personal opinion rather than merely reproducing the views of established scholars.',
     icon: 'Search',
   },
   {
     number: '04',
     title: 'A Strategically Planned Study Programme',
-    headline: 'Planning is the foundation of success. The goal is examination readiness, not passive scholarship.',
-    description: 'The strategy covers time management, realistic study schedules, curated source selection, rigorous prioritisation, cyclical revision, and continuous answer-writing practice.',
-    keyPoints: [
-      'What to study vs. What to consciously ignore',
-      'Curated primary source discipline over material hoarding',
-      'Precision micro-schedules and milestone tracking',
-      'Synchronised Prelims-cum-Mains integrated workflow',
+    headline: 'Proper planning is the foundation of success, where lakhs of candidates compete for a few hundred vacancies and time is the most precious resource.',
+    description:
+      'The objective of a sound study strategy is to achieve maximum results with the most efficient use of time and effort. This examination is not the means to become a scholar or a pandit; the only objective is to qualify.',
+    paragraphs: [
+      'Proper planning is the foundation of success in every sphere of life, but more so in the Civil Services Examination, wherein lakhs of candidates compete for few hundred vacancies in which time is the most precious resource.',
+      'The objective of a sound study strategy is to achieve maximum results with the most efficient use of time and effort.',
+      'Equally important is to understand the fact that this examination is not the means to become a scholar or a pandit. The only objective here is to qualify the examination and nothing else.',
+      'Drawing upon decades of experience in the Army, the Civil Services, the higher judiciary and his own experience of preparation, Sarathii offers practical strategies that help aspirants prepare with clarity, discipline, and purpose.',
     ],
-    quote: 'Strategy is the art of concentrating maximum force at the point of greatest impact.',
+    bullets: {
+      title: 'Every aspirant must know with precision:',
+      items: [
+        'What to study and what to consciously avoid.',
+        'How to study for maximum analytical retention and recall.',
+        'How much to study without falling into the scholar trap.',
+        'From which authoritative, high-yield sources to study.',
+      ],
+    },
+    keyPoints: [
+      'Disciplined planning: Time management, study schedules, material selection & revision',
+      'Knowing with clarity: What, How, How Much, and From Which Sources to study',
+      'Shedding the scholar trap: The sole objective is qualifying the examination',
+      'Practical strategies distilled from decades of military, IAS, and judicial experience',
+    ],
+    quote: 'This examination is not the means to become a scholar or a pandit. The only objective here is to qualify the examination and nothing else.',
     icon: 'Target',
   },
   {
     number: '05',
     title: 'Mental and Emotional Resilience',
-    headline: 'The examination is demanding, and the long preparation cycle tests the spirit. A calm mind wins the war.',
-    description: 'Sarathii helps aspirants develop deep mental strength, emotional resilience, steady confidence, composure, and razor-sharp concentration throughout the preparation journey.',
-    keyPoints: [
-      'Managing burnout, plateaus, and performance fatigue',
-      'Stoic emotional self-regulation techniques',
-      'Overcoming fear of failure and examination anxiety',
-      'Transforming preparation into an enjoyable, disciplined journey',
+    headline: 'Much of the perceived difficulty arises from fear, uncertainty, and lack of proper guidance. Only a calm mind wins the war.',
+    description:
+      'The examination is difficult for those who prepare without direction. However, for candidates who receive proper guidance and follow a systematic approach, it is one of the easiest ones.',
+    paragraphs: [
+      'The Civil Services Examination is widely perceived as extraordinarily difficult. It is only partly true. While it is certainly demanding, much of its perceived difficulty arises from fear, uncertainty, and lack of proper guidance.',
+      'The examination is indeed difficult for those who prepare without direction. However, for candidates who receive proper guidance and follow a systematic approach, it is one of the easiest ones.',
+      'A long examination cycle inevitably creates anxiety. As the examination dates approach, many candidates get overwhelmed by both real and imaginary fears. Their confidence gets shaken, concentration declines, affecting their preparation adversely. Some become real nervous in examination hall on finding unexpected questions on unfamiliar topics.',
+      'These psychological challenges are common and often determine the final outcome. Sarathii helps aspirants develop the mental strength, emotional resilience, and confidence to remain calm under pressure.',
+      'It has been proven umpteen times that only a calm mind wins the war. The objective is not merely to reduce stress but to transform preparation into an enjoyable, disciplined, and rewarding journey.',
     ],
-    quote: 'Under pressure, you do not rise to the occasion; you sink to the level of your training and calm.',
+    bullets: {
+      title: 'Navigating Psychological Challenges',
+      items: [
+        'Deconstruct real and imaginary fears that erode confidence and concentration.',
+        'Overcome exam-hall nervousness when facing unexpected questions on unfamiliar topics.',
+        'Build emotional resilience to sustain focus through the demanding multi-year cycle.',
+        'Transform preparation from an ordeal into an enjoyable, disciplined, and rewarding journey.',
+      ],
+    },
+    keyPoints: [
+      'Much perceived difficulty arises from fear, uncertainty, and lack of direction',
+      'With proper guidance and a systematic approach, it becomes manageable and clear',
+      'Mastering exam-hall nervousness on unfamiliar questions',
+      'Cultivating the proven truth: Only a calm mind wins the war',
+    ],
+    quote: 'It has been proven umpteen times that only a calm mind wins the war.',
     icon: 'Sparkles',
   },
   {
     number: '06',
     title: 'Positive Thinking',
     headline: 'Positive thinking is one of the greatest assets in life. A confident mind produces confident answers.',
-    description: 'Aspirants cultivate steady self-belief, disciplined optimism, constructive self-dialogue, and consistent performance across all stages of the examination and interview.',
-    keyPoints: [
-      'Replacing self-doubt with evidence-backed personal progress',
-      'Developing quiet executive presence for the personality test',
-      'Constructive mindset towards feedback and evaluation',
-      'Long-term vision for meaningful public service',
+    description:
+      'The quality of a candidate’s thinking is reflected in every stage of the examination—from preparation to answer writing and finally to the personality test.',
+    paragraphs: [
+      'Positive thinking is one of the greatest assets in every field of life, particularly in the Civil Services Examination.',
+      'The quality of a candidate’s thinking is reflected in every stage of the examination—from preparation to answer writing and finally to the personality test.',
+      'A confident mind produces confident answers. Conversely, a mind filled with uncertainty and self-doubt invariably produces confused and indecisive writing. This is where many aspirants lose the war.',
+      'Sarathii helps them cultivate confidence, optimism, and a positive mindset through practical techniques and disciplined preparation, enabling them to perform to the best of their abilities under every circumstance.',
     ],
-    quote: 'When your purpose is rooted in service rather than ego, clarity naturally follows.',
+    bullets: {
+      title: 'How Mindset Shapes Outcomes',
+      items: [
+        'A confident mind produces confident, authoritative answers on the examination page.',
+        'Uncertainty and self-doubt invariably produce confused and indecisive writing.',
+        'Cultivating quiet, authentic confidence that resonates in the Personality Test.',
+        'Performing to the absolute best of your abilities under every circumstance.',
+      ],
+    },
+    keyPoints: [
+      'Positive thinking is reflected across preparation, answer writing, and the interview',
+      'A confident mind produces confident, decisive answers on paper',
+      'Eliminating the uncertainty and self-doubt where many aspirants lose the war',
+      'Performing to the absolute best of your abilities under every circumstance',
+    ],
+    quote: 'A confident mind produces confident answers. Conversely, a mind filled with uncertainty and self-doubt invariably produces confused and indecisive writing.',
     icon: 'Sun',
   },
 ]

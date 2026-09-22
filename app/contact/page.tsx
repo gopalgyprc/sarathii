@@ -74,8 +74,8 @@ const CONSULTATION_STEPS = [
 
 const FAQS = [
   {
-    q: 'How is 1-on-1 mentorship conducted with Jay Prakash Singh?',
-    a: 'Mentorship is strictly customized. Rather than generic classroom lectures, sessions focus on individualized diagnostics: dissecting your specific weaknesses in GS papers, refining ethical frameworks in GS-4, and evaluating answer articulation under examination constraints.',
+    q: 'How is 1-on-1 mentorship conducted at Sarathii?',
+    a: 'Mentorship at Sarathii is strictly customized and guided by Founder & Chief Mentor Jay Prakash Singh. Rather than generic classroom lectures, sessions focus on individualized diagnostics: dissecting your specific weaknesses in GS papers, refining ethical frameworks in GS-4, and evaluating answer articulation under examination constraints.',
   },
   {
     q: 'Is digital consultation available for outstation aspirants?',
@@ -160,7 +160,7 @@ export default function ContactPage() {
             <div className="max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2A0932]/90 border border-[#D4AF6A]/40 text-xs uppercase tracking-[0.2em] font-semibold text-[#E6CFA5] shadow-lg backdrop-blur-md">
                 <Sparkles size={13} className="text-[#D4AF6A] animate-pulse" />
-                <span>Begin Your Mentorship</span>
+                <span>Sarathii Admissions & Diagnostic Mentorship</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] text-[#FFFDF9] font-normal leading-[1.05] tracking-tight">
@@ -171,13 +171,16 @@ export default function ContactPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-[#E5DDD8]/90 leading-relaxed max-w-2xl mx-auto font-normal">
-                Direct diagnostic guidance, personalized answer-writing evaluation, and strategic roadmap consultations with Jay Prakash Singh.
+                Direct diagnostic guidance, personalized answer-writing evaluation, and strategic civil services roadmap consultations with Founder & Chief Mentor Jay Prakash Singh.
               </p>
 
               <div className="pt-2">
                 <p className="font-serif text-sm sm:text-base text-[#E6CFA5] italic max-w-xl mx-auto">
                   &ldquo;At Sarathii, we believe that the right guidance at the right time can change the course of a lifetime.&rdquo;
                 </p>
+                <cite className="block text-xs uppercase tracking-widest text-[#E5DDD8]/70 not-italic mt-1">
+                  — Sarathii Institutional Philosophy
+                </cite>
               </div>
             </div>
           </Container>
@@ -186,7 +189,7 @@ export default function ContactPage() {
         </section>
 
         {/* 2-Column Balanced Intake & Secretariat Section */}
-        <section className="py-12 lg:py-16 bg-[#FFFDF9]">
+        <section className="py-12 lg:py-18 bg-[#FFFDF9]">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
               {/* Left Column: Institutional Secretariat & Modalities (5 cols) */}
@@ -197,7 +200,7 @@ export default function ContactPage() {
                     <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold">
                       Institutional Secretariat
                     </div>
-                    <span className="px-3 py-1 rounded-full bg-[#4B1458]/10 text-[#4B1458] text-[10px] uppercase tracking-wider font-bold">
+                    <span className="px-3 py-1 rounded-full bg-[#4B1458]/10 text-[#4B1458] text-xs uppercase tracking-wider font-bold">
                       Noida HQ
                     </span>
                   </div>
@@ -205,14 +208,14 @@ export default function ContactPage() {
                   <div className="space-y-5 text-sm text-[#1F1722]/90 leading-relaxed">
                     {/* Address */}
                     <div className="flex items-start gap-3.5">
-                      <div className="w-10 h-10 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
-                        <MapPin size={18} />
+                      <div className="w-11 h-11 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
+                        <MapPin size={20} />
                       </div>
                       <div>
-                        <strong className="block text-[#2A0932] font-semibold text-sm sm:text-base font-serif">
+                        <strong className="block text-[#2A0932] font-semibold text-base font-serif">
                           Head Office & Advisory Chambers
                         </strong>
-                        <p className="text-[#6E6271] text-xs sm:text-sm mt-0.5 leading-relaxed">
+                        <p className="text-[#5D5060] text-sm mt-0.5 leading-relaxed">
                           1601, A Block, Spectrum Metro, Sector-75,
                           <br />
                           Gautam Buddha Nagar, Noida, UP 201301
@@ -222,16 +225,16 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <div className="flex items-start gap-3.5">
-                      <div className="w-10 h-10 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
-                        <Mail size={18} />
+                      <div className="w-11 h-11 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
+                        <Mail size={20} />
                       </div>
                       <div>
-                        <strong className="block text-[#2A0932] font-semibold text-sm sm:text-base font-serif">
+                        <strong className="block text-[#2A0932] font-semibold text-base font-serif">
                           Direct Mentorship Desk
                         </strong>
                         <a
                           href={`mailto:${siteConfig.contact.email}`}
-                          className="text-[#4B1458] hover:text-[#7B2A7A] text-xs sm:text-sm font-medium transition-colors"
+                          className="text-[#4B1458] hover:text-[#7B2A7A] text-sm font-medium transition-colors"
                         >
                           {siteConfig.contact.email}
                         </a>
@@ -240,16 +243,16 @@ export default function ContactPage() {
 
                     {/* Phone */}
                     <div className="flex items-start gap-3.5">
-                      <div className="w-10 h-10 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
-                        <Phone size={18} />
+                      <div className="w-11 h-11 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
+                        <Phone size={20} />
                       </div>
                       <div>
-                        <strong className="block text-[#2A0932] font-semibold text-sm sm:text-base font-serif">
+                        <strong className="block text-[#2A0932] font-semibold text-base font-serif">
                           Consultation Helpline
                         </strong>
                         <a
                           href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
-                          className="text-[#4B1458] hover:text-[#7B2A7A] text-xs sm:text-sm font-medium transition-colors"
+                          className="text-[#4B1458] hover:text-[#7B2A7A] text-sm font-medium transition-colors"
                         >
                           {siteConfig.contact.phone}
                         </a>
@@ -258,14 +261,14 @@ export default function ContactPage() {
 
                     {/* Working Hours */}
                     <div className="flex items-start gap-3.5">
-                      <div className="w-10 h-10 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
-                        <Clock size={18} />
+                      <div className="w-11 h-11 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center shrink-0 shadow-md">
+                        <Clock size={20} />
                       </div>
                       <div>
-                        <strong className="block text-[#2A0932] font-semibold text-sm sm:text-base font-serif">
+                        <strong className="block text-[#2A0932] font-semibold text-base font-serif">
                           Diagnostic Hours
                         </strong>
-                        <p className="text-[#6E6271] text-xs sm:text-sm">
+                        <p className="text-[#5D5060] text-sm">
                           {siteConfig.contact.hours} (Prior Appointment)
                         </p>
                       </div>
@@ -273,9 +276,9 @@ export default function ContactPage() {
                   </div>
 
                   {/* 24-Hour Response Guarantee Badge */}
-                  <div className="pt-4 border-t border-[#E5DDD8] flex items-center gap-3 bg-white p-3.5 rounded-2xl border border-[#E5DDD8]/80">
-                    <ShieldCheck size={20} className="text-[#A8823B] shrink-0" />
-                    <p className="text-[11px] text-[#6E6271] leading-snug">
+                  <div className="pt-4 border-t border-[#E5DDD8] flex items-center gap-3 bg-white p-4 rounded-2xl border border-[#E5DDD8]/80">
+                    <ShieldCheck size={22} className="text-[#A8823B] shrink-0" />
+                    <p className="text-xs text-[#5D5060] leading-snug">
                       <strong className="text-[#2A0932] font-semibold">
                         Prompt Response Commitment:
                       </strong>{' '}
@@ -294,21 +297,21 @@ export default function ContactPage() {
                     {MENTORSHIP_MODALITIES.map((item) => (
                       <div
                         key={item.title}
-                        className="bg-white rounded-2xl p-3.5 sm:p-4 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex items-start gap-3.5"
+                        className="bg-white rounded-2xl p-4 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex items-start gap-3.5"
                       >
-                        <div className="w-8 h-8 rounded-xl bg-[#2A0932]/5 text-[#4B1458] flex items-center justify-center shrink-0 mt-0.5">
-                          <item.icon size={16} />
+                        <div className="w-9 h-9 rounded-xl bg-[#2A0932]/5 text-[#4B1458] flex items-center justify-center shrink-0 mt-0.5">
+                          <item.icon size={18} />
                         </div>
-                        <div className="space-y-0.5">
+                        <div className="space-y-1">
                           <div className="flex items-center gap-2">
-                            <h4 className="text-xs font-semibold text-[#2A0932]">
+                            <h4 className="text-sm font-semibold text-[#2A0932]">
                               {item.title}
                             </h4>
-                            <span className="text-[9px] px-2 py-0.5 rounded-full bg-[#D4AF6A]/20 text-[#A8823B] font-bold">
+                            <span className="text-[10px] px-2.5 py-0.5 rounded-full bg-[#D4AF6A]/20 text-[#A8823B] font-bold">
                               {item.badge}
                             </span>
                           </div>
-                          <p className="text-[11px] text-[#6E6271] leading-relaxed">
+                          <p className="text-xs sm:text-sm text-[#5D5060] leading-relaxed">
                             {item.description}
                           </p>
                         </div>
@@ -387,7 +390,7 @@ export default function ContactPage() {
                             <div className="space-y-1.5">
                               <label
                                 htmlFor="name"
-                                className="block text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold"
+                                className="block text-xs uppercase tracking-wider text-[#E6CFA5] font-semibold"
                               >
                                 Full Name <span className="text-[#D4AF6A]">*</span>
                               </label>
@@ -399,14 +402,14 @@ export default function ContactPage() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder="e.g. Ananya Sharma"
-                                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-xs sm:text-sm outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-sm outline-none transition-all"
                               />
                             </div>
 
                             <div className="space-y-1.5">
                               <label
                                 htmlFor="mobile"
-                                className="block text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold"
+                                className="block text-xs uppercase tracking-wider text-[#E6CFA5] font-semibold"
                               >
                                 Mobile Number <span className="text-[#D4AF6A]">*</span>
                               </label>
@@ -418,7 +421,7 @@ export default function ContactPage() {
                                 value={formData.mobile}
                                 onChange={handleChange}
                                 placeholder="+91 98765 43210"
-                                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-xs sm:text-sm outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-sm outline-none transition-all"
                               />
                             </div>
                           </div>
@@ -428,7 +431,7 @@ export default function ContactPage() {
                             <div className="space-y-1.5">
                               <label
                                 htmlFor="email"
-                                className="block text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold"
+                                className="block text-xs uppercase tracking-wider text-[#E6CFA5] font-semibold"
                               >
                                 Email Address <span className="text-[#D4AF6A]">*</span>
                               </label>
@@ -440,14 +443,14 @@ export default function ContactPage() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="ananya@example.com"
-                                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-xs sm:text-sm outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-sm outline-none transition-all"
                               />
                             </div>
 
                             <div className="space-y-1.5">
                               <label
                                 htmlFor="examTarget"
-                                className="block text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold"
+                                className="block text-xs uppercase tracking-wider text-[#E6CFA5] font-semibold"
                               >
                                 Target Exam & Year
                               </label>
@@ -456,7 +459,7 @@ export default function ContactPage() {
                                 name="examTarget"
                                 value={formData.examTarget}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 rounded-xl bg-[#2A0932] border border-white/20 focus:border-[#D4AF6A] text-white text-xs sm:text-sm outline-none transition-all"
+                                className="w-full px-4 py-3 rounded-xl bg-[#2A0932] border border-white/20 focus:border-[#D4AF6A] text-white text-sm outline-none transition-all"
                               >
                                 <option value="UPSC CSE 2026">UPSC CSE 2026</option>
                                 <option value="UPSC CSE 2027">UPSC CSE 2027</option>
@@ -474,7 +477,7 @@ export default function ContactPage() {
                           <div className="space-y-1.5">
                             <label
                               htmlFor="subject"
-                              className="block text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold"
+                              className="block text-xs uppercase tracking-wider text-[#E6CFA5] font-semibold"
                             >
                               Primary Consultation Focus
                             </label>
@@ -483,7 +486,7 @@ export default function ContactPage() {
                               name="subject"
                               value={formData.subject}
                               onChange={handleChange}
-                              className="w-full px-4 py-3 rounded-xl bg-[#2A0932] border border-white/20 focus:border-[#D4AF6A] text-white text-xs sm:text-sm outline-none transition-all"
+                              className="w-full px-4 py-3 rounded-xl bg-[#2A0932] border border-white/20 focus:border-[#D4AF6A] text-white text-sm outline-none transition-all"
                             >
                               <option value="UPSC Mentorship Consultation">
                                 Comprehensive UPSC Mentorship Consultation
@@ -507,7 +510,7 @@ export default function ContactPage() {
                           <div className="space-y-1.5">
                             <label
                               htmlFor="message"
-                              className="block text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold"
+                              className="block text-xs uppercase tracking-wider text-[#E6CFA5] font-semibold"
                             >
                               Current Preparation Stage & Specific Questions{' '}
                               <span className="text-[#D4AF6A]">*</span>
@@ -520,7 +523,7 @@ export default function ContactPage() {
                               value={formData.message}
                               onChange={handleChange}
                               placeholder="Please share your optional subject, number of previous attempts, and the specific bottlenecks you wish to resolve..."
-                              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-xs sm:text-sm outline-none transition-all resize-y"
+                              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-[#D4AF6A] focus:bg-white/15 text-white placeholder-white/40 text-sm outline-none transition-all resize-y"
                             />
                           </div>
 
@@ -540,8 +543,8 @@ export default function ContactPage() {
                             )}
                           </button>
 
-                          <div className="flex items-center justify-center gap-2 text-[11px] text-[#E5DDD8]/70 text-center pt-2">
-                            <ShieldCheck size={13} className="text-[#D4AF6A]" />
+                          <div className="flex items-center justify-center gap-2 text-xs text-[#E5DDD8]/80 text-center pt-2">
+                            <ShieldCheck size={14} className="text-[#D4AF6A]" />
                             <span>
                               Strict confidentiality guaranteed under civil service advisory standards.
                             </span>
@@ -557,7 +560,7 @@ export default function ContactPage() {
         </section>
 
         {/* 3-Step Consultation Protocol Section */}
-        <section className="py-14 lg:py-18 bg-[#F8F5F2] border-t border-[#E5DDD8]">
+        <section className="py-14 lg:py-20 bg-[#F8F5F2] border-t border-[#E5DDD8]">
           <Container>
             <SectionHeading
               align="center"
@@ -579,7 +582,7 @@ export default function ContactPage() {
                     <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed">
+                    <p className="text-sm text-[#5D5060] leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -599,7 +602,7 @@ export default function ContactPage() {
               <h2 className="font-serif text-3xl sm:text-4xl text-[#2A0932] font-normal">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xs sm:text-sm text-[#6E6271]">
+              <p className="text-sm text-[#6E6271]">
                 Everything you need to know about scheduling, format, and preparation for your diagnostic consultation.
               </p>
             </div>
@@ -635,7 +638,7 @@ export default function ContactPage() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.25 }}
                         >
-                          <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-[#6E6271] leading-relaxed border-t border-[#E5DDD8]/60">
+                          <div className="px-6 pb-5 pt-1 text-sm sm:text-base text-[#4A3E4D] leading-relaxed border-t border-[#E5DDD8]/60">
                             {faq.a}
                           </div>
                         </motion.div>

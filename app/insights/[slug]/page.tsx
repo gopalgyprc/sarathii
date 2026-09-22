@@ -104,23 +104,23 @@ export default async function SingleArticlePage({ params }: PageProps) {
               {/* Author and Date Bar */}
               <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/15 text-xs sm:text-sm text-[#E5DDD8]">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#D4AF6A] text-[#2A0932] font-serif flex items-center justify-center font-bold">
+                  <div className="w-11 h-11 rounded-full bg-[#D4AF6A] text-[#2A0932] font-serif flex items-center justify-center font-bold text-sm shadow-inner">
                     JPS
                   </div>
                   <div>
-                    <div className="font-semibold text-white">{article.author}</div>
-                    <div className="text-[11px] text-[#E6CFA5]">{article.authorRole}</div>
+                    <div className="text-sm font-semibold text-white">{article.author}</div>
+                    <div className="text-xs text-[#E6CFA5]/90 font-medium">Founder & Chief Mentor, Sarathii</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 text-xs">
+                <div className="flex items-center gap-4 text-xs sm:text-sm text-[#E5DDD8]/90 font-medium">
                   <span className="flex items-center gap-1.5">
-                    <Calendar size={13} />
+                    <Calendar size={14} />
                     {article.formattedDate}
                   </span>
                   <span>•</span>
                   <span className="flex items-center gap-1.5">
-                    <Clock size={13} />
+                    <Clock size={14} />
                     {article.readTime}
                   </span>
                 </div>
@@ -211,12 +211,12 @@ export default async function SingleArticlePage({ params }: PageProps) {
               </div>
               <div className="space-y-2">
                 <div className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold">
-                  Written by the Mentor
+                  Authored by Founder & Chief Mentor
                 </div>
                 <h4 className="font-serif text-2xl text-[#2A0932] font-semibold">
                   Jay Prakash Singh
                 </h4>
-                <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed">
+                <p className="text-sm text-[#5D5060] leading-relaxed">
                   Founder & Chief Mentor at Sarathii. Former member of the Indian Administrative Service, Armed Forces, and Judicial Tribunals. Author of &ldquo;जिन राहों पर सियाराम चले&rdquo;.
                 </p>
                 <div className="pt-2 flex items-center gap-4">
@@ -246,37 +246,37 @@ export default async function SingleArticlePage({ params }: PageProps) {
         </article>
 
         {/* Related Articles Strip */}
-        <section className="py-10 lg:py-12 bg-[#F8F5F2] border-t border-[#E5DDD8]">
+        <section className="py-12 lg:py-16 bg-[#F8F5F2] border-t border-[#E5DDD8]">
           <Container>
-            <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-4">
-              More Insights
+            <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-6">
+              More Strategic Insights from Sarathii
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {relatedArticles.slice(0, 2).map((rel) => (
                 <div
                   key={rel.slug}
-                  className="bg-white rounded-3xl p-6 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex flex-col justify-between"
+                  className="bg-white rounded-3xl p-6 sm:p-7 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex flex-col justify-between hover:shadow-lg"
                 >
                   <div className="space-y-3">
-                    <span className="text-[10px] uppercase tracking-wider text-[#D4AF6A] font-bold">
+                    <span className="text-xs uppercase tracking-wider text-[#D4AF6A] font-bold">
                       {rel.category}
                     </span>
                     <h4 className="font-serif text-2xl text-[#2A0932] font-semibold hover:text-[#4B1458] transition-colors">
                       <Link href={`/insights/${rel.slug}`}>{rel.title}</Link>
                     </h4>
-                    <p className="text-xs sm:text-sm text-[#6E6271] line-clamp-2 leading-relaxed">
+                    <p className="text-sm text-[#5D5060] line-clamp-2 leading-relaxed">
                       {rel.excerpt}
                     </p>
                   </div>
 
-                  <div className="pt-4">
+                  <div className="pt-4 border-t border-[#E5DDD8] mt-4">
                     <Link
                       href={`/insights/${rel.slug}`}
                       className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-[#7B2A7A] hover:text-[#4B1458]"
                     >
                       <span>Read Essay</span>
-                      <ArrowRight size={12} />
+                      <ArrowRight size={13} />
                     </Link>
                   </div>
                 </div>

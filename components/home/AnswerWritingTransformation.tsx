@@ -39,7 +39,7 @@ export function AnswerWritingTransformation() {
       <Container>
         <SectionHeading
           align="center"
-          kicker="05 / The Art of Expression"
+          kicker="03 / The Sarathii Expression Standard"
           title={
             <>
               Knowledge Is Not Enough —{' '}
@@ -62,7 +62,7 @@ export function AnswerWritingTransformation() {
                 <button
                   key={step.number}
                   onClick={() => setActiveStepIndex(idx)}
-                  className={`p-3.5 sm:p-4 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between relative ${
+                  className={`p-4 sm:p-5 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between relative ${
                     isSelected
                       ? 'bg-[#4B1458] text-white border-[#4B1458] shadow-md -translate-y-1 ring-2 ring-[#D4AF6A]/50'
                       : 'bg-[#FBF8F4] hover:bg-white text-[#1F1722] border-[#E5DDD8] hover:border-[#D4AF6A]'
@@ -71,7 +71,7 @@ export function AnswerWritingTransformation() {
                 >
                   <div className="flex items-center justify-between mb-3 w-full">
                     <span
-                      className={`text-[11px] font-bold uppercase tracking-widest ${
+                      className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${
                         isSelected ? 'text-[#D4AF6A]' : 'text-[#7B2A7A]'
                       }`}
                     >
@@ -79,7 +79,7 @@ export function AnswerWritingTransformation() {
                     </span>
 
                     <div
-                      className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+                      className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
                         isSelected
                           ? 'bg-[#E6CFA5] text-[#2A0932] shadow-sm'
                           : isPassed
@@ -93,14 +93,14 @@ export function AnswerWritingTransformation() {
 
                   <div>
                     <h3
-                      className={`text-sm sm:text-base font-bold tracking-tight ${
+                      className={`text-base sm:text-lg font-bold tracking-tight leading-snug ${
                         isSelected ? 'text-white' : 'text-[#2A0932]'
                       }`}
                     >
                       {step.title}
                     </h3>
                     <p
-                      className={`text-[11px] mt-0.5 line-clamp-1 ${
+                      className={`text-xs sm:text-sm mt-1 line-clamp-1 ${
                         isSelected ? 'text-[#E6CFA5]' : 'text-[#6E6271]'
                       }`}
                     >
@@ -126,54 +126,54 @@ export function AnswerWritingTransformation() {
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                 {/* Left Description Column */}
-                <div className="lg:col-span-7 space-y-3">
-                  <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-[#4B1458]/10 text-[#4B1458] text-[11px] uppercase tracking-widest font-bold border border-[#4B1458]/20">
-                    <Sparkles size={12} className="text-[#D4AF6A]" />
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#4B1458]/10 text-[#4B1458] text-xs sm:text-sm uppercase tracking-wider font-bold border border-[#4B1458]/20">
+                    <Sparkles size={13} className="text-[#D4AF6A]" />
                     <span>Writing Progression · Step {activeStep.number} of 05</span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#2A0932]">
+                  <h3 className="text-2xl sm:text-3xl lg:text-[2.4rem] font-bold text-[#2A0932] leading-tight">
                     {activeStep.title} —{' '}
                     <span className="font-serif italic font-normal text-[#7B2A7A]">
                       {activeStep.subtitle}
                     </span>
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-[1.05rem] text-[#6E6271] leading-relaxed font-normal">
                     {activeStep.description}
                   </p>
 
-                  <div className="flex items-center gap-3 pt-1">
+                  <div className="flex items-center gap-3 pt-2">
                     <button
                       onClick={() =>
                         setActiveStepIndex((prev) =>
                           prev < answerWritingTransformationSteps.length - 1 ? prev + 1 : 0
                         )
                       }
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold text-white bg-[#4B1458] hover:bg-[#350C3E] transition-all shadow-md hover:scale-105 active:scale-95"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm uppercase tracking-wider font-bold text-white bg-[#4B1458] hover:bg-[#350C3E] transition-all shadow-md hover:scale-105 active:scale-95"
                     >
                       <span>
                         {activeStepIndex === answerWritingTransformationSteps.length - 1
                           ? 'Restart Flow'
                           : 'Next Transformation Stage'}
                       </span>
-                      <ArrowRight size={13} />
+                      <ArrowRight size={15} />
                     </button>
                   </div>
                 </div>
 
                 {/* Right Examiner Impact Column */}
-                <div className="lg:col-span-5 bg-[#FBF8F4] rounded-2xl p-5 sm:p-6 border border-[#E5DDD8] space-y-3 shadow-inner">
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-[#7B2A7A] font-bold">
-                    <TrendingUp size={15} className="text-[#D4AF6A]" />
+                <div className="lg:col-span-5 bg-[#FBF8F4] rounded-2xl p-6 sm:p-7 border border-[#E5DDD8] space-y-3.5 shadow-inner">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider text-[#7B2A7A] font-bold">
+                    <TrendingUp size={16} className="text-[#D4AF6A]" />
                     <span>Examiner Impact & Perception</span>
                   </div>
 
-                  <blockquote className="font-serif italic text-sm sm:text-base text-[#2A0932] leading-snug border-l-2 border-[#D4AF6A] pl-3 py-0.5">
+                  <blockquote className="font-serif italic text-base sm:text-lg lg:text-xl text-[#2A0932] leading-snug border-l-2 border-[#D4AF6A] pl-3.5 py-1">
                     &ldquo;{activeStep.examinerImpact}&rdquo;
                   </blockquote>
 
-                  <p className="text-[11px] text-[#6E6271] leading-relaxed pt-1">
+                  <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed pt-1 font-normal">
                     The difference between an average score and a top-bracket rank is structural framing and judicial balance.
                   </p>
                 </div>
@@ -183,11 +183,11 @@ export function AnswerWritingTransformation() {
         </div>
 
         {/* Guiding Principle Banner */}
-        <div className="mt-6 bg-gradient-to-r from-[#2A0932] via-[#4B1458] to-[#2A0932] text-white rounded-2xl sm:rounded-3xl p-6 sm:p-7 text-center shadow-lg border border-[#D4AF6A]/30 max-w-4xl mx-auto">
-          <p className="font-serif italic text-lg sm:text-xl lg:text-2xl text-[#FFFDF9] font-normal leading-relaxed">
+        <div className="mt-6 bg-gradient-to-r from-[#2A0932] via-[#4B1458] to-[#2A0932] text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center shadow-lg border border-[#D4AF6A]/30 max-w-4xl mx-auto">
+          <p className="font-serif italic text-xl sm:text-2xl lg:text-[1.85rem] text-[#FFFDF9] font-normal leading-relaxed">
             &ldquo;Clear writing is the mirror of a clear mind. Structure is what turns raw knowledge into persuasive administrative reasoning.&rdquo;
           </p>
-          <span className="text-[11px] uppercase tracking-widest text-[#E6CFA5] font-bold block mt-2">
+          <span className="text-xs sm:text-sm uppercase tracking-widest text-[#E6CFA5] font-bold block mt-3">
             — Jay Prakash Singh, Founder & Chief Mentor
           </span>
         </div>

@@ -72,17 +72,17 @@ export function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`relative text-xs lg:text-sm uppercase tracking-[0.14em] transition-colors duration-200 py-1.5 ${
+                    className={`relative text-sm lg:text-[0.95rem] uppercase tracking-[0.15em] transition-colors duration-200 py-1.5 ${
                       isActive
                         ? 'text-[#E6CFA5] font-bold'
-                        : 'text-[#FFFDF9]/85 hover:text-[#E6CFA5] font-medium'
+                        : 'text-[#FFFDF9]/90 hover:text-[#E6CFA5] font-semibold'
                     }`}
                   >
                     {item.label}
                     {isActive && (
                       <motion.span
                         layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] rounded-full bg-[#D4AF6A]"
+                        className="absolute bottom-0 left-0 right-0 h-[2.5px] rounded-full bg-[#D4AF6A]"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -95,11 +95,11 @@ export function Header() {
             <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] hover:text-[#1A041E] shadow-[0_4px_18px_rgba(212,175,106,0.35)] border border-[#D4AF6A]/50 transition-all duration-300 hover:shadow-[0_6px_24px_rgba(212,175,106,0.5)] hover:scale-105 active:scale-95"
+                className="group relative inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] hover:text-[#1A041E] shadow-[0_4px_18px_rgba(212,175,106,0.35)] border border-[#D4AF6A]/50 transition-all duration-300 hover:shadow-[0_6px_24px_rgba(212,175,106,0.5)] hover:scale-105 active:scale-95"
               >
                 <span>Let&apos;s Talk</span>
                 <ArrowRight
-                  size={14}
+                  size={15}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>

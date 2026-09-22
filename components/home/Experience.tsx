@@ -63,48 +63,48 @@ export function Experience() {
                 {/* Subtle top corner shimmer */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-[#D4AF6A]/10 to-transparent rounded-bl-full pointer-events-none" />
 
-                <div className="space-y-3 relative z-10">
+                <div className="space-y-3.5 relative z-10">
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-2xl bg-[#4B1458] border border-[#D4AF6A]/30 flex items-center justify-center text-[#E6CFA5] shadow-inner group-hover:scale-110 transition-transform">
+                    <div className="w-11 h-11 rounded-2xl bg-[#4B1458] border border-[#D4AF6A]/30 flex items-center justify-center text-[#E6CFA5] shadow-inner group-hover:scale-110 transition-transform">
                       {iconMap[pillar.icon]}
                     </div>
                     <span
                       style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                      className="text-[11px] uppercase tracking-widest text-[#D4AF6A] font-bold"
+                      className="text-xs sm:text-sm uppercase tracking-wider text-[#D4AF6A] font-bold"
                     >
                       Pillar 0{index + 1}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-xl sm:text-2xl font-normal text-white mb-0.5">
+                    <h3 className="font-serif text-2xl sm:text-3xl font-normal text-white mb-1">
                       {pillar.title}
                     </h3>
-                    <div className="text-xs text-[#E6CFA5] italic font-serif">
+                    <div className="text-sm sm:text-base text-[#E6CFA5] italic font-serif">
                       {pillar.subtitle}
                     </div>
                   </div>
 
-                  <p className="text-xs text-[#E5DDD8]/80 leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-[#E5DDD8]/90 leading-relaxed font-normal">
                     {pillar.description}
                   </p>
 
-                  <div className="bg-black/20 rounded-xl p-2.5 border-l-2 border-[#D4AF6A]/60">
-                    <p className="font-serif text-[11px] italic text-[#E6CFA5]/90 leading-snug">
+                  <div className="bg-black/20 rounded-xl p-3 border-l-2 border-[#D4AF6A]/60">
+                    <p className="font-serif text-xs sm:text-sm italic text-[#E6CFA5] leading-snug">
                       &ldquo;{pillar.quote}&rdquo;
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-3 mt-3 border-t border-white/10 space-y-1.5 relative z-10">
-                  <div className="text-[10px] uppercase tracking-widest text-[#D4AF6A] font-bold">
+                <div className="pt-4 mt-4 border-t border-white/10 space-y-2 relative z-10">
+                  <div className="text-xs uppercase tracking-wider text-[#D4AF6A] font-bold">
                     Executive Acumen:
                   </div>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1.5">
                     {pillar.qualities.map((q) => (
                       <span
                         key={q}
-                        className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[10px] text-[#E5DDD8]"
+                        className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs text-[#E5DDD8] font-medium"
                       >
                         {q}
                       </span>
@@ -121,13 +121,13 @@ export function Experience() {
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#4B1458] via-[#2A0932] to-[#4B1458] border border-[#D4AF6A]/30 text-center relative overflow-hidden shadow-xl"
+          className="mt-6 p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#4B1458] via-[#2A0932] to-[#4B1458] border border-[#D4AF6A]/30 text-center relative overflow-hidden shadow-xl"
         >
-          <Quote size={24} className="text-[#D4AF6A] mx-auto mb-2 opacity-90" />
-          <blockquote className="font-serif text-lg sm:text-xl lg:text-2xl text-[#FFFDF9] max-w-3xl mx-auto leading-snug font-normal italic">
+          <Quote size={28} className="text-[#D4AF6A] mx-auto mb-3 opacity-90" />
+          <blockquote className="font-serif text-xl sm:text-2xl lg:text-[1.85rem] text-[#FFFDF9] max-w-4xl mx-auto leading-snug font-normal italic">
             &ldquo;The discipline of a soldier. The vision of an administrator. The balance of a judge. The sensitivity of a writer.&rdquo;
           </blockquote>
-          <cite className="block mt-2 text-[11px] uppercase tracking-widest text-[#D4AF6A] font-bold not-italic">
+          <cite className="block mt-3 text-xs sm:text-sm uppercase tracking-wider text-[#D4AF6A] font-bold not-italic">
             — The Sarathii Philosophy of Leadership
           </cite>
         </motion.div>

@@ -30,11 +30,15 @@ import {
   careerMilestones,
   verifiedAchievements,
 } from '@/data/about'
+import {
+  sarathiiPhilosophySections,
+  sarathiiMantras,
+} from '@/data/philosophy'
 
 export const metadata: Metadata = {
-  title: 'Know Sarathii & Founder Jay Prakash Singh | Biography & Vision',
+  title: 'Know Sarathii & Founder Jay Prakash Singh | The Institution & The Mentor',
   description:
-    'The official digital biography and leadership philosophy of Jay Prakash Singh—former Armed Forces officer, senior civil administrator, judicial tribunal member, and author.',
+    'Sarathii is a premier civil services mentorship institution founded on five decades of lived public service by Jay Prakash Singh—former Armed Forces officer, senior civil administrator, and judicial tribunal member.',
 }
 
 const achievementIconMap: Record<string, React.ReactNode> = {
@@ -55,7 +59,7 @@ export default function AboutPage() {
 
       <main className="flex-grow">
         {/* =================================================================== */}
-        {/* 1. CINEMATIC LUXURY SPLIT HERO SECTION WITH OWNER IMAGE */}
+        {/* 1. CINEMATIC LUXURY SPLIT HERO SECTION WITH FOUNDER & INSTITUTION */}
         {/* =================================================================== */}
         <section className="relative pt-20 pb-8 sm:pt-24 sm:pb-10 lg:pt-28 lg:pb-12 bg-[#1A041E] text-white overflow-hidden border-b border-[#D4AF6A]/30">
           {/* Ambient Lighting & Glow */}
@@ -70,40 +74,40 @@ export default function AboutPage() {
                 {/* Gold Eyebrow Shimmer Pill */}
                 <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2A0932]/90 border border-[#D4AF6A]/40 text-xs uppercase tracking-[0.2em] font-semibold text-[#E6CFA5] shadow-lg backdrop-blur-md">
                   <Sparkles size={13} className="text-[#D4AF6A] animate-pulse" />
-                  <span>The Official Digital Biography</span>
+                  <span>The Institution & The Mentor</span>
                 </div>
 
                 {/* Main Headline */}
                 <h1 className="font-serif text-3xl sm:text-4xl lg:text-[3.2rem] xl:text-[3.6rem] text-[#FFFDF9] font-normal leading-[1.05] tracking-tight">
-                  From Village Soil to <br className="hidden sm:inline" />
+                  A School of Thought Forged in <br className="hidden sm:inline" />
                   National Service —{' '}
                   <span className="italic text-[#E6CFA5] block sm:inline mt-0.5 sm:mt-0">
-                    A Life of Discipline, Reform & Leadership.
+                    Discipline, Reform & Principled Leadership.
                   </span>
                 </h1>
 
                 {/* Subheading Narrative */}
-                <p className="text-sm sm:text-base text-[#E5DDD8]/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-                  Sarathii is grounded in five decades of uncompromised stewardship across national defence command, systemic civil administration, judicial tribunal adjudication, and civilizational literature.
+                <p className="text-base sm:text-lg text-[#E5DDD8]/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+                  Sarathii was established to cultivate habits of disciplined thinking and purposeful action in Civil Services aspirants. The institution is grounded in five decades of lived public leadership by its Founder & Chief Mentor, <strong className="text-white font-medium">Jay Prakash Singh</strong>, spanning military command, civil administration, judicial tribunals, and civilizational literature.
                 </p>
 
                 {/* 4-Column Metric Showcase Strip */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1 max-w-2xl mx-auto lg:mx-0">
                   <div className="bg-white/5 backdrop-blur-md py-2.5 px-3 rounded-2xl border border-white/10 text-center">
                     <div className="font-serif text-xl sm:text-2xl text-[#E6CFA5] font-bold">50+ Years</div>
-                    <div className="text-[10px] text-[#E5DDD8]/80 uppercase tracking-wider mt-0.5">Public Service</div>
+                    <div className="text-xs text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Public Service</div>
                   </div>
                   <div className="bg-white/5 backdrop-blur-md py-2.5 px-3 rounded-2xl border border-white/10 text-center">
                     <div className="font-serif text-xl sm:text-2xl text-white font-bold">4 Pillars</div>
-                    <div className="text-[10px] text-[#E5DDD8]/80 uppercase tracking-wider mt-0.5">Lived Disciplines</div>
+                    <div className="text-xs text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Lived Disciplines</div>
                   </div>
                   <div className="bg-white/5 backdrop-blur-md py-2.5 px-3 rounded-2xl border border-white/10 text-center">
                     <div className="font-serif text-xl sm:text-2xl text-[#E6CFA5] font-bold">1:1 Focus</div>
-                    <div className="text-[10px] text-[#E5DDD8]/80 uppercase tracking-wider mt-0.5">Direct Mentorship</div>
+                    <div className="text-xs text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Direct Mentorship</div>
                   </div>
                   <div className="bg-white/5 backdrop-blur-md py-2.5 px-3 rounded-2xl border border-white/10 text-center">
                     <div className="font-serif text-xl sm:text-2xl text-white font-bold">Author</div>
-                    <div className="text-[10px] text-[#E5DDD8]/80 uppercase tracking-wider mt-0.5">Civilizational Work</div>
+                    <div className="text-xs text-[#E5DDD8]/90 uppercase tracking-wider font-semibold mt-0.5">Civilizational Work</div>
                   </div>
                 </div>
 
@@ -113,7 +117,7 @@ export default function AboutPage() {
                     href="#biography-chapters"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg transition-all hover:scale-105 active:scale-95"
                   >
-                    <span>Explore 6 Chapters</span>
+                    <span>Explore 6 Formative Chapters</span>
                     <ArrowRight size={13} />
                   </a>
                   <Link
@@ -147,7 +151,7 @@ export default function AboutPage() {
                   <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border-2 border-[#D4AF6A]/50 shadow-2xl bg-[#1A041E] group">
                     <Image
                       src={founderProfile.portraitUrl}
-                      alt="Jay Prakash Singh - Founder & Chief Mentor"
+                      alt="Jay Prakash Singh - Founder & Chief Mentor of Sarathii"
                       fill
                       sizes="(max-width: 768px) 100vw, 550px"
                       className="object-cover object-[center_top] transition-transform duration-700 group-hover:scale-105"
@@ -156,16 +160,16 @@ export default function AboutPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A041E]/90 via-transparent to-transparent pointer-events-none" />
 
                     {/* Bottom Identity Clean Bar */}
-                    <div className="absolute bottom-3 left-3 right-3 bg-[#1A041E]/80 backdrop-blur-md py-2.5 px-4 rounded-2xl border border-[#D4AF6A]/30 flex items-center justify-between text-left">
+                    <div className="absolute bottom-3 left-3 right-3 bg-[#1A041E]/85 backdrop-blur-md py-3 px-4 rounded-2xl border border-[#D4AF6A]/30 flex items-center justify-between text-left">
                       <div>
                         <div className="font-serif text-base sm:text-lg text-white font-bold leading-tight">
                           Jay Prakash Singh
                         </div>
-                        <div className="text-[10px] text-[#E5DDD8]/80 leading-tight">
-                          Former Senior Administrator · Tribunal Member · Author
+                        <div className="text-xs text-[#E5DDD8]/90 leading-tight mt-0.5">
+                          Founder & Chief Mentor, Sarathii · Former Senior Administrator & Tribunal Member
                         </div>
                       </div>
-                      <span className="text-[10px] uppercase tracking-wider font-bold text-[#E6CFA5] px-2.5 py-1 rounded-full bg-[#2A0932] border border-[#D4AF6A]/40 shrink-0">
+                      <span className="text-xs uppercase tracking-wider font-bold text-[#E6CFA5] px-3 py-1 rounded-full bg-[#2A0932] border border-[#D4AF6A]/40 shrink-0">
                         50+ Yrs Exp.
                       </span>
                     </div>
@@ -187,11 +191,11 @@ export default function AboutPage() {
             <div className="max-w-4xl mx-auto text-center space-y-4 mb-10">
               <SectionHeading
                 align="center"
-                kicker="The Founder's Story"
-                title="A Synthesis of India's Most Demanding Public Disciplines"
-                description="A life forged through duty, ethical governance, and the relentless pursuit of institutional excellence."
+                kicker="The Mind Behind Sarathii"
+                title="Five Decades of Lived Public Disciplines Shaping the Sarathii Method"
+                description="How martial composure, civil systems governance, judicial neutrality, and ethical philosophy converge to power the Sarathii mentorship curriculum."
               />
-              <p className="text-base text-[#4A3E4D] leading-relaxed font-normal max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg text-[#4A3E4D] leading-relaxed font-normal max-w-3xl mx-auto">
                 Jay Prakash Singh brings a rare confluence of five decades across India’s most demanding public disciplines: the martial discipline and tactical grit of the Armed Forces, the complex systems modernization of the Indian Administrative Service, the dialectical balance of judicial tribunals, and the profound ethical synthesis of civilizational literature.
               </p>
             </div>
@@ -199,72 +203,72 @@ export default function AboutPage() {
             {/* 4 Interactive Domain Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {/* Domain 1: Armed Forces */}
-              <div className="bg-white p-6 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
-                    <Shield size={20} />
+                  <div className="w-11 h-11 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
+                    <Shield size={22} />
                   </div>
-                  <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B2A7A] block">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[#7B2A7A] block">
                     Armed Forces
                   </span>
-                  <h4 className="font-serif text-lg font-semibold text-[#2A0932] leading-snug">
+                  <h4 className="font-serif text-xl font-semibold text-[#2A0932] leading-snug">
                     Command & Martial Composure
                   </h4>
-                  <p className="text-xs text-[#6E6271] leading-relaxed">
-                    Tactical situational awareness, iron discipline, and stoic mental stamina in high-pressure environments.
+                  <p className="text-sm text-[#5D5060] leading-relaxed">
+                    Tactical situational awareness, iron discipline, and stoic mental stamina under intense high-pressure environments.
                   </p>
                 </div>
               </div>
 
               {/* Domain 2: Civil Administration */}
-              <div className="bg-white p-6 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
-                    <Briefcase size={20} />
+                  <div className="w-11 h-11 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
+                    <Briefcase size={22} />
                   </div>
-                  <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B2A7A] block">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[#7B2A7A] block">
                     Civil Administration
                   </span>
-                  <h4 className="font-serif text-lg font-semibold text-[#2A0932] leading-snug">
+                  <h4 className="font-serif text-xl font-semibold text-[#2A0932] leading-snug">
                     Public Stewardship & Policy
                   </h4>
-                  <p className="text-xs text-[#6E6271] leading-relaxed">
+                  <p className="text-sm text-[#5D5060] leading-relaxed">
                     Pioneered nationwide sanitation protocols, PPP infrastructure frameworks, and transparent ticketing safeguards.
                   </p>
                 </div>
               </div>
 
               {/* Domain 3: Judicial Tribunals */}
-              <div className="bg-white p-6 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
-                    <Scale size={20} />
+                  <div className="w-11 h-11 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
+                    <Scale size={22} />
                   </div>
-                  <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B2A7A] block">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[#7B2A7A] block">
                     Judicial Tribunals
                   </span>
-                  <h4 className="font-serif text-lg font-semibold text-[#2A0932] leading-snug">
+                  <h4 className="font-serif text-xl font-semibold text-[#2A0932] leading-snug">
                     Administrative Jurisprudence
                   </h4>
-                  <p className="text-xs text-[#6E6271] leading-relaxed">
+                  <p className="text-sm text-[#5D5060] leading-relaxed">
                     Adjudicated complex administrative disputes with constitutional equity, evidential balance, and deep neutrality.
                   </p>
                 </div>
               </div>
 
               {/* Domain 4: Civilizational Literature */}
-              <div className="bg-white p-6 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
+              <div className="bg-white p-6 sm:p-7 rounded-3xl border border-[#E5DDD8] shadow-sm hover:border-[#D4AF6A] transition-all duration-300 space-y-3 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between">
                 <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
-                    <BookOpen size={20} />
+                  <div className="w-11 h-11 rounded-xl bg-[#4B1458]/10 text-[#4B1458] flex items-center justify-center">
+                    <BookOpen size={22} />
                   </div>
-                  <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B2A7A] block">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[#7B2A7A] block">
                     Literature & Philosophy
                   </span>
-                  <h4 className="font-serif text-lg font-semibold text-[#2A0932] leading-snug">
+                  <h4 className="font-serif text-xl font-semibold text-[#2A0932] leading-snug">
                     Civilizational Authorship
                   </h4>
-                  <p className="text-xs text-[#6E6271] leading-relaxed">
+                  <p className="text-sm text-[#5D5060] leading-relaxed">
                     Author of &ldquo;जिन राहों पर सियाराम चले&rdquo;, decoding classical civilizational virtues into actionable governance principles.
                   </p>
                 </div>
@@ -281,8 +285,66 @@ export default function AboutPage() {
                 &ldquo;True leadership is not the exercise of authority; it is the quiet stewardship of principles in moments when compromise seems convenient.&rdquo;
               </p>
               <cite className="block text-xs uppercase tracking-widest text-[#E6CFA5] font-semibold not-italic">
-                — Jay Prakash Singh · Founder, Sarathii
+                — Jay Prakash Singh · Founder & Chief Mentor, Sarathii
               </cite>
+            </div>
+          </Container>
+        </section>
+
+        {/* =================================================================== */}
+        {/* 2.5 THE SARATHII PHILOSOPHY: A SCHOOL OF THOUGHT */}
+        {/* =================================================================== */}
+        <section className="py-14 lg:py-20 bg-[#FFFDF9] border-b border-[#E5DDD8]">
+          <Container>
+            <div className="max-w-4xl mx-auto text-center space-y-4 mb-12">
+              <SectionHeading
+                align="center"
+                kicker="The Institutional Credo"
+                title="The Sarathii Philosophy: A School of Thought"
+                description="The Sarathii Method is founded on the belief that excellence is not an accident. It is the outcome of disciplined preparation, logical thinking, strategic planning, emotional resilience, and unwavering self-belief."
+              />
+            </div>
+
+            {/* Philosophy Dimension Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {sarathiiPhilosophySections.map((sec, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#FDFBF7] rounded-3xl p-6 sm:p-8 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all duration-300 hover:shadow-lg flex flex-col justify-between"
+                >
+                  <div className="space-y-3.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold px-3 py-1 rounded-full bg-[#4B1458]/5 border border-[#4B1458]/10">
+                        Pillar 0{idx + 1}
+                      </span>
+                      <Sparkles size={15} className="text-[#D4AF6A]" />
+                    </div>
+                    <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold leading-snug">
+                      {sec.heading}
+                    </h3>
+                    <p className="text-sm sm:text-base text-[#4A3E4D] leading-relaxed">
+                      {sec.content}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Dual Closing Mantras Box */}
+            <div className="mt-10 max-w-4xl mx-auto bg-gradient-to-r from-[#2A0932] via-[#350C3E] to-[#1F0724] text-white rounded-3xl p-6 sm:p-8 border border-[#D4AF6A]/40 text-center space-y-3 shadow-xl">
+              <p className="font-serif text-base sm:text-xl italic text-[#E6CFA5]">
+                &ldquo;For Sarathii, success is measured not only by the number of selections it produces, but also by the quality of officers it helps shape.&rdquo;
+              </p>
+              <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-medium text-[#FFFDF9]">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-[#D4AF6A]" />
+                  <span>Sarathii is not merely a classroom. It is a school of thought.</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-[#D4AF6A]" />
+                  <span>Sarathii is not merely a mentor. It is a lifelong guide.</span>
+                </div>
+              </div>
             </div>
           </Container>
         </section>
@@ -295,15 +357,16 @@ export default function AboutPage() {
         </div>
 
         {/* =================================================================== */}
+        {/* =================================================================== */}
         {/* 4. PRESTIGE CAREER CHRONOLOGY (NATURAL JOURNEY STREAM) */}
         {/* =================================================================== */}
         <section className="py-14 lg:py-20 bg-[#F8F5F2] border-b border-[#E5DDD8] bg-pattern-subtle">
           <Container>
             <SectionHeading
               align="center"
-              kicker="Chronology of Service"
-              title="Career Milestones & Public Stewardship"
-              description="A progressive trajectory of public service, policy innovation, and nationwide administrative impact across five decades."
+              kicker="Sarathii Foundation · Chronology of Service"
+              title="Career Milestones & Public Stewardship of Our Chief Mentor"
+              description="A progressive trajectory of public service, policy innovation, and nationwide administrative impact that provides living case studies for Sarathii aspirants."
             />
 
             {/* Natural Connected Chronology Stream */}
@@ -335,9 +398,9 @@ export default function AboutPage() {
                             {milestone.role}
                           </span>
                         </div>
-                        <span className="text-[11px] font-bold text-[#A8823B] flex items-center gap-1 bg-[#D4AF6A]/10 px-3 py-0.5 rounded-full border border-[#D4AF6A]/30">
-                          <Sparkles size={11} className="text-[#D4AF6A]" />
-                          <span>Verified Era</span>
+                        <span className="text-xs font-bold text-[#A8823B] flex items-center gap-1.5 bg-[#D4AF6A]/10 px-3 py-1 rounded-full border border-[#D4AF6A]/30">
+                          <Sparkles size={12} className="text-[#D4AF6A]" />
+                          <span>Verified Public Record</span>
                         </span>
                       </div>
 
@@ -349,8 +412,8 @@ export default function AboutPage() {
                         {milestone.description}
                       </p>
 
-                      <div className="pt-3.5 border-t border-[#E5DDD8] flex items-center gap-2 text-xs text-[#2A0932] font-medium bg-[#FBF8F4] -mx-6 -mb-6 sm:-mx-8 sm:-mb-8 px-6 sm:px-8 py-4 rounded-b-3xl">
-                        <Sparkles size={14} className="text-[#D4AF6A] shrink-0" />
+                      <div className="pt-3.5 border-t border-[#E5DDD8] flex items-center gap-2 text-xs sm:text-sm text-[#2A0932] font-medium bg-[#FBF8F4] -mx-6 -mb-6 sm:-mx-8 sm:-mb-8 px-6 sm:px-8 py-4 rounded-b-3xl">
+                        <Sparkles size={15} className="text-[#D4AF6A] shrink-0" />
                         <span><strong>Key Systemic Impact:</strong> {milestone.impact}</span>
                       </div>
                     </div>
@@ -368,9 +431,9 @@ export default function AboutPage() {
           <Container>
             <SectionHeading
               align="center"
-              kicker="Distinguished Record"
-              title="Verified Achievements & Honors"
-              description="Real-world leadership honors earned through uncompromised integrity, systemic reform, and dedicated service."
+              kicker="Distinguished Public Record"
+              title="Verified Achievements & Honors Guiding Sarathii"
+              description="Real-world leadership honors earned through uncompromised integrity, systemic reform, and dedicated national service."
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-8">
@@ -384,7 +447,7 @@ export default function AboutPage() {
                       <div className="w-12 h-12 rounded-2xl bg-[#2A0932] text-[#E6CFA5] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
                         {achievementIconMap[achievement.icon]}
                       </div>
-                      <span className="text-[10px] uppercase tracking-widest text-[#7B2A7A] font-bold px-2.5 py-1 rounded-full bg-[#4B1458]/5 border border-[#4B1458]/10">
+                      <span className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold px-3 py-1 rounded-full bg-[#4B1458]/5 border border-[#4B1458]/10">
                         {achievement.domain}
                       </span>
                     </div>
@@ -393,7 +456,7 @@ export default function AboutPage() {
                       {achievement.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed">
+                    <p className="text-sm text-[#5D5060] leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
@@ -420,13 +483,13 @@ export default function AboutPage() {
               <div className="space-y-3 text-center lg:text-left max-w-2xl relative z-10">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs uppercase tracking-widest font-bold text-[#E6CFA5] border border-white/15">
                   <Sparkles size={12} className="text-[#D4AF6A]" />
-                  <span>Direct Personal Mentorship</span>
+                  <span>Direct Mentorship at Sarathii</span>
                 </div>
                 <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#FFFDF9] font-normal leading-tight">
-                  Seek Guidance from a Lifelong Charioteer
+                  Seek Guidance from Sarathii & Its Founder
                 </h3>
-                <p className="text-xs sm:text-sm text-[#E5DDD8]/90 leading-relaxed">
-                  Begin with a focused diagnostic evaluation of your preparation trajectory, answer writing maturity, and administrative reasoning directly with Jay Prakash Singh.
+                <p className="text-sm sm:text-base text-[#E5DDD8]/90 leading-relaxed">
+                  Begin with a focused diagnostic evaluation of your preparation trajectory, answer writing maturity, and administrative reasoning directly with Sarathii&apos;s Chief Mentor, Jay Prakash Singh.
                 </p>
               </div>
 

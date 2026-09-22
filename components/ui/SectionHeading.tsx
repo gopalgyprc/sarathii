@@ -37,7 +37,7 @@ export function SectionHeading({
     >
       {kicker && (
         <div
-          className={`inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold mb-3 ${
+          className={`inline-flex items-center gap-2 text-xs sm:text-sm uppercase tracking-[0.22em] font-bold mb-3 ${
             isDark ? 'text-[#D4AF6A]' : 'text-[#7B2A7A]'
           } ${isCenter ? 'justify-center' : ''}`}
         >
@@ -58,7 +58,7 @@ export function SectionHeading({
       )}
 
       <h2
-        className={`font-serif text-3xl sm:text-4xl md:text-5xl lg:text-5xl tracking-tight leading-[1.1] font-normal mb-3 ${
+        className={`font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] tracking-tight leading-[1.12] font-normal mb-3.5 ${
           isDark ? 'text-[#FFFDF9]' : 'text-[#2A0932]'
         }`}
       >
@@ -67,7 +67,7 @@ export function SectionHeading({
 
       {subtitle && (
         <p
-          className={`font-serif text-lg sm:text-xl italic font-normal mb-2.5 ${
+          className={`font-serif text-xl sm:text-2xl italic font-normal mb-3 ${
             isDark ? 'text-[#E6CFA5]' : 'text-[#7B2A7A]'
           }`}
         >
@@ -77,8 +77,8 @@ export function SectionHeading({
 
       {description && (
         <p
-          className={`text-sm sm:text-base leading-relaxed max-w-3xl ${
-            isDark ? 'text-[#E5DDD8]/80' : 'text-[#6E6271]'
+          className={`text-base sm:text-lg lg:text-[1.15rem] leading-relaxed max-w-3xl ${
+            isDark ? 'text-[#E5DDD8]/90' : 'text-[#5E5261]'
           } ${isCenter ? 'mx-auto' : ''}`}
         >
           {description}

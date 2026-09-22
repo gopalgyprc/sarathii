@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond } from 'next/font/google'
-import localFont from 'next/font/local'
+import { Cormorant_Garamond, Plus_Jakarta_Sans, Cinzel } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CustomCursor } from '@/components/ui/CustomCursor'
 import './globals.css'
@@ -12,75 +11,17 @@ const cormorant = Cormorant_Garamond({
   display: 'swap',
 })
 
-const poppins = localFont({
-  src: [
-    {
-      path: '../public/Poppins/Poppins-Thin.ttf',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-ExtraLight.ttf',
-      weight: '200',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-Italic.ttf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: '../public/Poppins/Poppins-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-MediumItalic.ttf',
-      weight: '500',
-      style: 'italic',
-    },
-    {
-      path: '../public/Poppins/Poppins-SemiBold.ttf',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-SemiBoldItalic.ttf',
-      weight: '600',
-      style: 'italic',
-    },
-    {
-      path: '../public/Poppins/Poppins-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-BoldItalic.ttf',
-      weight: '700',
-      style: 'italic',
-    },
-    {
-      path: '../public/Poppins/Poppins-ExtraBold.ttf',
-      weight: '800',
-      style: 'normal',
-    },
-    {
-      path: '../public/Poppins/Poppins-Black.ttf',
-      weight: '900',
-      style: 'normal',
-    },
-  ],
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+})
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  variable: '--font-cinzel',
+  weight: ['600', '700', '800'],
   display: 'swap',
 })
 
@@ -165,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${poppins.variable} scroll-smooth`}>
+    <html lang="en" className={`${cormorant.variable} ${plusJakartaSans.variable} ${cinzel.variable} scroll-smooth`}>
       <body className="font-sans antialiased bg-[#FFFDF9] text-[#1F1722] selection:bg-[#4B1458] selection:text-[#FFFDF9]">
         <CustomCursor />
         {children}

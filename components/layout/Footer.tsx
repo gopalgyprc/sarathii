@@ -37,12 +37,12 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm leading-relaxed text-[#E5DDD8]/80 max-w-sm">
+            <p className="text-sm sm:text-base leading-relaxed text-[#E5DDD8]/85 max-w-sm">
               <strong className="text-white font-medium">Sarathii</strong> represents the steady charioteer guiding ambitious civil services aspirants and emerging leaders through clarity, strategic preparation, and ethical conviction.
             </p>
 
-            <div className="pt-2 flex items-center gap-3 text-xs text-[#D4AF6A]">
-              <Sparkles size={14} className="text-[#D4AF6A] shrink-0" />
+            <div className="pt-2 flex items-center gap-3 text-xs sm:text-sm text-[#D4AF6A] font-medium">
+              <Sparkles size={16} className="text-[#D4AF6A] shrink-0" />
               <span>Founded on five decades of distinguished public service.</span>
             </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
                 href="https://www.linkedin.com/in/jay-prakash-singh-87381a66/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
                 aria-label="LinkedIn Profile of Jay Prakash Singh"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@ export function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ export function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#E5DDD8] hover:text-[#D4AF6A] hover:border-[#D4AF6A]/40 transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -97,19 +97,19 @@ export function Footer() {
 
           {/* Col 2: Useful Links (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="font-serif text-lg text-[#E6CFA5] font-normal tracking-wide">
+            <h4 className="font-serif text-xl text-[#E6CFA5] font-normal tracking-wide">
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-sm sm:text-base">
               {siteConfig.navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-[#E5DDD8]/75 hover:text-white transition-colors duration-200 inline-flex items-center gap-1 group"
+                    className="text-[#E5DDD8]/80 hover:text-white transition-colors duration-200 inline-flex items-center gap-1 group font-medium"
                   >
                     <span>{item.label}</span>
                     <ArrowUpRight
-                      size={12}
+                      size={14}
                       className="opacity-0 group-hover:opacity-100 transition-opacity text-[#D4AF6A]"
                     />
                   </Link>
@@ -120,20 +120,20 @@ export function Footer() {
 
           {/* Col 3: Latest Insights (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-serif text-lg text-[#E6CFA5] font-normal tracking-wide">
+            <h4 className="font-serif text-xl text-[#E6CFA5] font-normal tracking-wide">
               Latest Insights
             </h4>
-            <div className="space-y-3">
+            <div className="space-y-3.5">
               {articles.slice(0, 3).map((article) => (
                 <Link
                   key={article.slug}
                   href={`/insights/${article.slug}`}
                   className="group block space-y-1"
                 >
-                  <span className="text-[10px] uppercase tracking-wider text-[#D4AF6A] font-semibold">
+                  <span className="text-xs uppercase tracking-wider text-[#D4AF6A] font-bold">
                     {article.category}
                   </span>
-                  <p className="text-xs text-[#E5DDD8]/85 group-hover:text-white group-hover:underline underline-offset-2 transition-colors line-clamp-2 leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#E5DDD8]/90 group-hover:text-white group-hover:underline underline-offset-2 transition-colors line-clamp-2 leading-relaxed">
                     {article.title}
                   </p>
                 </Link>
@@ -143,12 +143,12 @@ export function Footer() {
 
           {/* Col 4: Contact & Office (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-serif text-lg text-[#E6CFA5] font-normal tracking-wide">
+            <h4 className="font-serif text-xl text-[#E6CFA5] font-normal tracking-wide">
               Connect
             </h4>
-            <div className="space-y-3 text-xs sm:text-sm text-[#E5DDD8]/80 leading-relaxed">
-              <div className="flex items-start gap-2.5">
-                <MapPin size={16} className="text-[#D4AF6A] shrink-0 mt-0.5" />
+            <div className="space-y-3.5 text-sm sm:text-base text-[#E5DDD8]/85 leading-relaxed">
+              <div className="flex items-start gap-3">
+                <MapPin size={18} className="text-[#D4AF6A] shrink-0 mt-1" />
                 <span>
                   1601, A Block, Spectrum Metro,
                   <br />
@@ -158,8 +158,8 @@ export function Footer() {
                 </span>
               </div>
 
-              <div className="flex items-center gap-2.5 pt-1">
-                <Mail size={16} className="text-[#D4AF6A] shrink-0" />
+              <div className="flex items-center gap-3 pt-1">
+                <Mail size={18} className="text-[#D4AF6A] shrink-0" />
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="hover:text-white transition-colors"
@@ -168,8 +168,8 @@ export function Footer() {
                 </a>
               </div>
 
-              <div className="flex items-center gap-2.5">
-                <Phone size={16} className="text-[#D4AF6A] shrink-0" />
+              <div className="flex items-center gap-3">
+                <Phone size={18} className="text-[#D4AF6A] shrink-0" />
                 <a
                   href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
                   className="hover:text-white transition-colors"
@@ -181,10 +181,10 @@ export function Footer() {
               <div className="pt-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs uppercase tracking-wider font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm uppercase tracking-wider font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all"
                 >
                   <span>Request Consultation</span>
-                  <ArrowRight size={12} />
+                  <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -192,7 +192,7 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E5DDD8]/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#E5DDD8]/70">
           <div>
             © {new Date().getFullYear()} Sarathii (India). All rights reserved.
           </div>

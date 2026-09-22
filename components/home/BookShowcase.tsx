@@ -57,30 +57,30 @@ export function BookShowcase() {
 
           {/* Right Column: Editorial Synopsis & Actions (7 cols) */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 text-[#E6CFA5] text-[11px] uppercase tracking-widest font-semibold">
-              <Sparkles size={12} className="text-[#D4AF6A]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#E6CFA5] text-xs sm:text-sm uppercase tracking-wider font-bold">
+              <Sparkles size={13} className="text-[#D4AF6A]" />
               <span>Civilizational Treatise on Leadership</span>
             </div>
 
-            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#FFFDF9] font-normal leading-tight">
+            <h3 className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] text-[#FFFDF9] font-normal leading-tight">
               &ldquo;{featuredBook.hindiTitle}&rdquo;
             </h3>
 
-            <p className="text-xs sm:text-sm text-[#E5DDD8]/90 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base lg:text-[1.05rem] text-[#E5DDD8]/95 leading-relaxed font-normal">
               {featuredBook.summary}
             </p>
 
             {/* Key Book Themes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               {featuredBook.themes.slice(0, 2).map((theme) => (
                 <div
                   key={theme.title}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-3.5 space-y-1"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-1.5"
                 >
-                  <div className="text-xs font-serif text-[#E6CFA5] font-semibold">
+                  <div className="text-sm sm:text-base font-serif text-[#E6CFA5] font-semibold">
                     {theme.title}
                   </div>
-                  <div className="text-[11px] text-[#E5DDD8]/75 leading-relaxed">
+                  <div className="text-xs sm:text-sm text-[#E5DDD8]/85 leading-relaxed">
                     {theme.description}
                   </div>
                 </div>
@@ -88,21 +88,21 @@ export function BookShowcase() {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <button
                 onClick={() => setPrastavanaOpen(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all shadow-md"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all shadow-md"
               >
-                <BookOpen size={14} />
+                <BookOpen size={16} />
                 <span>Read Prastavana (Preface)</span>
               </button>
 
               <Link
                 href="/books"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.14em] font-bold text-white border border-white/20 hover:border-white hover:bg-white/10 transition-all"
               >
                 <span>Full Book Details</span>
-                <ArrowRight size={13} />
+                <ArrowRight size={15} />
               </Link>
             </div>
           </div>
@@ -136,28 +136,28 @@ export function BookShowcase() {
 
               <div className="space-y-6">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-1">
+                  <div className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-1">
                     ग्रंथ प्रस्तावना (Author&apos;s Preface)
                   </div>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[#2A0932]">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-[#2A0932]">
                     {featuredBook.hindiTitle}
                   </h3>
-                  <p className="text-xs text-[#6E6271] italic">
+                  <p className="text-sm text-[#6E6271] italic mt-1 font-medium">
                     लेखक: {featuredBook.authorHindi}
                   </p>
                 </div>
 
-                <div className="bg-[#F8F5F2] p-5 rounded-2xl border-l-4 border-[#D4AF6A] space-y-3 font-serif text-base sm:text-lg leading-relaxed text-[#2A0932]">
+                <div className="bg-[#F8F5F2] p-5 sm:p-6 rounded-2xl border-l-4 border-[#D4AF6A] space-y-3.5 font-serif text-lg sm:text-xl leading-relaxed text-[#2A0932]">
                   {featuredBook.prastavanaHindi.map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
                 </div>
 
                 <div className="space-y-3 pt-2">
-                  <h4 className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold">
+                  <h4 className="text-xs sm:text-sm uppercase tracking-widest text-[#7B2A7A] font-bold">
                     English Reflection & Synthesis
                   </h4>
-                  <div className="space-y-3 text-sm text-[#6E6271] leading-relaxed">
+                  <div className="space-y-3 text-sm sm:text-base text-[#6E6271] leading-relaxed">
                     {featuredBook.prastavanaEnglishReflection.map((para, i) => (
                       <p key={i}>{para}</p>
                     ))}
@@ -167,7 +167,7 @@ export function BookShowcase() {
                 <div className="pt-4 border-t border-[#E5DDD8] flex justify-end">
                   <button
                     onClick={() => setPrastavanaOpen(false)}
-                    className="px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] transition-all"
+                    className="px-6 py-2.5 rounded-full text-xs sm:text-sm uppercase tracking-wider font-bold text-white bg-[#4B1458] hover:bg-[#2A0932] transition-all"
                   >
                     Close Preview
                   </button>

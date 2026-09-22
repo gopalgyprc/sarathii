@@ -10,9 +10,9 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { featuredBook } from '@/data/books'
 
 export const metadata: Metadata = {
-  title: 'Books & Civilizational Works by Jay Prakash Singh',
+  title: 'Sarathii Publications | Civilizational Works by Founder Jay Prakash Singh',
   description:
-    'Explore "जिन राहों पर सियाराम चले" (वन में और जीवन में) by J.P. Singh—a profound exploration of ethical leadership, fortitude, and purpose through the exile of Shri Ram.',
+    'Explore "जिन राहों पर सियाराम चले" (वन में और जीवन में) by Sarathii Founder & Chief Mentor Jay Prakash Singh—a profound exploration of ethical leadership, fortitude, and purpose.',
 }
 
 export default function BooksPage() {
@@ -31,18 +31,18 @@ export default function BooksPage() {
             <div className="max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2A0932]/90 border border-[#D4AF6A]/40 text-xs uppercase tracking-[0.2em] font-semibold text-[#E6CFA5] shadow-lg backdrop-blur-md">
                 <Sparkles size={13} className="text-[#D4AF6A] animate-pulse" />
-                <span>Civilizational Literature & Leadership</span>
+                <span>Sarathii Publications · Ethical Foundations</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] text-[#FFFDF9] font-normal leading-[1.05] tracking-tight">
-                Books by{' '}
+                Civilizational Works by <br className="hidden sm:inline" />
                 <span className="italic text-[#E6CFA5]">
-                  Jay Prakash Singh
+                  Founder Jay Prakash Singh
                 </span>
               </h1>
 
               <p className="text-base sm:text-lg text-[#E5DDD8]/90 leading-relaxed max-w-2xl mx-auto font-normal">
-                Synthesizing classical Indian civilizational wisdom with five decades of real-world administrative, military, and judicial leadership.
+                At Sarathii, Civil Services preparation is incomplete without moral fortitude and ethical clarity. The literary works authored by our Chief Mentor synthesize classical civilizational wisdom with five decades of real-world administrative and judicial leadership.
               </p>
             </div>
           </Container>
@@ -51,7 +51,7 @@ export default function BooksPage() {
         </section>
 
         {/* Featured Book Major Showcase */}
-        <section className="py-10 lg:py-14 bg-[#FFFDF9]">
+        <section className="py-12 lg:py-18 bg-[#FFFDF9]">
           <Container>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* 3D Book Visual (5 cols) */}
@@ -74,45 +74,45 @@ export default function BooksPage() {
               {/* Book Overview & Narrative (7 cols) */}
               <div className="lg:col-span-7 space-y-6">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-2">
-                    About The Masterwork
+                  <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold mb-2">
+                    01 / Essential Reading for Civil Services Ethics
                   </div>
-                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#2A0932] font-normal leading-tight mb-3">
+                  <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#2A0932] font-normal leading-tight mb-3">
                     {featuredBook.hindiTitle}{' '}
                     <span className="italic text-[#7B2A7A] text-xl sm:text-2xl block sm:inline">
                       ({featuredBook.hindiSubtitle})
                     </span>
-                  </h3>
-                  <p className="text-sm sm:text-base text-[#6E6271] leading-relaxed">
+                  </h2>
+                  <p className="text-base sm:text-lg text-[#4A3E4D] leading-relaxed">
                     {featuredBook.summary}
                   </p>
                 </div>
 
                 {/* Extended Summary Paragraphs */}
-                <div className="space-y-3 text-sm text-[#6E6271] leading-relaxed border-l-2 border-[#D4AF6A] pl-5">
+                <div className="space-y-3.5 text-sm sm:text-base text-[#4A3E4D] leading-relaxed border-l-2 border-[#D4AF6A] pl-5">
                   {featuredBook.extendedSummary.map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
                 </div>
 
                 {/* Core Themes Grid */}
-                <div className="space-y-3">
-                  <h4 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
-                    Core Conceptual Themes
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-3 pt-2">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
+                    Core Conceptual Themes for Administrators
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {featuredBook.themes.map((theme) => (
                       <div
                         key={theme.title}
-                        className="bg-[#F8F5F2] rounded-2xl p-4 sm:p-5 border border-[#E5DDD8] space-y-1.5"
+                        className="bg-[#F8F5F2] rounded-2xl p-5 border border-[#E5DDD8] space-y-2 hover:border-[#D4AF6A] transition-colors"
                       >
-                        <div className="font-serif text-base sm:text-lg text-[#4B1458] font-semibold">
+                        <div className="font-serif text-lg text-[#4B1458] font-semibold">
                           {theme.title}
                         </div>
-                        <p className="text-xs text-[#6E6271] leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#5D5060] leading-relaxed">
                           {theme.description}
                         </p>
-                        <div className="pt-2 text-[11px] text-[#A8823B] font-semibold border-t border-[#E5DDD8]">
+                        <div className="pt-2 text-xs text-[#A8823B] font-semibold border-t border-[#E5DDD8]">
                           Aspirant Acumen: {theme.relevanceToAspirants}
                         </div>
                       </div>
@@ -121,11 +121,11 @@ export default function BooksPage() {
                 </div>
 
                 {/* Quotes from the Book */}
-                <div className="bg-[#2A0932] text-[#FFFDF9] rounded-3xl p-6 sm:p-7 border border-[#D4AF6A]/30 space-y-3 shadow-md">
-                  <Quote size={20} className="text-[#D4AF6A]" />
-                  <div className="space-y-2 font-serif text-base sm:text-lg italic text-[#E6CFA5]">
+                <div className="bg-[#2A0932] text-[#FFFDF9] rounded-3xl p-6 sm:p-8 border border-[#D4AF6A]/30 space-y-3 shadow-md">
+                  <Quote size={22} className="text-[#D4AF6A]" />
+                  <div className="space-y-2 font-serif text-base sm:text-xl italic text-[#E6CFA5]">
                     {featuredBook.quotes.map((quote, i) => (
-                      <p key={i}>{quote}</p>
+                      <p key={i}>&ldquo;{quote}&rdquo;</p>
                     ))}
                   </div>
                 </div>
@@ -135,36 +135,36 @@ export default function BooksPage() {
         </section>
 
         {/* Complete Prastavana (Preface) Section */}
-        <section className="py-10 lg:py-14 bg-[#F8F5F2] border-t border-[#E5DDD8]">
+        <section className="py-12 lg:py-18 bg-[#F8F5F2] border-t border-[#E5DDD8]">
           <Container size="sm">
-            <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-semibold mb-1">
+            <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
+              <div className="text-xs uppercase tracking-[0.2em] text-[#7B2A7A] font-bold">
                 मूल प्रस्तावना
               </div>
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#2A0932] font-normal">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#2A0932] font-normal">
                 ग्रंथ की प्रस्तावना एवं दर्शन
               </h2>
-              <p className="text-xs text-[#6E6271] mt-1">
-                From the preface of &ldquo;जिन राहों पर सियाराम चले&rdquo; by Jay Prakash Singh
+              <p className="text-xs sm:text-sm text-[#6E6271]">
+                From the preface of &ldquo;जिन राहों पर सियाराम चले&rdquo; by Founder Jay Prakash Singh
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#E5DDD8] shadow-md space-y-6">
+            <div className="bg-white rounded-3xl p-6 sm:p-10 border border-[#E5DDD8] shadow-md space-y-8">
               {/* Hindi Preface Text */}
-              <div className="space-y-5 font-serif text-base sm:text-lg leading-relaxed text-[#2A0932] border-b border-[#E5DDD8] pb-6">
+              <div className="space-y-5 font-serif text-lg sm:text-xl leading-relaxed text-[#2A0932] border-b border-[#E5DDD8] pb-6">
                 {featuredBook.prastavanaHindi.map((para, i) => (
-                  <p key={i} className="first-letter:text-2xl first-letter:font-bold first-letter:text-[#4B1458]">
+                  <p key={i} className="first-letter:text-3xl first-letter:font-bold first-letter:text-[#4B1458]">
                     {para}
                   </p>
                 ))}
               </div>
 
               {/* English Reflection */}
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <h4 className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold">
-                  English Reflection & Synthesis
+                  English Reflection & Administrative Synthesis
                 </h4>
-                <div className="space-y-3 text-xs sm:text-sm text-[#6E6271] leading-relaxed">
+                <div className="space-y-3.5 text-sm sm:text-base text-[#4A3E4D] leading-relaxed">
                   {featuredBook.prastavanaEnglishReflection.map((para, i) => (
                     <p key={i}>{para}</p>
                   ))}
@@ -175,32 +175,32 @@ export default function BooksPage() {
         </section>
 
         {/* Chapters Overview */}
-        <section className="py-10 lg:py-14 bg-[#FFFDF9]">
+        <section className="py-12 lg:py-18 bg-[#FFFDF9]">
           <Container>
             <SectionHeading
               align="center"
               kicker="Table of Contents"
-              title="Chapter Architecture & Journey"
-              description="A progressive thematic exploration across the pivotal stages of the epic journey."
+              title="Chapter Architecture & Thematic Journey"
+              description="A progressive thematic exploration across the pivotal stages of the epic exile, serving as an ethical template for administrative life."
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
               {featuredBook.chapters.map((chapter) => (
                 <div
                   key={chapter.number}
-                  className="bg-[#F8F5F2] rounded-3xl p-6 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex flex-col justify-between"
+                  className="bg-[#F8F5F2] rounded-3xl p-6 sm:p-7 border border-[#E5DDD8] hover:border-[#D4AF6A] transition-all flex flex-col justify-between"
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-2.5">
                     <span className="text-xs uppercase tracking-widest text-[#D4AF6A] font-bold">
                       अध्याय {chapter.number}
                     </span>
-                    <h3 className="font-serif text-lg sm:text-xl text-[#2A0932] font-semibold">
+                    <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
                       {chapter.hindiTitle}
                     </h3>
-                    <div className="text-xs text-[#7B2A7A] italic font-serif">
+                    <div className="text-xs sm:text-sm text-[#7B2A7A] italic font-serif">
                       {chapter.englishTitle}
                     </div>
-                    <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed pt-1">
+                    <p className="text-xs sm:text-sm text-[#5D5060] leading-relaxed pt-1">
                       {chapter.description}
                     </p>
                   </div>
@@ -209,13 +209,19 @@ export default function BooksPage() {
             </div>
 
             {/* Inquire for Copy CTA */}
-            <div className="mt-8 text-center">
+            <div className="mt-12 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all shrink-0 hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg transition-all shrink-0 hover:scale-105 active:scale-95"
               >
-                <span>Request Reading Copy / Inquire</span>
+                <span>Request Reading Copy / Ethics Consultation</span>
                 <ArrowRight size={14} />
+              </Link>
+              <Link
+                href="/insights"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-[#2A0932] bg-[#F8F5F2] hover:bg-[#EAE4DD] border border-[#E5DDD8] transition-all"
+              >
+                <span>Explore Strategic Insights</span>
               </Link>
             </div>
           </Container>

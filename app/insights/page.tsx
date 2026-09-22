@@ -8,9 +8,9 @@ import { articles } from '@/data/articles'
 import { InsightsExplorer } from '@/components/insights/InsightsExplorer'
 
 export const metadata: Metadata = {
-  title: 'Insights & Strategy Journal | Sarathii',
+  title: 'Sarathii Journal | Strategic Insights & Mentorship Notes',
   description:
-    'Essays and strategic notes on UPSC preparation, administrative leadership, mental resilience, and answer-writing by Jay Prakash Singh.',
+    'Strategic monographs on high-yield civil services preparation, administrative statesmanship, constitutional ethics, and mental fortitude by Sarathii Founder & Chief Mentor Jay Prakash Singh.',
 }
 
 export default function InsightsPage() {
@@ -30,7 +30,7 @@ export default function InsightsPage() {
             <div className="max-w-3xl mx-auto space-y-4">
               <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2A0932]/90 border border-[#D4AF6A]/40 text-xs uppercase tracking-[0.2em] font-semibold text-[#E6CFA5] shadow-lg backdrop-blur-md">
                 <Sparkles size={13} className="text-[#D4AF6A] animate-pulse" />
-                <span>The Sarathii Journal</span>
+                <span>The Sarathii Journal · Strategic Monographs</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] text-[#FFFDF9] font-normal leading-[1.05] tracking-tight">
@@ -41,7 +41,7 @@ export default function InsightsPage() {
               </h1>
 
               <p className="text-base sm:text-lg text-[#E5DDD8]/90 leading-relaxed max-w-2xl mx-auto font-normal">
-                Strategic monographs on high-yield exam preparation, administrative statesmanship, constitutional ethics, and mental fortitude by Jay Prakash Singh.
+                Strategic monographs on high-yield civil services preparation, administrative statesmanship, constitutional ethics, and mental fortitude authored by Founder & Chief Mentor Jay Prakash Singh.
               </p>
             </div>
           </Container>

@@ -46,7 +46,7 @@ export function SarathiiMethod() {
       <Container>
         <SectionHeading
           align="center"
-          kicker="06 / The Predictable Excellence Framework"
+          kicker="04 / The Sarathii Method"
           title={
             <>
               A Systematic Framework for{' '}
@@ -80,17 +80,17 @@ export function SarathiiMethod() {
                 <button
                   key={step.step}
                   onClick={() => setSelectedStep(index)}
-                  className={`group relative p-3 sm:p-4 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between ${
+                  className={`group relative p-3.5 sm:p-5 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between ${
                     isSelected
                       ? 'bg-[#4B1458] text-white border-[#4B1458] shadow-lg shadow-[#4B1458]/20 -translate-y-1 ring-2 ring-[#D4AF6A]/40'
                       : 'bg-white hover:bg-[#FFFDF9] text-[#1F1722] border-[#E5DDD8] hover:border-[#D4AF6A] shadow-sm'
                   }`}
                 >
                   {/* Step Header with Number & Animated Node */}
-                  <div className="flex items-center justify-between mb-2 w-full">
+                  <div className="flex items-center justify-between mb-2.5 w-full">
                     <span
                       style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                      className={`text-[11px] font-bold uppercase tracking-widest ${
+                      className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${
                         isSelected ? 'text-[#D4AF6A]' : 'text-[#7B2A7A]'
                       }`}
                     >
@@ -98,7 +98,7 @@ export function SarathiiMethod() {
                     </span>
 
                     <div
-                      className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+                      className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
                         isSelected
                           ? 'bg-[#E6CFA5] text-[#2A0932] shadow-sm scale-105'
                           : isCompleted
@@ -111,10 +111,10 @@ export function SarathiiMethod() {
                   </div>
 
                   {/* Step Name */}
-                  <div className="space-y-0.5">
+                  <div className="space-y-1">
                     <h3
                       style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                      className={`text-base sm:text-lg font-bold tracking-tight ${
+                      className={`text-base sm:text-lg lg:text-xl font-bold tracking-tight leading-snug ${
                         isSelected ? 'text-white' : 'text-[#2A0932]'
                       }`}
                     >
@@ -122,7 +122,7 @@ export function SarathiiMethod() {
                     </h3>
                     <p
                       style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                      className={`text-[11px] line-clamp-1 leading-normal ${
+                      className={`text-xs sm:text-sm line-clamp-1 leading-normal ${
                         isSelected ? 'text-[#E6CFA5]' : 'text-[#6E6271]'
                       }`}
                     >
@@ -157,14 +157,14 @@ export function SarathiiMethod() {
 
               {/* Left Column: Narrative & Purpose (6 cols) */}
               <div className="lg:col-span-6 space-y-4 relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 text-[#E6CFA5] text-[11px] uppercase tracking-widest font-bold border border-white/15">
-                  <Sparkles size={12} className="text-[#D4AF6A]" />
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#E6CFA5] text-xs sm:text-sm uppercase tracking-wider font-bold border border-white/15">
+                  <Sparkles size={13} className="text-[#D4AF6A]" />
                   <span>Phase {sarathiiMethodSteps[selectedStep].step} of 05</span>
                 </div>
 
                 <h3
                   style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                  className="text-2xl sm:text-3xl lg:text-4xl text-[#FFFDF9] font-bold tracking-tight leading-tight"
+                  className="text-2xl sm:text-3xl lg:text-[2.6rem] text-[#FFFDF9] font-bold tracking-tight leading-tight"
                 >
                   {sarathiiMethodSteps[selectedStep].name} —{' '}
                   <span className="font-serif italic font-normal text-[#E6CFA5]">
@@ -174,78 +174,78 @@ export function SarathiiMethod() {
 
                 <p
                   style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                  className="text-xs sm:text-sm text-[#E5DDD8]/90 leading-relaxed font-normal"
+                  className="text-sm sm:text-base lg:text-[1.05rem] text-[#E5DDD8]/90 leading-relaxed font-normal"
                 >
                   {sarathiiMethodSteps[selectedStep].description}
                 </p>
 
                 {/* 4-Quadrant Strategic Alignment Matrix */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/10">
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#D4AF6A] block">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                  <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10">
+                    <span className="text-xs uppercase font-bold tracking-wider text-[#D4AF6A] block">
                       Core Objective
                     </span>
-                    <span className="text-xs text-[#E5DDD8] mt-0.5 block leading-snug">
+                    <span className="text-xs sm:text-sm text-[#E5DDD8] mt-1 block leading-snug">
                       {sarathiiMethodSteps[selectedStep].objective}
                     </span>
                   </div>
 
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/10">
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#D4AF6A] block">
+                  <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10">
+                    <span className="text-xs uppercase font-bold tracking-wider text-[#D4AF6A] block">
                       Trained Mindset
                     </span>
-                    <span className="text-xs text-[#E5DDD8] mt-0.5 block leading-snug">
+                    <span className="text-xs sm:text-sm text-[#E5DDD8] mt-1 block leading-snug">
                       {sarathiiMethodSteps[selectedStep].mindset}
                     </span>
                   </div>
 
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/10">
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#D4AF6A] block">
+                  <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10">
+                    <span className="text-xs uppercase font-bold tracking-wider text-[#D4AF6A] block">
                       Target Action
                     </span>
-                    <span className="text-xs text-[#E5DDD8] mt-0.5 block leading-snug">
+                    <span className="text-xs sm:text-sm text-[#E5DDD8] mt-1 block leading-snug">
                       {sarathiiMethodSteps[selectedStep].action}
                     </span>
                   </div>
 
-                  <div className="p-2.5 rounded-xl bg-white/[0.04] border border-white/10">
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#D4AF6A] block">
+                  <div className="p-3 rounded-xl bg-white/[0.04] border border-white/10">
+                    <span className="text-xs uppercase font-bold tracking-wider text-[#D4AF6A] block">
                       Measurable Outcome
                     </span>
-                    <span className="text-xs text-[#E5DDD8] mt-0.5 block leading-snug">
+                    <span className="text-xs sm:text-sm text-[#E5DDD8] mt-1 block leading-snug">
                       {sarathiiMethodSteps[selectedStep].outcome}
                     </span>
                   </div>
                 </div>
 
                 {/* Navigation Buttons inside showcase */}
-                <div className="flex items-center gap-3 pt-2">
+                <div className="flex items-center gap-3.5 pt-2">
                   <button
                     onClick={handlePrev}
-                    className="p-2.5 rounded-full bg-white/5 hover:bg-white/15 border border-white/15 text-white transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
+                    className="p-3 rounded-full bg-white/5 hover:bg-white/15 border border-white/15 text-white transition-all hover:scale-105 active:scale-95 flex items-center justify-center"
                     aria-label="Previous step"
                   >
-                    <ArrowLeft size={15} />
+                    <ArrowLeft size={16} />
                   </button>
 
                   <button
                     onClick={handleNext}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all shadow-md hover:scale-105 active:scale-95"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm uppercase tracking-wider font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] transition-all shadow-md hover:scale-105 active:scale-95"
                   >
                     <span>Next Phase</span>
-                    <ArrowRight size={13} />
+                    <ArrowRight size={15} />
                   </button>
 
-                  <span className="text-xs text-[#E5DDD8]/60 ml-1">
+                  <span className="text-xs sm:text-sm text-[#E5DDD8]/70 ml-1 font-medium">
                     {selectedStep + 1} / 5
                   </span>
                 </div>
               </div>
 
               {/* Right Column: Key Execution Protocols (6 cols) */}
-              <div className="lg:col-span-6 bg-white/[0.05] backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-[#D4AF6A]/25 space-y-3 relative z-10 shadow-inner">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-[#D4AF6A] font-bold">
-                  <CheckCircle2 size={15} />
+              <div className="lg:col-span-6 bg-white/[0.05] backdrop-blur-md rounded-2xl p-6 sm:p-7 border border-[#D4AF6A]/25 space-y-3.5 relative z-10 shadow-inner">
+                <div className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider text-[#D4AF6A] font-bold">
+                  <CheckCircle2 size={16} />
                   <span>Execution Protocols & Deliverables</span>
                 </div>
 
@@ -253,9 +253,9 @@ export function SarathiiMethod() {
                   {sarathiiMethodSteps[selectedStep].details.map((detail, i) => (
                     <div
                       key={detail}
-                      className="p-3 rounded-xl bg-white/[0.03] border border-white/10 flex items-start gap-2.5 text-xs sm:text-sm text-[#E5DDD8] leading-relaxed group hover:border-[#D4AF6A]/40 transition-colors"
+                      className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 flex items-start gap-3 text-xs sm:text-sm text-[#E5DDD8] leading-relaxed group hover:border-[#D4AF6A]/40 transition-colors"
                     >
-                      <span className="w-5 h-5 rounded-full bg-[#4B1458] border border-[#D4AF6A]/30 flex items-center justify-center text-[10px] text-[#E6CFA5] shrink-0 font-bold mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-[#4B1458] border border-[#D4AF6A]/30 flex items-center justify-center text-[11px] text-[#E6CFA5] shrink-0 font-bold mt-0.5">
                         {i + 1}
                       </span>
                       <span>{detail}</span>

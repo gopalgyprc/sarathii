@@ -48,42 +48,42 @@ export function InsightsPreview() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-white/95 backdrop-blur-md text-[10px] uppercase tracking-widest font-bold text-[#4B1458] shadow-sm">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs uppercase tracking-wider font-bold text-[#4B1458] shadow-sm">
                     {article.category}
                   </div>
                 </div>
 
                 {/* Card Body */}
-                <div className="p-5 space-y-2.5">
-                  <div className="flex items-center gap-3 text-xs text-[#6E6271]">
+                <div className="p-6 space-y-3">
+                  <div className="flex items-center gap-3 text-xs sm:text-sm text-[#6E6271] font-medium">
                     <span>{article.formattedDate}</span>
                     <span>•</span>
-                    <span className="flex items-center gap-1">
-                      <Clock size={12} />
+                    <span className="flex items-center gap-1.5">
+                      <Clock size={14} />
                       {article.readTime}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-lg sm:text-xl text-[#2A0932] font-semibold group-hover:text-[#4B1458] transition-colors line-clamp-2 leading-snug">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold group-hover:text-[#4B1458] transition-colors line-clamp-2 leading-snug">
                     <Link href={`/insights/${article.slug}`}>
                       {article.title}
                     </Link>
                   </h3>
 
-                  <p className="text-xs text-[#6E6271] leading-relaxed line-clamp-2">
+                  <p className="text-sm sm:text-base text-[#6E6271] leading-relaxed line-clamp-2 font-normal">
                     {article.excerpt}
                   </p>
                 </div>
               </div>
 
               {/* Card Footer Link */}
-              <div className="px-5 pb-5 pt-1">
+              <div className="px-6 pb-6 pt-1">
                 <Link
                   href={`/insights/${article.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-[#7B2A7A] group-hover:text-[#4B1458] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider font-bold text-[#7B2A7A] group-hover:text-[#4B1458] transition-colors"
                 >
                   <span>Read Article</span>
-                  <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
+                  <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </motion.article>
@@ -94,10 +94,10 @@ export function InsightsPreview() {
         <div className="mt-8 text-center">
           <Link
             href="/insights"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs uppercase tracking-[0.16em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all hover:scale-105 active:scale-95 group"
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs sm:text-sm uppercase tracking-[0.16em] font-bold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all hover:scale-105 active:scale-95 group"
           >
             <span>Explore All Journal Essays</span>
-            <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </Container>

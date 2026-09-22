@@ -58,7 +58,7 @@ export function ProjectArchive() {
         <SectionHeading
           theme="dark"
           align="center"
-          kicker="Policy & Infrastructure"
+          kicker="Sarathii Heritage · Policy & Infrastructure"
           title={
             <>
               Major Public Policy &{' '}
@@ -67,7 +67,7 @@ export function ProjectArchive() {
               </span>
             </>
           }
-          description="Pioneering systemic administrative reforms that established nationwide benchmarks in passenger amenities, PPP frameworks, transparency tools, and non-tariff revenue optimization."
+          description="Pioneering systemic administrative reforms that established nationwide benchmarks in passenger amenities, PPP frameworks, transparency tools, and non-tariff revenue optimization—now serving as living case studies for Sarathii aspirants."
         />
 
         {/* Category Filters with Dynamic Counts */}
@@ -87,7 +87,7 @@ export function ProjectArchive() {
               >
                 <span>{cat}</span>
                 <span
-                  className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${isSelected
+                  className={`px-2 py-0.5 rounded-full text-xs font-bold ${isSelected
                       ? 'bg-[#2A0932] text-[#E6CFA5]'
                       : 'bg-white/10 text-[#E5DDD8]/80'
                     }`}
@@ -117,7 +117,7 @@ export function ProjectArchive() {
               >
                 <div className="space-y-3.5">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] uppercase tracking-widest text-[#E6CFA5] font-bold px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                    <span className="text-xs uppercase tracking-widest text-[#E6CFA5] font-bold px-3 py-1 rounded-full bg-white/5 border border-white/10">
                       {project.category}
                     </span>
                     <div className="w-8 h-8 rounded-xl bg-white/10 text-[#D4AF6A] flex items-center justify-center border border-white/10 group-hover:scale-110 group-hover:bg-[#D4AF6A] group-hover:text-[#2A0932] transition-all">
@@ -129,19 +129,19 @@ export function ProjectArchive() {
                     {project.name}
                   </h3>
 
-                  <div className="text-xs text-[#E6CFA5] italic font-serif">
+                  <div className="text-sm text-[#E6CFA5] italic font-serif">
                     &ldquo;{project.tagline}&rdquo;
                   </div>
 
-                  <p className="text-xs sm:text-sm text-[#E5DDD8]/85 leading-relaxed pt-1 font-normal">
+                  <p className="text-sm text-[#E5DDD8]/90 leading-relaxed pt-1 font-normal">
                     {project.description}
                   </p>
                 </div>
 
                 <div className="pt-5 mt-6 border-t border-white/10 flex items-center justify-between gap-2 text-xs text-[#E6CFA5] font-semibold bg-black/20 -mx-7 -mb-7 sm:-mx-8 sm:-mb-8 px-6 py-4 rounded-b-3xl border-t border-white/10">
                   <div className="flex items-center gap-2">
-                    <TrendingUp size={15} className="shrink-0 text-[#D4AF6A]" />
-                    <span className="text-xs font-bold text-white">Impact: <span className="text-[#E6CFA5] font-normal">{project.impactMetric}</span></span>
+                    <TrendingUp size={16} className="shrink-0 text-[#D4AF6A]" />
+                    <span className="text-sm font-bold text-white">Impact: <span className="text-[#E6CFA5] font-normal">{project.impactMetric}</span></span>
                   </div>
                 </div>
               </motion.div>

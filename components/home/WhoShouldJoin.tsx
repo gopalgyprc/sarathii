@@ -49,23 +49,23 @@ export function WhoShouldJoin() {
                   <div className="w-10 h-10 rounded-2xl bg-[#4B1458] text-[#E6CFA5] flex items-center justify-center">
                     {iconMap[audience.icon]}
                   </div>
-                  <span className="text-[11px] uppercase tracking-widest text-[#7B2A7A] font-semibold">
+                  <span className="text-xs uppercase tracking-widest text-[#7B2A7A] font-bold">
                     Profile 0{index + 1}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold mb-2">
+                <h3 className="font-serif text-2xl sm:text-3xl text-[#2A0932] font-semibold mb-2.5">
                   {audience.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-[#6E6271] leading-relaxed mb-4">
+                <p className="text-base sm:text-lg text-[#3D3141] leading-relaxed mb-4">
                   {audience.description}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-[#E5DDD8] flex items-center justify-between">
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#4B1458]">
-                  <CheckCircle2 size={14} className="text-[#D4AF6A]" />
+              <div className="pt-3.5 border-t border-[#E5DDD8] flex items-center justify-between">
+                <div className="flex items-center gap-2.5 text-sm sm:text-base font-bold text-[#4B1458]">
+                  <CheckCircle2 size={16} className="text-[#D4AF6A] shrink-0" />
                   <span>{audience.idealFor}</span>
                 </div>
               </div>
@@ -74,21 +74,21 @@ export function WhoShouldJoin() {
         </div>
 
         {/* Action Callout */}
-        <div className="mt-6 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-[#F8F5F2] border border-[#E5DDD8] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="space-y-0.5 text-center sm:text-left">
-            <h4 className="font-serif text-lg sm:text-xl text-[#2A0932] font-medium">
+        <div className="mt-8 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#F8F5F2] border border-[#E5DDD8] flex flex-col sm:flex-row items-center justify-between gap-5">
+          <div className="space-y-1 text-center sm:text-left">
+            <h4 className="font-serif text-xl sm:text-2xl text-[#2A0932] font-semibold">
               Ready to evaluate your current preparation roadmap?
             </h4>
-            <p className="text-xs text-[#6E6271]">
+            <p className="text-sm sm:text-base text-[#5E5261]">
               Book an initial diagnostic discussion with Jay Prakash Singh.
             </p>
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs uppercase tracking-[0.14em] font-semibold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all shrink-0 hover:scale-105 active:scale-95"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm uppercase tracking-[0.14em] font-bold text-white bg-[#4B1458] hover:bg-[#2A0932] shadow-md transition-all shrink-0 hover:scale-105 active:scale-95"
           >
             <span>Request Diagnostic Session</span>
-            <ArrowRight size={13} />
+            <ArrowRight size={16} />
           </Link>
         </div>
       </Container>

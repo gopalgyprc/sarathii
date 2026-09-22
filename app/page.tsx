@@ -22,12 +22,12 @@ export default function HomePage() {
       <main className="flex-grow">
         <Hero />
         <ImpactStrip />
-        <MeetTheMentor />
-        <ProofOfExperience />
         <Philosophy />
         <WhySarathii />
         <AnswerWritingTransformation />
         <SarathiiMethod />
+        <MeetTheMentor />
+        <ProofOfExperience />
         <Experience />
         <WhoShouldJoin />
         <BookShowcase />

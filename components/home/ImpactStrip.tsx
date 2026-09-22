@@ -137,7 +137,7 @@ export function ImpactStrip() {
               {/* Label */}
               <div
                 style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                className="font-sans text-xs sm:text-sm uppercase tracking-[0.16em] font-bold text-[#FFFDF9] mt-1 group-hover:text-[#E6CFA5] transition-colors"
+                className="font-sans text-sm sm:text-base uppercase tracking-[0.16em] font-bold text-[#FFFDF9] mt-1 group-hover:text-[#E6CFA5] transition-colors"
               >
                 {stat.label}
               </div>
@@ -145,7 +145,7 @@ export function ImpactStrip() {
               {/* Description */}
               <p
                 style={{ fontFamily: "var(--font-sans), 'Poppins', sans-serif" }}
-                className="font-sans text-xs text-[#E5DDD8]/75 mt-2 max-w-[240px] leading-relaxed"
+                className="font-sans text-xs sm:text-sm text-[#E5DDD8]/85 mt-2 max-w-[260px] leading-relaxed"
               >
                 {stat.description}
               </p>
