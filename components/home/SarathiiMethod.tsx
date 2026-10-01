@@ -38,7 +38,7 @@ export function SarathiiMethod() {
   }
 
   return (
-    <section id="method" className="py-10 lg:py-14 bg-[#F8F5F2] relative overflow-hidden bg-pattern-subtle">
+    <section id="sarathii-method" className="py-10 lg:py-14 bg-[#F8F5F2] relative overflow-hidden bg-pattern-subtle">
       {/* Subtle background ambient lighting */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#7B2A7A]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#D4AF6A]/8 rounded-full blur-3xl pointer-events-none" />
@@ -46,7 +46,7 @@ export function SarathiiMethod() {
       <Container>
         <SectionHeading
           align="center"
-          kicker="04 / The Sarathii Method"
+          kicker="05 / The Sarathii Method"
           title={
             <>
               A Systematic Framework for{' '}

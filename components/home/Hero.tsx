@@ -120,7 +120,7 @@ export function Hero() {
                       Sarathii Mentorship
                     </div>
                     <div className="text-sm font-serif font-bold text-white leading-tight mt-0.5">
-                      Jay Prakash Singh · Chief Mentor
+                      J. P. Singh · Chief Mentor
                     </div>
                   </div>
                   <span className="text-[10px] sm:text-xs uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#2A0932] border border-[#D4AF6A]/40 text-[#E6CFA5]">
@@ -135,7 +135,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-base sm:text-lg lg:text-xl text-[#E5DDD8]/95 leading-relaxed font-normal"
             >
-              <strong className="text-white font-bold">Sarathii</strong> is a premier civil services mentorship institution founded on the belief that excellence is not an accident. Guided by Founder &amp; Chief Mentor <span className="text-[#E6CFA5] font-semibold">Jay Prakash Singh</span>, Sarathii prepares candidates not merely to complete a syllabus, but to{' '}
+              <strong className="text-white font-bold">Sarathii</strong> is a premier civil services mentorship institution founded on the belief that excellence is not an accident. Guided by Founder &amp; Chief Mentor <span className="text-[#E6CFA5] font-semibold">J. P. Singh</span>, Sarathii prepares candidates not merely to complete a syllabus, but to{' '}
               <strong className="text-white font-semibold">think clearly</strong>,{' '}
               <strong className="text-white font-semibold">analyse objectively</strong>,{' '}
               <strong className="text-white font-semibold">express precisely</strong>, and{' '}
@@ -145,11 +145,11 @@ export function Hero() {
             {/* Action Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2"
             >
               <Link
                 href="/contact"
-                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-sm sm:text-base uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden"
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.1em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg shadow-black/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 overflow-hidden whitespace-nowrap shrink-0"
               >
                 <motion.div
                   initial={{ x: '-100%' }}
@@ -157,18 +157,18 @@ export function Hero() {
                   transition={{ duration: 0.6 }}
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none"
                 />
-                <span>Begin Your Journey with Sarathii</span>
+                <span className="whitespace-nowrap">Begin Your Journey with Sarathii</span>
                 <ArrowRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1.5"
+                  size={15}
+                  className="transition-transform duration-300 group-hover:translate-x-1 shrink-0"
                 />
               </Link>
 
               <Link
                 href="/about"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm sm:text-base uppercase tracking-[0.14em] font-bold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#D4AF6A] hover:bg-white/15 transition-all duration-300 hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.1em] font-bold text-white bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#D4AF6A] hover:bg-white/15 transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap shrink-0"
               >
-                <span>Discover Sarathii</span>
+                <span className="whitespace-nowrap">Discover Sarathii</span>
               </Link>
             </motion.div>
 

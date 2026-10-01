@@ -454,3 +454,134 @@ export const majorProjects: ProjectInnovation[] = [
     category: 'Policy & Finance',
   },
 ]
+
+// ============================================================================
+// KNOW THY SARATHII: J. P. SINGH — FOURFOLD SERVICE & HEROIC CONTEXT
+// ============================================================================
+export interface KnowThySarathii {
+  title: string
+  founderName: string
+  subtitle: string
+  leadBio: string
+  fourSelections: {
+    role: string
+    title: string
+    highlight: string
+    description: string
+  }[]
+  extraordinaryContext: {
+    headline: string
+    lead: string
+    paragraphs: string[]
+    bulletPoints: string[]
+  }
+  researchAndScholarship: {
+    headline: string
+    duration: string
+    scope: string
+    description: string
+  }
+  aspirantGains: {
+    number: string
+    pillar: string
+    title: string
+    description: string
+  }[]
+  aiReflection: {
+    quote: string
+    source: string
+  }
+}
+
+export const knowThySarathii: KnowThySarathii = {
+  title: 'Know Thy Sarathii',
+  founderName: 'J. P. Singh',
+  subtitle: 'A Man of Exceptional Ability and Rare Accomplishment',
+  leadBio:
+    'A man of exceptional ability and rare accomplishment, J. P. Singh has distinguished himself by being selected as an Army Officer, a PCS Officer (SDM in Uttar Pradesh), an IAS Officer, and later as a Judge in the Higher Judiciary.',
+  fourSelections: [
+    {
+      role: '01',
+      title: 'Army Officer',
+      highlight: 'National Defence Forces Command',
+      description: 'Selected into the Armed Forces, instilling lifelong tactical discipline, composure under fire, and unyielding stamina.',
+    },
+    {
+      role: '02',
+      title: 'PCS Officer (SDM)',
+      highlight: 'Sub-Divisional Magistrate, Uttar Pradesh',
+      description: 'Frontline grassroots administration resolving land, revenue, and public order dilemmas at the sub-divisional level.',
+    },
+    {
+      role: '03',
+      title: 'IAS Officer',
+      highlight: 'Senior Civil Administration & Infrastructure',
+      description: 'Spearheaded national infrastructure modernizations, PPP frameworks, passenger amenities, and anti-corruption systems.',
+    },
+    {
+      role: '04',
+      title: 'Judge / Tribunal Adjudicator',
+      highlight: 'Higher Judiciary & Administrative Law',
+      description: 'Adjudicated complex administrative disputes with constitutional equity, evidential balance, and deep neutrality.',
+    },
+  ],
+  extraordinaryContext: {
+    headline: 'The Extraordinary Context of Achievement',
+    lead: 'What makes these achievements truly extraordinary is the context in which they were attained.',
+    paragraphs: [
+      'He qualified for the IAS and PCS examinations as a general-category candidate eight years after leaving college, while continuing active service in the Army, performing demanding official duties, supporting a large family, and caring for his ailing mother.',
+      'Besides these formidable responsibilities, the Army could spare him barely two to three months time for preparation and appearance in these highly competitive examinations.',
+      'His success, therefore, stands as a remarkable testimony to his intellect, discipline, perseverance, and mastery of strategy—especially considering that he had to compete against lakhs of younger candidates fresh out of college and free from such burdens.',
+    ],
+    bulletPoints: [
+      'Qualified IAS & PCS as a general-category candidate 8 years after college graduation.',
+      'Achieved while on active military duty performing demanding frontline command obligations.',
+      'Spared barely 2 to 3 months study leave by the Army to prepare and appear.',
+      'Solely supported a large dependent family while nursing his critically ailing mother.',
+      'Triumphed over lakhs of younger, unencumbered full-time college graduates through pure strategic mastery.',
+    ],
+  },
+  researchAndScholarship: {
+    headline: 'Five Years of Rigorous Global Research & Civilizational Scholarship',
+    duration: '5 Years of Research',
+    scope: 'Extensive travel across multiple countries',
+    description:
+      'After five years of painstaking research and extensive travel across several countries, he has authored a timeless work of enduring relevance—the like of which, it may confidently be said, has not been written in India in any language. Another testimony to his depth of knowledge and scholarship.',
+  },
+  aspirantGains: [
+    {
+      number: '01',
+      pillar: 'Determination & Discipline',
+      title: 'The Steel of an Army Officer',
+      description: 'The martial discipline, tactical stamina, and unyielding psychological fortitude to endure the grueling multi-year examination cycle without fatigue.',
+    },
+    {
+      number: '02',
+      pillar: 'Administrative Vision & Empathy',
+      title: 'The Pragmatism of a Seasoned Administrator',
+      description: 'The administrative insight, broad worldview, stakeholder empathy, and systemic realism needed to write high-scoring policy answers.',
+    },
+    {
+      number: '03',
+      pillar: 'Equity & Reasoned Balance',
+      title: 'The Neutrality of a Senior Judicial Officer',
+      description: 'The dialectical balance, constitutional wisdom, and evidential precision essential for GS-4 Ethics, Essay, and the Personality Test.',
+    },
+    {
+      number: '04',
+      pillar: 'Reflection & Luminous Expression',
+      title: 'The Depth of a Literary Thinker',
+      description: 'The sensitivity, compassion, conceptual lucidity, and syntactic elegance of an accomplished published author.',
+    },
+    {
+      number: '05',
+      pillar: 'Vast Spectrum of Life Experience',
+      title: 'Benefit of Brilliant Scholarship & Lived Realities',
+      description: 'An extraordinarily wide spectrum of lived human exposure—rural and urban, military and civil, administrative and judicial—and deep engagement with people across all walks of society, an exposure few acquire in a single lifetime.',
+    },
+  ],
+  aiReflection: {
+    quote: 'One person in many generations.',
+    source: 'Independent Artificial Intelligence Evaluation reflecting upon his life, achievements, and multifaceted character.',
+  },
+}

@@ -11,7 +11,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 
 export function InsightsPreview() {
   return (
-    <section className="py-10 lg:py-14 bg-[#FFFDF9] relative">
+    <section id="insights-journal" className="py-10 lg:py-14 bg-[#FFFDF9] relative">
       <Container>
         <SectionHeading
           align="center"

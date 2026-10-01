@@ -34,21 +34,21 @@ export function FinalCTA() {
               Reach out today and let&apos;s begin the deliberate process of transforming your potential into impactful, ethical excellence.
             </p>
 
-            <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full text-sm sm:text-base uppercase tracking-[0.14em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg shadow-black/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.12em] font-bold text-[#2A0932] bg-[#E6CFA5] hover:bg-[#FFFDF9] shadow-lg shadow-black/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap shrink-0"
               >
-                <span>Request a Free Consultation</span>
-                <ArrowRight size={16} />
+                <span className="whitespace-nowrap">Request a Free Consultation</span>
+                <ArrowRight size={15} />
               </Link>
 
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm sm:text-base uppercase tracking-[0.14em] font-bold text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-xs sm:text-sm uppercase tracking-[0.12em] font-bold text-white border border-white/20 hover:border-white hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
               >
-                <Mail size={16} />
-                <span>{siteConfig.contact.email}</span>
+                <Mail size={15} />
+                <span className="whitespace-nowrap">{siteConfig.contact.email}</span>
               </a>
             </div>
 

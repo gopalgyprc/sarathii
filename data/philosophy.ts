@@ -463,3 +463,155 @@ export const targetAudiences: TargetAudience[] = [
     icon: 'Users',
   },
 ]
+
+// ============================================================================
+// SARATHII MANIFESTO: THE POWER OF A GUIDE & CIVIL SERVICES AS MAHABHARATA
+// ============================================================================
+export interface SarathiiGenesis {
+  whatIsSarathii: {
+    title: string
+    subtitle: string
+    definition: string
+    idealExample: string
+  }
+  thePowerOfAGuide: {
+    title: string
+    subtitle: string
+    arjunaContext: string
+    deeperTruth: string
+    theChoice: string
+    kurukshetraDecisiveFactor: string
+  }
+  civilServicesMahabharata: {
+    title: string
+    battlefieldComparison: string
+    aspirantNeed: string
+    sarathiiRole: string
+    closingMaxim: string
+  }
+  sixPillars: {
+    number: string
+    title: string
+    subtitle: string
+    tagline: string
+    quote: string
+    description: string
+    fourQuestions?: string[]
+    coreTakeaway: string
+  }[]
+  sarathiiPromise: {
+    title: string
+    credo: string
+    paragraphs: string[]
+  }
+}
+
+export const sarathiiGenesis: SarathiiGenesis = {
+  whatIsSarathii: {
+    title: 'What is a Sarathii?',
+    subtitle: 'The Charioteer, Confidant & Strategic Guide',
+    definition:
+      'A Sarathii is a driver of a chariot. More importantly, he is the warrior’s confidant, counsellor and guide—the one who understands both the battlefield and the mind of the warrior. He does not fight the battle himself, yet through his wisdom, judgement and timely guidance, he can play a decisive role in its outcome.',
+    idealExample:
+      'The finest example of the ideal Sarathii is Shri Krishna as Parthasarathii—the charioteer of Arjuna.',
+  },
+  thePowerOfAGuide: {
+    title: 'The Power of a Guide',
+    subtitle: 'Wisdom Over Numbers · Clarity Over Brute Strength',
+    arjunaContext:
+      'Arjuna was the greatest warrior of his age. Trained in archery by Dronacharya and blessed with divine weapons by Lord Shiva after a fierce duel, he had attained near invincibility. Yet Arjuna understood the deeper truth: strength of skill and divine weapons alone do not guarantee victory.',
+    deeperTruth:
+      'Standing against the Kauravas, whose vast army was commanded by formidable warriors such as Bhishma, Drona, and Karna—all capable of matching him arrow for arrow—he realized that when opponents are evenly matched, success depends upon something greater than mere capability. That “something greater” is guidance: the presence of a mentor, strategist, and confidant who can lead one through moments of uncertainty, complexity, and self-doubt.',
+    theChoice:
+      'Arjuna found that guiding force in Krishna. When offered to choose between a mighty army and an unarmed Krishna, he chose the latter. He chose wisdom over numbers, clarity over brute strength. He requested Krishna to become his Sarathi—his charioteer and guide—and Krishna accepted. The rest is history.',
+    kurukshetraDecisiveFactor:
+      'As vividly narrated by Ved Vyasa, it was Krishna’s subtle, strategic, and unwavering guidance that ultimately became the decisive factor in the Pandavas’ victory at Kurukshetra. Without the Sarathi, the outcome may well have been different.',
+  },
+  civilServicesMahabharata: {
+    title: 'Civil Services Exam is Akin to the War of Mahabharata',
+    battlefieldComparison:
+      'Today, the Civil Services Examination mirrors the same battlefield. Instead of weapons, aspirants wield knowledge; instead of armies, lakhs of candidates compete for a few hundred coveted positions, making it one of the most challenging examinations in the world.',
+    aspirantNeed:
+      'Just as Arjuna’s mastery of archery alone was not sufficient, similarly, merely reading books and notes is not enough for success in this examination. What an aspirant truly needs is direction—a mentor who can provide clarity, strategy, confidence, and perspective throughout the journey.',
+    sarathiiRole:
+      'That is where Sarathii comes in. Sarathii seeks to be that guiding force, helping aspirants navigate the complexities of preparation through time-tested strategies, structured mentorship, and personalized guidance.',
+    closingMaxim:
+      'In a landscape crowded with coaching institutes, choosing the right mentor becomes crucial. For in the end, success depends not merely on how much one studies, but on how wisely one is guided.',
+  },
+  sixPillars: [
+    {
+      number: 'I',
+      title: 'Clarity of Expression',
+      subtitle: 'Written Communication',
+      tagline: 'Knowledge has little value unless it can be communicated with clarity.',
+      quote: 'The goal is not to write more, but to communicate better.',
+      description:
+        'Sarathii trains aspirants to write clear, concise, and precise answers in simple yet effective language. Every sentence must carry meaning, every paragraph must advance the argument, and every answer must leave a favourable impression on the examiner.',
+      coreTakeaway: 'Express maximum intellectual substance with minimum words without sacrificing meaning.',
+    },
+    {
+      number: 'II',
+      title: 'Logical and Coherent Thinking',
+      subtitle: 'Chain of Reasoning',
+      tagline: 'A successful answer is not merely a collection of facts. It is a carefully constructed chain of reasoning.',
+      quote: 'Knowledge informs; logic persuades.',
+      description:
+        'Sarathii develops the ability to organise ideas logically, maintain a single central theme, and lead the examiner effortlessly from the introduction to a convincing conclusion.',
+      coreTakeaway: 'Maintain a single focused theme and present arguments in a logically irreversible sequence.',
+    },
+    {
+      number: 'III',
+      title: 'Analytical and Critical Thinking',
+      subtitle: 'Independent Judgment',
+      tagline: 'The Civil Services Examination rewards original thinking rather than mechanical reproduction of facts.',
+      quote: 'The objective is to develop thinkers, not merely memorisers.',
+      description:
+        'Sarathii teaches aspirants to analyse issues from multiple perspectives, identify strengths and weaknesses, evaluate competing viewpoints, and arrive at balanced, independent conclusions.',
+      coreTakeaway: 'Formulate balanced, constitutionally grounded personal judgments on complex policy dilemmas.',
+    },
+    {
+      number: 'IV',
+      title: 'Strategic Preparation',
+      subtitle: 'Surgical Efficiency',
+      tagline: 'Success is rarely the result of studying more. It is the result of studying intelligently.',
+      quote: 'Maximum results with the most efficient use of time, energy, and resources.',
+      description:
+        'Sarathii helps aspirants prepare a disciplined and strategic study plan that answers four essential questions:',
+      fourQuestions: [
+        'What should I study?',
+        'How should I study?',
+        'How much should I study?',
+        'From where should I study?',
+      ],
+      coreTakeaway: 'Courageously eliminate source bloat and focus strictly on high-yield mastery.',
+    },
+    {
+      number: 'V',
+      title: 'Mental and Emotional Resilience',
+      subtitle: 'Composure Under Pressure',
+      tagline: 'Knowledge alone does not determine success. Composure under pressure often makes the decisive difference.',
+      quote: 'Preparation should become a journey of confidence rather than one of fear.',
+      description:
+        'Sarathii equips aspirants with practical techniques to overcome anxiety, maintain confidence during the long examination process, and remain calm even when confronted with unexpected questions.',
+      coreTakeaway: 'Cultivate the stoic equanimity of a military commander in the examination hall.',
+    },
+    {
+      number: 'VI',
+      title: 'Positive Thinking',
+      subtitle: 'Quality of Mind',
+      tagline: 'Every answer reflects the quality of the writer’s mind.',
+      quote: 'Confidence, optimism, and self-belief produce clear and convincing answers.',
+      description:
+        'Doubt and hesitation inevitably reveal themselves in writing. Sarathii nurtures a positive mindset that enables aspirants to face every stage of the examination with confidence, resilience, and determination.',
+      coreTakeaway: 'Quiet, authentic confidence that translates into authoritative writing and personality test presence.',
+    },
+  ],
+  sarathiiPromise: {
+    title: 'The Sarathii Promise',
+    credo: 'Sarathii is not merely a coaching programme. It is a method of thinking, preparing, and succeeding.',
+    paragraphs: [
+      'The objective of Sarathii is not merely to help aspirants clear an examination. Its larger purpose is to cultivate disciplined thinking, effective communication, balanced judgment, emotional strength, and purposeful leadership—the qualities expected of a civil servant and, indeed, of every responsible citizen.',
+      'Sarathii is not merely a coaching programme. It is a method of thinking, preparing, and succeeding.',
+    ],
+  },
+}

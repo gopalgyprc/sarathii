@@ -26,7 +26,7 @@ export function BookShowcase() {
               </span>
             </>
           }
-          description="In addition to five decades in national administration and defence, Jay Prakash Singh is an accomplished author exploring ethical leadership, statesmanship, and composure through classical Indian narratives."
+          description="After five years of painstaking research and extensive travel across several countries, J. P. Singh has authored a timeless work of enduring relevance—the like of which has not been written in India in any language."
         />
 
         {/* 3D Book Showcase Composition */}
@@ -57,9 +57,14 @@ export function BookShowcase() {
 
           {/* Right Column: Editorial Synopsis & Actions (7 cols) */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#E6CFA5] text-xs sm:text-sm uppercase tracking-wider font-bold">
-              <Sparkles size={13} className="text-[#D4AF6A]" />
-              <span>Civilizational Treatise on Leadership</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#E6CFA5] text-xs sm:text-sm uppercase tracking-wider font-bold">
+                <Sparkles size={13} className="text-[#D4AF6A]" />
+                <span>Civilizational Treatise on Leadership</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6CFA5]/15 border border-[#D4AF6A]/30 text-[11px] uppercase tracking-wider text-[#E6CFA5] font-semibold">
+                <span>5 Years Global Research</span>
+              </div>
             </div>
 
             <h3 className="font-serif text-3xl sm:text-4xl lg:text-[2.6rem] text-[#FFFDF9] font-normal leading-tight">

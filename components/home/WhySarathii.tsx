@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   PenTool,
@@ -13,247 +11,280 @@ import {
   Sun,
   CheckCircle2,
   ArrowRight,
-  ChevronDown,
   Quote,
+  ShieldCheck,
+  Compass,
+  Award,
+  HelpCircle,
 } from 'lucide-react'
-import { whatSarathiiOffers } from '@/data/philosophy'
 import { Container } from '@/components/ui/Container'
 import { SectionHeading } from '@/components/ui/SectionHeading'
+import { sarathiiGenesis } from '@/data/philosophy'
 
-const iconMap: Record<string, React.ReactNode> = {
-  PenTool: <PenTool size={22} />,
-  Brain: <Brain size={22} />,
-  Search: <Search size={22} />,
-  Target: <Target size={22} />,
-  Sparkles: <Sparkles size={22} />,
-  Sun: <Sun size={22} />,
-}
+const iconMap = [PenTool, Brain, Search, Target, Sparkles, Sun]
+
+// Background tint per pillar to provide subtle dynamic background feel
+const pillarBackgroundAccents = [
+  'radial-gradient(ellipse at 80% 20%, rgba(75, 20, 88, 0.08), transparent 60%)',
+  'radial-gradient(ellipse at 80% 20%, rgba(212, 175, 106, 0.12), transparent 60%)',
+  'radial-gradient(ellipse at 80% 20%, rgba(123, 42, 122, 0.09), transparent 60%)',
+  'radial-gradient(ellipse at 80% 20%, rgba(42, 9, 50, 0.08), transparent 60%)',
+  'radial-gradient(ellipse at 80% 20%, rgba(212, 175, 106, 0.15), transparent 60%)',
+  'radial-gradient(ellipse at 80% 20%, rgba(75, 20, 88, 0.10), transparent 60%)',
+]
 
 export function WhySarathii() {
-  const [activePillar, setActivePillar] = useState(0)
+  const [activePillarIndex, setActivePillarIndex] = useState(0)
+  const { sixPillars, sarathiiPromise } = sarathiiGenesis
+  const activePillar = sixPillars[activePillarIndex]
+  const ActiveIcon = iconMap[activePillarIndex]
 
   return (
-    <section id="why-sarathii" className="py-10 lg:py-14 bg-[#FFFDF9] relative">
+    <section id="why-sarathii" className="py-12 lg:py-20 bg-[#FFFDF9] relative overflow-hidden border-t border-[#E5DDD8]/60">
+      {/* Ambient background glows */}
+      <div className="absolute top-10 right-0 w-[450px] h-[450px] bg-[#4B1458]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-0 w-[450px] h-[450px] bg-[#D4AF6A]/10 rounded-full blur-3xl pointer-events-none" />
+
       <Container>
         <SectionHeading
           align="center"
-          kicker="02 / The Sarathii Standard"
+          kicker="03 / The Sarathii Standard"
           title={
             <>
-              What Sarathii Offers{' '}
-              <br className="hidden sm:inline" />
-              <span className="italic font-normal text-[#7B2A7A]">
-                That Others Do Not
+              The Six Pillars of the{' '}
+              <span className="font-serif italic font-normal text-[#7B2A7A]">
+                Sarathii Method
               </span>
             </>
           }
-          description="Sarathii does not offer generic, mass-market coaching. We provide transformative personal mentorship rooted in high-yield writing, strategic planning, and emotional mastery under Founder & Chief Mentor Jay Prakash Singh."
+          description="Every successful candidate develops knowledge. Only a few develop the ability to apply that knowledge effectively under examination conditions. The Sarathii Method is built upon six fundamental pillars that transform an aspirant from a student into a successful Civil Services candidate."
         />
 
-        {/* 6-Pillar Interactive Navigation Tabs across Full Width (Eliminating Left Void) */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3.5 mt-6 mb-6">
-          {whatSarathiiOffers.map((pillar, index) => {
-            const isActive = activePillar === index
-            return (
-              <button
-                key={pillar.number}
-                onClick={() => setActivePillar(index)}
-                className={`p-3.5 sm:p-4 rounded-2xl text-left transition-all duration-300 flex flex-col justify-between border relative overflow-hidden group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7B2A7A] ${
-                  isActive
-                    ? 'bg-[#4B1458] text-white border-[#D4AF6A] shadow-lg -translate-y-1 ring-2 ring-[#D4AF6A]/50'
-                    : 'bg-white hover:bg-[#FFFDF9] text-[#1F1722] border-[#E5DDD8] hover:border-[#D4AF6A] shadow-sm'
-                }`}
-                data-cursor="explore"
-              >
-                {/* Active Gold Top Highlight */}
-                {isActive && (
-                  <motion.div
-                    layoutId="pillarTopIndicator"
-                    className="absolute top-0 left-0 right-0 h-1 bg-[#D4AF6A]"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
+        {/* ================================================================= */}
+        {/* INTERACTIVE KNOWLEDGE SYSTEM: LEFT LIST + RIGHT LARGE PANEL */}
+        {/* ================================================================= */}
+        <div className="mt-10 lg:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          
+          {/* LEFT COLUMN: Vertical list of 6 items (5 cols) */}
+          <div className="lg:col-span-5 flex flex-col gap-2.5 sm:gap-3">
+            {sixPillars.map((pillar, idx) => {
+              const isActive = activePillarIndex === idx
+              const PillarIcon = iconMap[idx]
 
-                <div className="flex items-center justify-between mb-2 w-full">
-                  <span
-                    style={{ fontFamily: "var(--font-sans), 'Plus Jakarta Sans', sans-serif" }}
-                    className={`text-xs sm:text-sm font-bold tracking-widest ${
-                      isActive ? 'text-[#D4AF6A]' : 'text-[#7B2A7A]'
-                    }`}
-                  >
-                    Discipline {pillar.number}
-                  </span>
+              return (
+                <button
+                  key={pillar.number}
+                  onClick={() => setActivePillarIndex(idx)}
+                  className={`w-full text-left p-4 sm:p-4.5 rounded-2xl transition-all duration-300 border flex items-center justify-between group cursor-pointer focus:outline-none ${
+                    isActive
+                      ? 'bg-[#4B1458] text-white border-[#4B1458] shadow-lg -translate-x-0.5 ring-2 ring-[#D4AF6A]/50'
+                      : 'bg-[#F8F5F2] hover:bg-white text-[#2A0932] border-[#E5DDD8] hover:border-[#D4AF6A]'
+                  }`}
+                  data-cursor="explore"
+                  aria-selected={isActive}
+                  role="tab"
+                >
+                  <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                    {/* Stage number */}
+                    <span
+                      className={`text-xs sm:text-sm font-extrabold tracking-widest uppercase shrink-0 font-serif ${
+                        isActive ? 'text-[#D4AF6A]' : 'text-[#7B2A7A]'
+                      }`}
+                    >
+                      Pillar {pillar.number}
+                    </span>
 
+                    {/* Icon container */}
+                    <div
+                      className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                        isActive
+                          ? 'bg-[#D4AF6A] text-[#2A0932] shadow-sm'
+                          : 'bg-white text-[#4B1458] group-hover:bg-[#4B1458]/10'
+                      }`}
+                    >
+                      <PillarIcon size={18} />
+                    </div>
+
+                    {/* Title & Subtitle */}
+                    <div className="min-w-0">
+                      <div
+                        className={`font-serif text-base sm:text-lg font-semibold tracking-wide truncate ${
+                          isActive ? 'text-white' : 'text-[#2A0932]'
+                        }`}
+                      >
+                        {pillar.title}
+                      </div>
+                      <div
+                        className={`text-xs truncate ${
+                          isActive ? 'text-[#E6CFA5]' : 'text-[#6E6271]'
+                        }`}
+                      >
+                        {pillar.subtitle}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Active Indicator Arrow */}
                   <div
-                    className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                    className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${
                       isActive
-                        ? 'bg-white/20 text-[#E6CFA5] scale-105'
-                        : 'bg-[#F8F5F2] text-[#6E6271] group-hover:text-[#4B1458]'
+                        ? 'bg-white/20 text-[#D4AF6A]'
+                        : 'opacity-0 group-hover:opacity-100 text-[#7B2A7A]'
                     }`}
                   >
-                    {iconMap[pillar.icon]}
+                    <ArrowRight size={14} />
+                  </div>
+                </button>
+              )
+            })}
+          </div>
+
+          {/* RIGHT COLUMN: Large Active Content Panel (7 cols) */}
+          <div className="lg:col-span-7">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activePillar.number}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                style={{
+                  background: pillarBackgroundAccents[activePillarIndex],
+                }}
+                className="h-full bg-white rounded-3xl border border-[#E5DDD8] shadow-xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden"
+              >
+                {/* Header of Active Panel */}
+                <div className="space-y-6">
+                  {/* Top Badge Strip */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#E5DDD8]">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2A0932] text-xs font-bold uppercase tracking-widest text-[#D4AF6A]">
+                      <span>PILLAR {activePillar.number}</span>
+                      <span>·</span>
+                      <span>{activePillar.subtitle}</span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#7B2A7A]">
+                      <ShieldCheck size={14} className="text-[#D4AF6A]" />
+                      <span>The Sarathii Method</span>
+                    </div>
+                  </div>
+
+                  {/* Title & Tagline */}
+                  <div>
+                    <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#2A0932] font-normal leading-tight">
+                      {activePillar.title}
+                    </h3>
+                    <p className="font-serif text-lg sm:text-xl italic text-[#7B2A7A] mt-2 leading-relaxed">
+                      &ldquo;{activePillar.tagline}&rdquo;
+                    </p>
+                  </div>
+
+                  {/* Detailed Description */}
+                  <p className="text-sm sm:text-base text-[#4A3E4D] leading-relaxed">
+                    {activePillar.description}
+                  </p>
+
+                  {/* If Pillar IV, render the 4 Essential Questions */}
+                  {activePillar.fourQuestions && (
+                    <div className="space-y-3 pt-2">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#2A0932] flex items-center gap-2">
+                        <HelpCircle size={15} className="text-[#D4AF6A]" />
+                        Four Essential Strategic Questions:
+                      </h4>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        {activePillar.fourQuestions.map((q, i) => (
+                          <div
+                            key={i}
+                            className="flex items-center gap-3 p-3 rounded-xl bg-[#F8F5F2] border border-[#E5DDD8] text-xs sm:text-sm font-semibold text-[#2A0932]"
+                          >
+                            <span className="w-6 h-6 rounded-full bg-[#4B1458] text-white flex items-center justify-center text-xs shrink-0 font-mono">
+                              0{i + 1}
+                            </span>
+                            <span>{q}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Core Takeaway Box */}
+                  <div className="bg-[#F8F5F2] rounded-2xl p-4 sm:p-5 border-l-4 border-[#D4AF6A] flex items-start gap-3">
+                    <Quote size={20} className="text-[#D4AF6A] shrink-0 mt-0.5" />
+                    <p className="text-xs sm:text-sm font-medium text-[#2A0932] leading-relaxed italic font-serif">
+                      &ldquo;{activePillar.coreTakeaway}&rdquo;
+                    </p>
                   </div>
                 </div>
 
-                <div className="font-serif text-sm sm:text-base font-bold leading-snug line-clamp-2">
-                  {pillar.title}
+                {/* Golden Maxim Box */}
+                <div className="mt-8 pt-6 border-t border-[#E5DDD8] bg-gradient-to-r from-[#2A0932] to-[#4B1458] text-white rounded-2xl p-5 sm:p-6 shadow-md flex items-center justify-between gap-4">
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-[#D4AF6A] mb-1">
+                      Sarathii Axiom:
+                    </div>
+                    <p className="text-sm sm:text-base font-serif italic text-[#FFFDF9] leading-relaxed">
+                      &ldquo;{activePillar.quote}&rdquo;
+                    </p>
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-[#D4AF6A] shrink-0">
+                    <ActiveIcon size={20} />
+                  </div>
                 </div>
-              </button>
-            )
-          })}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
         </div>
 
-        {/* Full-Width Deep Editorial Feature Showcase Card */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activePillar}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.35, ease: 'easeInOut' }}
-            className="bg-gradient-to-br from-[#350C3E] via-[#2A0932] to-[#1F0724] text-[#FFFDF9] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#D4AF6A]/30 relative overflow-hidden shadow-2xl"
-          >
-            {/* Decorative ambient aura and number watermark */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#7B2A7A]/25 rounded-full blur-3xl pointer-events-none" />
-            <span
-              style={{ fontFamily: "var(--font-sans), 'Plus Jakarta Sans', sans-serif" }}
-              className="absolute top-4 right-8 font-black text-8xl sm:text-9xl text-white/[0.04] pointer-events-none select-none"
-            >
-              {whatSarathiiOffers[activePillar].number}
-            </span>
+        {/* ================================================================= */}
+        {/* THE SARATHII PROMISE: ILLUMINATED LUXURY BANNER */}
+        {/* ================================================================= */}
+        <div className="mt-14 sm:mt-16 bg-gradient-to-br from-[#1A041E] via-[#2A0932] to-[#17031A] text-white rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-[#D4AF6A]/40 shadow-2xl relative overflow-hidden">
+          {/* Ambient decorative glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF6A]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#7B2A7A]/20 rounded-full blur-3xl pointer-events-none" />
 
-            {/* Top Bar inside Showcase */}
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10 relative z-10">
-              <div className="flex items-center gap-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-[#D4AF6A] font-bold">
-                <Sparkles size={15} className="text-[#D4AF6A]" />
-                <span>Discipline {whatSarathiiOffers[activePillar].number} of 06 · The Sarathii Standard</span>
-              </div>
+          <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E6CFA5]/15 border border-[#D4AF6A]/40 text-xs uppercase tracking-[0.2em] font-bold text-[#E6CFA5]">
+              <Award size={14} className="text-[#D4AF6A]" />
+              <span>{sarathiiPromise.title}</span>
+            </div>
 
-              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#E5DDD8]/70 font-medium">
-                <span>Phase {activePillar + 1} of {whatSarathiiOffers.length}</span>
+            <p className="font-serif text-xl sm:text-2xl md:text-3xl text-white font-normal leading-relaxed italic">
+              &ldquo;{sarathiiPromise.paragraphs[0]}&rdquo;
+            </p>
+
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+              <div className="px-6 py-3 rounded-full bg-[#E6CFA5] text-[#2A0932] font-serif text-sm sm:text-base font-bold shadow-lg tracking-wide">
+                {sarathiiPromise.credo}
               </div>
             </div>
 
-            {/* Balanced 2-Column Internal Grid (Zero Empty Space) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start relative z-10">
-              {/* Left Column (5 cols): Title, Core Principle, Thematic Image & Pull Quote */}
-              <div className="lg:col-span-5 space-y-4">
-                <h3 className="font-serif text-3xl sm:text-4xl text-[#FFFDF9] font-normal leading-tight">
-                  {whatSarathiiOffers[activePillar].title}
-                </h3>
-
-                <p className="font-serif text-base sm:text-lg lg:text-xl text-[#E6CFA5] italic leading-relaxed border-l-2 border-[#D4AF6A]/60 pl-4 py-0.5">
-                  &ldquo;{whatSarathiiOffers[activePillar].headline}&rdquo;
-                </p>
-
-                {/* Thematic Imagery Spotlight for the Discipline */}
-                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-[#D4AF6A]/50 shadow-xl group">
-                  <Image
-                    src={
-                      activePillar === 0
-                        ? '/images/sarathii-writing-mastery.jpg'
-                        : activePillar === 1 || activePillar === 2
-                        ? '/images/sarathii-thinking-lab.jpg'
-                        : '/images/sarathii-philosophy-chamber.jpg'
-                    }
-                    alt={whatSarathiiOffers[activePillar].title}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 480px"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F0724]/90 via-black/20 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs sm:text-sm text-[#E6CFA5]">
-                    <span className="font-serif italic font-medium">
-                      {activePillar === 0
-                        ? 'The Art of Concise Expression'
-                        : activePillar === 1 || activePillar === 2
-                        ? 'The Cognitive Laboratory'
-                        : 'Sanctuary of Strategy & Fortitude'}
-                    </span>
-                    <span className="text-[10px] sm:text-xs uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#1A051F]/85 border border-[#D4AF6A]/40 text-[#E6CFA5]">
-                      {activePillar === 0
-                        ? 'UPSC Mains Mastery'
-                        : activePillar === 1 || activePillar === 2
-                        ? 'Coherent Logic'
-                        : 'Leadership Mindset'}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Core Takeaway Quote Box */}
-                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 flex items-start gap-3 text-xs sm:text-sm font-serif italic text-[#E6CFA5] shadow-inner">
-                  <Quote size={18} className="text-[#D4AF6A] shrink-0 mt-0.5" />
-                  <div>
-                    <p className="leading-snug">&ldquo;{whatSarathiiOffers[activePillar].quote}&rdquo;</p>
-                    <span className="block not-italic text-[11px] uppercase tracking-wider text-[#E5DDD8]/60 font-sans font-bold mt-2">
-                      — Jay Prakash Singh, Founder & Chief Mentor
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column (7 cols): Full Narrative, Directives & Action Controls */}
-              <div className="lg:col-span-7 space-y-4">
-                {/* Narrative Paragraphs from the Chief Mentor */}
-                <div className="space-y-3.5 text-sm sm:text-base lg:text-[1.05rem] text-[#E5DDD8]/95 leading-relaxed font-normal">
-                  {whatSarathiiOffers[activePillar].paragraphs?.map((para, idx) => (
-                    <p key={idx}>{para}</p>
-                  )) || (
-                    <p>{whatSarathiiOffers[activePillar].description}</p>
-                  )}
-                </div>
-
-                {/* Specific Structured Criteria / Directives */}
-                {whatSarathiiOffers[activePillar].bullets && (
-                  <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.05] border border-[#D4AF6A]/30 space-y-3 shadow-inner">
-                    <div className="text-xs sm:text-sm uppercase tracking-wider text-[#E6CFA5] font-bold flex items-center gap-2">
-                      <CheckCircle2 size={16} className="text-[#D4AF6A]" />
-                      <span>{whatSarathiiOffers[activePillar].bullets.title}</span>
-                    </div>
-                    <ul className="space-y-2 pt-1">
-                      {whatSarathiiOffers[activePillar].bullets.items.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm lg:text-base text-[#E5DDD8]/90 leading-relaxed">
-                          <span className="w-2 h-2 rounded-full bg-[#D4AF6A] shrink-0 mt-2" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Action Navigation Footer */}
-                <div className="pt-3 flex flex-wrap items-center justify-between gap-4 border-t border-white/10">
-                  <div className="flex items-center gap-2.5">
-                    <button
-                      onClick={() =>
-                        setActivePillar((prev) => (prev > 0 ? prev - 1 : whatSarathiiOffers.length - 1))
-                      }
-                      className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/15 border border-white/15 text-xs uppercase tracking-wider font-bold text-white transition-all hover:scale-105 active:scale-95"
-                    >
-                      ← Previous
-                    </button>
-                    <button
-                      onClick={() =>
-                        setActivePillar((prev) => (prev < whatSarathiiOffers.length - 1 ? prev + 1 : 0))
-                      }
-                      className="px-5 py-2 rounded-full bg-[#E6CFA5] hover:bg-white text-[#2A0932] text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95"
-                    >
-                      Next Discipline →
-                    </button>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 text-xs sm:text-sm uppercase tracking-wider font-bold text-[#E6CFA5] hover:text-white transition-colors"
-                  >
-                    <span>Request Diagnostic Session</span>
-                    <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
+            <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs uppercase tracking-widest text-[#E5DDD8]/80 font-semibold">
+              <span className="flex items-center gap-2">
+                <CheckCircle2 size={14} className="text-[#D4AF6A]" />
+                Disciplined Thinking
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle2 size={14} className="text-[#D4AF6A]" />
+                Effective Communication
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle2 size={14} className="text-[#D4AF6A]" />
+                Balanced Judgment
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle2 size={14} className="text-[#D4AF6A]" />
+                Emotional Strength
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle2 size={14} className="text-[#D4AF6A]" />
+                Purposeful Leadership
+              </span>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
       </Container>
     </section>
   )

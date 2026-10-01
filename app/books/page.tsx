@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer'
 import { Container } from '@/components/ui/Container'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { featuredBook } from '@/data/books'
+import { BookThemes } from '@/components/books/BookThemes'
 
 export const metadata: Metadata = {
   title: 'Sarathii Publications | Civilizational Works by Founder Jay Prakash Singh',
@@ -131,6 +132,15 @@ export default function BooksPage() {
                 </div>
               </div>
             </div>
+          </Container>
+        </section>
+
+        {/* =================================================================== */}
+        {/* INTERACTIVE THEMATIC EXPLORATION (DUTY, ADVERSITY, LEADERSHIP, ETC) */}
+        {/* =================================================================== */}
+        <section className="py-12 lg:py-18 bg-[#FFFDF9] border-t border-[#E5DDD8]">
+          <Container>
+            <BookThemes />
           </Container>
         </section>
 

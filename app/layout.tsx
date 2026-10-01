@@ -32,10 +32,11 @@ export const metadata: Metadata = {
     template: '%s | Sarathii Mentorship',
   },
   description:
-    'Sarathii is an elite mentorship platform for Civil Services (UPSC), strategic leadership, and purposeful public service, founded by Jay Prakash Singh.',
+    'Sarathii is an elite mentorship platform for Civil Services (UPSC), strategic leadership, and purposeful public service, founded by J. P. Singh (Jay Prakash Singh).',
   keywords: [
     'UPSC Mentorship',
     'Civil Services Preparation',
+    'J. P. Singh',
     'Jay Prakash Singh',
     'Leadership Coaching',
     'UPSC Answer Writing',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     'Sarathii',
     'Mindset & Resilience',
   ],
-  authors: [{ name: 'Jay Prakash Singh' }],
+  authors: [{ name: 'J. P. Singh' }, { name: 'Jay Prakash Singh' }],
   creator: 'Sarathii',
   openGraph: {
     type: 'website',
